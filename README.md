@@ -23,7 +23,8 @@ _A CMC8 from the Tekniska Muséet collection, ID TEKS0043130_
 
 CMC8 is a CMOS processor, in a 40-pin DIL package. It has a 8-bit address bus plus two Page pins,
 and an 8-bit data bus. It was thought of as a "microcontroller" at the time, in the sense that
-it was meant be used as a programmable logic component.
+it was meant be used as a programmable logic component. To that end, it has several facilities
+for direct input/output, without requiring separate circuitry for this.
 
 It has 43 instructions according to the book.
 
