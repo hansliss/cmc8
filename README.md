@@ -2,14 +2,17 @@
 
 The book _Mikroprocessor i CMOS_ by Gunnar Markesjö and Ingmar Höglund (ISBN 91-24-27562-X)
 describes in great detail the inner workings of the only (as far as I know) Swedish-made
-microprocessor, the CMC8 by ASEA-HAFO. The book was published in 1978 so the processor must
+microprocessor, the CMC8 by ASEA-HAFO. The book was published in 1978, so the processor must
 have been developed around that time.
 
 ![Mikroprocessor i CMOS](Mikroprocessor_i_CMOS_front.jpg)
 
 This repository contains the result of a deep analysis of the processor based on the information
-in the book. The aim has been to extrapolate all instruction signaling and timing in order to
-build a complete reimplementation, in emulated form as well as using an FPGA.
+in the book. The aim has been to record the known instruction signaling based on the information
+in the book, and extrapolate all other instruction signaling and timing in order to build a
+complete reimplementation, in software emulation as well as using an FPGA - a pin-compatible
+FPGA-based design would be the ultimate goal, and we have produced a fairly likely pinout from
+the information available.
 
 The book also describes Midahs, a demonstration computer based on the CMC8. A secondary aim is
 to reconstruct this system as far as possible.
@@ -21,24 +24,27 @@ to reconstruct this system as far as possible.
 [![CMC8, Tekniska Muséet, ID TEKS0043130](TEKS0043130_scaled.jpg)](https://digitaltmuseum.se/021026356822/integrerad-krets-till-dator)\
 _A CMC8 from the Tekniska Muséet collection, ID TEKS0043130_
 
-CMC8 is a CMOS processor, in a 40-pin DIL package. It has a 8-bit address bus plus two Page pins,
-and an 8-bit data bus. It was thought of as a "microcontroller" at the time, in the sense that
-it was meant be used as a programmable logic component. To that end, it has several facilities
+CMC8 is a CMOS processor, in a 40-pin DIL package. It has an 8-bit address bus plus two "page"
+signals, for a total of ten bits of address space, or 1024 bytes each, for program ROM and
+R/W memory. It has an 8-bit data bus.
+
+It was sometimes referred to as a "microcontroller" at the time, in the sense that
+it was meant be used as a programmable logic component. To that end, it had several facilities
 for direct input/output, without requiring separate circuitry for this.
 
-It has 43 instructions according to the book.
+It has 43 instructions, according to the book.
 
 ## The investigation
 
-I started looking at this around six years ago, but it stalled due to other priorities and the
-incredible amount of work it would take to figure out all the timings, fill in the gaps left
-by the book, and produce test harnesses to verify everything.
+I started looking at this around seven years ago, but the project stalled due to other priorities
+and the incredible amount of work it would take to figure out all the timings, fill in the gaps
+left by the book, and produce test harnesses to verify everything.
 
 This is where AI can do wonders, as long as you stay in control. I've been using Codex CLI
 to look through the scanned pages of the book, extract all the provided signaling diagrams
-and evaluate them, and from that extrapolate one set of instructions at a time, carefully
-recording what's known, what's assumed based on good evidence or a principle of simplicity
-and consistency in the design, and what's merely a guess.
+and evaluate them, and from that, extrapolate one set of related instructions at a time,
+carefully recording what's known, what's assumed based on good evidence or a principle of
+simplicity and consistency in the design, and what's merely a guess.
 
 I have stayed with the microcode model that the book uses to explain the CMC8's inner workings.
 There is also a "PLA"-based model of the signaling, which may be a good basis for an FPGA
@@ -51,7 +57,7 @@ has been produced for the book, as inconsistencies and impossibilities have been
 I expected numerous stumbling blocks, but in the end, only a single hardware component had
 to be invented in order to implement a slightly tricky instruction, and it's not a
 controversial feature. Almost all the signaling and the assumptions made to fill gaps were
-soundly based in information provided in the book.
+soundly based on information provided in the book.
 
 Even though what we (yeah, I'm going to keep saying "we" - I'm not antropomorphizing a
 glorified text generator, I'm just using language in a rational way) have produced is
