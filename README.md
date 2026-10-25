@@ -57,11 +57,6 @@ glorified text generator, I'm just using language in a rational way) have produc
 almost certainly not an exact replica of the original CMC8 design, I am confident that it
 it good enough to base a reimplementation off.
 
-Hopefully, by the time you read this, and even if I forget to update this document, you
-will find some sort of emulator in this repo, and hopefully also a macro assembler for
-the CMC8. And all of the design and decision documents should be here too, in case you want
-to follow the investigation.
-
 ## Standalone macro assembler
 
 [cmc8asm](assembler/README.md) is a portable C99 application with macros,
