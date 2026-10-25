@@ -18,7 +18,7 @@ to reconstruct this system as far as possible.
 
 ## The processor
 
-[![CMC8, Tekniska Muséet, ID TEKS0043130](TEKS0043130_scaled.jpg)](https://digitaltmuseum.se/021026356822/integrerad-krets-till-dator)
+[![CMC8, Tekniska Muséet, ID TEKS0043130](TEKS0043130_scaled.jpg 'A CMC8 from the Tekniska Muséet collection')](https://digitaltmuseum.se/021026356822/integrerad-krets-till-dator)
 
 CMC8 is a CMOS processor, in a 40-pin DIL package. It has a 8-bit address bus plus two Page pins,
 and an 8-bit data bus. It was thought of as a "microcontroller" at the time, in the sense that
