@@ -71,7 +71,7 @@ cmake --build assembler/build
 
 The traffic source reproduces all 75 book bytes. All 239 encodings, explicit
 page wrapping and a cross-page call trampoline are checked independently;
-the current complete project suite has 363 passing tests. The assembler
+the current complete project suite has 368 passing tests. The assembler
 directory has also been built and run separately from this repository.
 
 ## Browser traffic lights
@@ -85,8 +85,7 @@ Intel HEX loading, and runs entirely in the browser without dependencies.
 python3 -m http.server 8000
 ```
 
-Open <http://localhost:8000/demos/traffic/>. The demo core currently supports
-the traffic program's instruction families; the numbered research models
+Open <http://localhost:8000/demos/traffic/>. The demo uses a shared instruction-level core; the numbered research models
 remain the reference for signaling and the complete processor.
 
 
@@ -109,3 +108,13 @@ snippets. To refresh the OCR search from the PDF, install `pdftotext`, run
 `python3 -m tools.index_book`, then regenerate the references. To check the
 presence of every catalogued page scan as well, use
 `python3 -m tools.build_instruction_reference --check --check-scans`.
+
+
+## Interactive Midahs
+
+Open <http://localhost:8000/demos/midahs/> using the same local server.
+The [Midahs demo](demos/midahs/README.md) runs a reconstructed CMC8 KEX monitor
+with octal address/data entry, memory examination, switches, lamps, GO and
+return through KEX. The default user program copies switches to lamps;
+other programs can be loaded as Intel HEX. The monitor is readable assembly
+and is explicitly distinguished from an original ROM dump.

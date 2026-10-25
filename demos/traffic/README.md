@@ -9,8 +9,8 @@ python3 -m http.server 8000
 ```
 
 Open <http://localhost:8000/demos/traffic/>. Loading modules and the default HEX
-requires HTTP rather than opening index.html directly. The demo directory can
-also be copied by itself to any static web host; cpu.test.mjs is only needed
+requires HTTP rather than opening index.html directly. For a separate static host, copy both `demos/traffic/` and its sibling
+`demos/shared/`, retaining their relative locations. cpu.test.mjs is only needed
 for repository development tests.
 
 Cars have reproducible random arrival times and desired speeds. Main-road
@@ -55,12 +55,12 @@ how vehicles respond to the combined lamps.
 
 ## Execution model and scope
 
-cpu.mjs is a separate instruction-level demo core, leaving the numbered
-signaling models unchanged. It implements NOP, LRI, LRM, SRD (ED4 only), INR,
-DCR, JSR, RSR, BT0/BT1, BZ0/BZ1 and JMP. These cover the traffic program, not
-the full instruction set. Unsupported instructions or output ports stop the
-demo with an error. Interrupts, waits, external memory writes and the Midahs
-monitor are outside this first version.
+The instruction-level core in `../shared/cpu.mjs` is shared with the Midahs
+demo, leaving the numbered signaling models unchanged. `cpu.mjs` retains the
+traffic import path. The shared core implements ordinary instruction results;
+the traffic board attaches only program-memory reads, ED4 output and TEST
+inputs. Unattached ports, writes, controls and storage accesses fail explicitly.
+Interrupt entry, external waits and handshaking remain outside this core.
 
 Instruction costs use the established 64-microsecond machine cycle. The
 initial RESET cycle is counted; registers start at explicitly supplied zero

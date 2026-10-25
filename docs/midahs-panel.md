@@ -89,3 +89,11 @@ HALT/SS/RESET/INT interfaces are available through the attached CPU object.
 Validation for this pass: **343 tests pass** across the full suite. The
 46 generated instruction-reference artifacts are current. Numbered CPU
 models remain unchanged.
+
+
+## Browser reconstruction
+
+The [interactive browser demo](../demos/midahs/README.md) now adds a reconstructed
+assembly monitor, KEX entry and a documented functional hypothesis for memory
+remapping. It uses the separate instruction-level browser core and does not
+change this Python fixture or establish the omitted original monitor circuitry.
