@@ -38,6 +38,11 @@ and evaluate them, and from that extrapolate one set of instructions at a time, 
 recording what's known, what's assumed based on good evidence or a principle of simplicity
 and consistency in the design, and what's merely a guess.
 
+I have stayed with the microcode model that the book uses to explain the CMC8's inner workings.
+There is also a "PLA"-based model of the signaling, which may be a good basis for an FPGA
+implementation, but the microcode model is excellent for explaining microprocessor design
+to a layman like me.
+
 Alternatives have been recorded in cases where we couldn't be sure, and an errata document
 has been produced for the book, as inconsistencies and impossibilities have been identified.
 
