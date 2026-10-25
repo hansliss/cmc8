@@ -1,0 +1,209 @@
+.TH CMC8ASM 1 "October 2026" "cmc8asm 0.1.0" "User Commands"
+.SH NAME
+cmc8asm \- absolute macro assembler for the ASEA-HAFO CMC8
+.SH SYNOPSIS
+.B cmc8asm
+.RI [ options ] " source.asm"
+.SH DESCRIPTION
+.B cmc8asm
+assembles all 43 CMC8 instruction families into an absolute program image.
+It supports macros, includes, expressions, conditional assembly, listings,
+and symbol maps. No linker, relocation support, or processor simulator is required.
+Program memory comprises four pages of 256 bytes, addressed from 0 to 1023.
+.SH OPTIONS
+.TP
+.BI "-o " file
+Output filename. The default replaces the source extension with .hex or .bin.
+Use \- for Intel HEX on standard output. Binary output requires a file.
+.TP
+.BI "-f " format
+Select ihex (the default; hex is also accepted) or bin.
+.TP
+.BI "-l " file
+Write an expanded-source listing, including macro call locations.
+.TP
+.BI "-m " file
+Write a sorted absolute symbol map.
+.TP
+.BI "-I " directory
+Add an include search directory. Repeatable; \-Idirectory is also accepted.
+.TP
+.BI "--fill " number
+Set the binary gap-fill byte, from 0 to 255. The default is 0 (NOP).
+.TP
+.B -q
+Suppress the success summary.
+.TP
+.BR -h ", " --help
+Display command-line help.
+.TP
+.B --version
+Display the application version.
+.PP
+Listing and map output may also use \-, provided all output paths are distinct.
+Diagnostics and the success summary go to standard error.
+.SH SOURCE SYNTAX
+Names, instructions, and directives are case-insensitive.
+Identifiers start with a letter, underscore, or dot, followed by those
+characters or digits. Labels end with a colon. Semicolons start comments
+outside quoted strings.
+Constants use NAME EQU expression, NAME = expression, EQU NAME,expression,
+or NAME: EQU expression. Forward labels and EQU chains are supported;
+layout expressions must be known during the first pass.
+.PP
+Registers are R0 through R7, with X an alias for R7. TEST selectors are
+T0 through T3. Numeric selectors are also accepted.
+Immediates may have an optional # prefix.
+.PP
+Numbers are decimal, including numbers with leading zeros.
+Octal forms include 172o and 0o172; hexadecimal forms include 0x7A, $7A,
+and 7Ah; binary forms include 0b1010 and %1010.
+Single-quoted characters denote byte values.
+.PP
+Expressions support parentheses, checked signed 64-bit arithmetic,
+comparisons, bit operations, and logical operations:
+.nf
+  unary:  + - ~ ! < >
+  binary: * / % + - << >> < <= > >= == != & ^ | && ||
+.fi
+Conventional precedence applies; evaluation is eager, not short-circuit.
+Unary < and > extract the low and high bytes.
+LOW(expr) and HIGH(expr) also extract bytes; PAGEOF(expr) extracts the
+page of an address in 0 through 1023.
+A lone $ or a unary * denotes the full current location.
+Division truncates toward zero; shifts require nonnegative operands and
+counts from 0 through 62. Overflow and division by zero are errors.
+.SH PAGING
+.TP
+.BI "PAGE " n
+Select page 0 through 3. Each page has an independent offset counter,
+initially zero. Returning to a page resumes that counter.
+.TP
+.BI "ORG " offset
+Set the current page's offset, from 0 through 255.
+.TP
+.BI "ORGA " address
+Set both page and offset from an absolute address, from 0 through 1023.
+.TP
+.BR "WRAP ON" " / " "WRAP OFF"
+Allow or reject emission wrapping from offset 255 to offset 0 of the same
+page. Initially OFF; the setting persists across PAGE selections.
+A single emitted block cannot exceed 256 bytes.
+.PP
+These directives do not emit instructions or change the hardware PG register.
+Assembly never advances silently into the next page. Overlapping emitted or
+reserved locations are errors, including overlaps due to wrapping.
+.PP
+Labels carry full addresses. JMP, BZ0, BZ1, BL0, and BL1 infer the encoded
+page from a label. They also accept an explicit page,target pair, checked
+for agreement with a full target. Numeric targets 0 through 255 are offsets
+in the current assembly page; larger targets are absolute addresses.
+.PP
+JSR, BB0, BB1, BT0, BT1, LRM, LRS, SRM, and SRS require symbolic or absolute
+targets on the current page. LOW(label) explicitly discards page information.
+Arithmetic with one address retains its address provenance; subtracting two
+addresses produces a scalar, as do extraction and bit operations.
+.PP
+JSR and RSR do not save or restore PG. Cross-page subroutine calls require
+explicit jump stubs to enter and return from the other page.
+.SH INSTRUCTION FORMS
+.nf
+  No operands:       NOP EIN DIN SEL REL SEZ REZ RSR
+  op Rn:             CPY INR DCR AND XOR EXR ROR SHR RRL
+                     JCR LRX LSX SRX SSX
+  op Rn,#byte:       LRI XRI ANI
+  op Rn,address:     LRM LRS SRM SRS
+  op Rn,port:        LRD SRD
+  op Rn,target:      BB0 BB1
+  op Tn,target:      BT0 BT1
+  op [page,]target:  JMP BZ0 BZ1 BL0 BL1
+  JSR target
+  op #byte:          SCS SCW
+.fi
+.SH MACROS AND INCLUDES
+.nf
+  MACRO COUNTDOWN count
+          LRI R4,#\ecount
+  %%loop: DCR R4
+          BZ0 %%loop
+  ENDM
+          COUNTDOWN 3
+.fi
+Parameters use \ename or positional \e1, \e2, and so on.
+Substitution is textual and does not occur inside strings or comments.
+Parenthesize arguments when needed to preserve expression precedence.
+%%name produces a unique local label per invocation; \e@ is the invocation
+number. The __M namespace is reserved for generated names.
+Macros must be defined before use, may call other macros, and may not
+replace instruction or directive names. Nested definitions are unsupported.
+.PP
+INCLUDE "file.inc" searches relative to the source or macro-definition
+file first, then the directories specified with \-I.
+.PP
+IF expression, IFDEF name, IFNDEF name, ELSE, and ENDIF provide conditional
+assembly. Conditions use previously known numeric EQU constants and macro
+arguments, not assembly addresses or forward definitions.
+IFDEF and IFNDEF test known numeric constants and macro definitions.
+Skipped branches do not open includes.
+REPT count through ENDR repeats a block.
+Standalone REPT blocks receive unique %% names; inside a macro these names
+belong to the enclosing invocation. Use a helper macro for fresh labels
+on each nested repetition.
+.SH DATA AND CHECK DIRECTIVES
+Directives may have a leading dot.
+.TP
+.BI "BYTE " values
+Emit bytes or quoted strings. DB and ASCII are aliases.
+.TP
+.BI "WORD " values
+Emit unsigned 16-bit words, little-endian. DW is an alias.
+.TP
+.BI "FILL " count[,value]
+Emit repeated bytes; the value defaults to zero.
+.TP
+.BI "RES " count[,value]
+Reserve locations. With a value, also initialize them.
+.TP
+.BI "ASSERT " expression[,"message"]
+Check an expression after symbol resolution.
+.TP
+.B ERROR "message"
+Stop with an error.
+.TP
+.B END
+End the entire translation unit, including further preprocessing.
+.PP
+Strings and characters support \en, \er, \et, \e0, \e\e, \e', \e",
+and \exHH (exactly two hexadecimal digits).
+A label on a directive binds to the location before that directive;
+place labels after PAGE or ORG to name the new location.
+.SH OUTPUT FORMATS
+Intel HEX contains absolute data records of at most 16 bytes and an EOF
+record. Only initialized cells are emitted. No relocation or entry-point
+records are emitted. Reset starts execution at page 0, offset 0.
+.PP
+Binary output is always 1024 bytes. Index page*256+offset holds the program
+cell; holes and uninitialized RES ranges use the gap-fill byte.
+No separate initialized storage-memory image is produced.
+.PP
+Requested outputs are opened only after assembly succeeds, preserving
+previous results on source errors. Lexical path checks reject collisions
+with source/include files and other outputs; symbolic and hard-link aliases
+are not resolved.
+.SH LIMITS
+Physical source lines: 4095 bytes. Expanded lines: 65535 bytes.
+Expanded lines/invocations: 100000. Preprocessing nesting: 32 levels.
+Expression/EQU nesting: 128 levels. Operands/parameters: 64.
+REPT iterations: 10000. UTF-8 byte-order marks and CRLF lines are accepted.
+.SH EXIT STATUS
+Zero indicates success; nonzero indicates an assembly or input/output error.
+.SH EXAMPLES
+.nf
+  cmc8asm program.asm -o program.hex
+  cmc8asm program.asm -f bin -o program.bin --fill 0xFF
+  cmc8asm program.asm -I include -l program.lst -m program.map
+  cmc8asm program.asm -q -o -
+.fi
+.SH SEE ALSO
+The accompanying README.md contains a tutorial and worked paging and macro
+examples. The examples directory includes a cross-page call trampoline.

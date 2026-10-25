@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="690" viewBox="0 0 1160 690">
+<rect width="1160" height="690" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#193049}.small{font-size:16px}</style>
+<text x="35" y="42" font-size="26">CMC8 traffic lights — observed ED4 writes</text>
+<text x="35" y="74" class="small">Literal figure8.6 program; v018, 8 µs per subdivision</text>
+<text x="35" y="122" class="small">Time (s)</text>
+<text x="220" y="122" class="small">ED4 octal</text>
+<text x="380" y="122" class="small">Main road R/Y/G</text>
+<text x="650" y="122" class="small">Side road R/Y/G</text>
+<text x="915" y="122" class="small">Until next write</text>
+<path d="M30 197 H1120" stroke="#dfe7ed"/>
+<text x="35" y="176" class="small">0.000424</text>
+<text x="220" y="176" class="small">044</text>
+<circle cx="405" cy="170" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="465" cy="170" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="525" cy="170" r="16" fill="#20954f" stroke="#6c7a86"/>
+<circle cx="675" cy="170" r="16" fill="#d32f2f" stroke="#6c7a86"/>
+<circle cx="735" cy="170" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="795" cy="170" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<text x="915" y="176" class="small">0.001664s</text>
+<path d="M30 258 H1120" stroke="#dfe7ed"/>
+<text x="35" y="237" class="small">0.002088</text>
+<text x="220" y="237" class="small">046</text>
+<circle cx="405" cy="231" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="465" cy="231" r="16" fill="#edb20a" stroke="#6c7a86"/>
+<circle cx="525" cy="231" r="16" fill="#20954f" stroke="#6c7a86"/>
+<circle cx="675" cy="231" r="16" fill="#d32f2f" stroke="#6c7a86"/>
+<circle cx="735" cy="231" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="795" cy="231" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<text x="915" y="237" class="small">10.034240s</text>
+<path d="M30 319 H1120" stroke="#dfe7ed"/>
+<text x="35" y="298" class="small">10.036328</text>
+<text x="220" y="298" class="small">041</text>
+<circle cx="405" cy="292" r="16" fill="#d32f2f" stroke="#6c7a86"/>
+<circle cx="465" cy="292" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="525" cy="292" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="675" cy="292" r="16" fill="#d32f2f" stroke="#6c7a86"/>
+<circle cx="735" cy="292" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="795" cy="292" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<text x="915" y="298" class="small">20.068096s</text>
+<path d="M30 380 H1120" stroke="#dfe7ed"/>
+<text x="35" y="359" class="small">30.104424</text>
+<text x="220" y="359" class="small">201</text>
+<circle cx="405" cy="353" r="16" fill="#d32f2f" stroke="#6c7a86"/>
+<circle cx="465" cy="353" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="525" cy="353" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="675" cy="353" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="735" cy="353" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="795" cy="353" r="16" fill="#20954f" stroke="#6c7a86"/>
+<text x="915" y="359" class="small">30.101952s</text>
+<path d="M30 441 H1120" stroke="#dfe7ed"/>
+<text x="35" y="420" class="small">60.206376</text>
+<text x="220" y="420" class="small">301</text>
+<circle cx="405" cy="414" r="16" fill="#d32f2f" stroke="#6c7a86"/>
+<circle cx="465" cy="414" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="525" cy="414" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="675" cy="414" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="735" cy="414" r="16" fill="#edb20a" stroke="#6c7a86"/>
+<circle cx="795" cy="414" r="16" fill="#20954f" stroke="#6c7a86"/>
+<text x="915" y="420" class="small">20.068096s</text>
+<path d="M30 502 H1120" stroke="#dfe7ed"/>
+<text x="35" y="481" class="small">80.274472</text>
+<text x="220" y="481" class="small">041</text>
+<circle cx="405" cy="475" r="16" fill="#d32f2f" stroke="#6c7a86"/>
+<circle cx="465" cy="475" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="525" cy="475" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="675" cy="475" r="16" fill="#d32f2f" stroke="#6c7a86"/>
+<circle cx="735" cy="475" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="795" cy="475" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<text x="915" y="481" class="small">10.034240s</text>
+<path d="M30 563 H1120" stroke="#dfe7ed"/>
+<text x="35" y="542" class="small">90.308712</text>
+<text x="220" y="542" class="small">044</text>
+<circle cx="405" cy="536" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="465" cy="536" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="525" cy="536" r="16" fill="#20954f" stroke="#6c7a86"/>
+<circle cx="675" cy="536" r="16" fill="#d32f2f" stroke="#6c7a86"/>
+<circle cx="735" cy="536" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<circle cx="795" cy="536" r="16" fill="#e4e9ed" stroke="#6c7a86"/>
+<text x="915" y="542" class="small">Idle polling</text>
+<text x="35" y="635" class="small">11,288,752 executed subdivisions; 564,443 CPU events; all seven observed states and interval counts checked.</text>
+<text x="35" y="665" class="small">Green/yellow overlaps follow the book. The diagram reports simulation, not measured hardware.</text>
+</svg>

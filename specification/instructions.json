@@ -1,0 +1,3993 @@
+{
+  "schema_version": 1,
+  "baseline": "repertory",
+  "model": "v018",
+  "scope": "All 43 figure-5.1 mnemonic families; page-wide OCR leads are not reviewed evidence.",
+  "evidence_policy": "Documented, derived, consistency-supported extrapolation, hypothesis and unknown remain distinct. Printed source and chosen correction are both retained.",
+  "sources": {
+    "repertory": {
+      "printed_page": 67,
+      "pdf_page": 74,
+      "image": "bookpages/Page_073.jpg",
+      "title": "Figure 5.1: instruction repertory",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Primary baseline for all 43 mnemonic families, encodings, cycles and flag columns. Normalized zero glyphs and mnemonic spacing only; image remains authoritative."
+    },
+    "formats": {
+      "printed_page": 68,
+      "pdf_page": 75,
+      "image": "bookpages/Page_074.jpg",
+      "title": "Instruction formats a–f",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Explains flag encoding, SSX register selector, immediate bytes, address bytes and test/page selector fields."
+    },
+    "load_intro": {
+      "printed_page": 30,
+      "pdf_page": 37,
+      "image": "bookpages/Page_036.jpg",
+      "title": "Figure 3.2: meaning of LRS",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Introduces the CMC8 load operation; surrounding LDA/MOV examples belong to other architectures."
+    },
+    "load_phases": {
+      "printed_page": 31,
+      "pdf_page": 38,
+      "image": "bookpages/Page_037.jpg",
+      "title": "LRS format and three phases",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Fetch, operand-address fetch, final read; PC advances for both bytes. Also identifies REL as one cycle and JMP as two."
+    },
+    "mops": {
+      "printed_page": 38,
+      "pdf_page": 45,
+      "image": "bookpages/Page_044.jpg",
+      "title": "Figure 4.2: MOP list",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Numbered functional controls; not necessarily independent physical silicon wires."
+    },
+    "datapath": {
+      "printed_page": 39,
+      "pdf_page": 46,
+      "image": "bookpages/Page_045.jpg",
+      "title": "Figure 4.1: processor principle diagram",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Register selectors, buses, ALU, latch paths and interrupt controls; explicitly simplified."
+    },
+    "registers": {
+      "printed_page": 40,
+      "pdf_page": 47,
+      "image": "bookpages/Page_046.jpg",
+      "title": "Register addressing and X",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "PC=R(N), operand register=R(A); MOP20 selects R7/X; subroutines change N."
+    },
+    "pages": {
+      "printed_page": 43,
+      "pdf_page": 50,
+      "image": "bookpages/Page_049.jpg",
+      "title": "Figure 4.3: page addressing",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Four pages each for program/storage, AB-only I/O; LSX retains three cycles to simplify control."
+    },
+    "lrs_timing": {
+      "printed_page": 49,
+      "pdf_page": 56,
+      "image": "bookpages/Page_055.jpg",
+      "title": "Figure 4.9: LRS bus timing",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Memory enables, address changes and data-valid deadlines."
+    },
+    "lrs_format": {
+      "printed_page": 50,
+      "pdf_page": 57,
+      "image": "bookpages/Page_056.jpg",
+      "title": "LRS encoding and read deadlines",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "01010RRR plus address byte; F1/F2 read timing and 375 ns example."
+    },
+    "fetch": {
+      "printed_page": 51,
+      "pdf_page": 58,
+      "image": "bookpages/Page_057.jpg",
+      "title": "Common fetch description",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Common through T5; one-cycle instructions use T6/T7. IR open during T5."
+    },
+    "fetch_mops": {
+      "printed_page": 52,
+      "pdf_page": 59,
+      "image": "bookpages/Page_058.jpg",
+      "title": "Figure 4.10: fetch controls",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Numbered fetch table and alternatives; MOP6 needed by stores at F1T6."
+    },
+    "lrs_function": {
+      "printed_page": 53,
+      "pdf_page": 60,
+      "image": "bookpages/Page_059.jpg",
+      "title": "Figure 4.11: LRS functional microprogram",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "All three phases; IR final capture at end T5, BR capture at start T5."
+    },
+    "lrs_mops": {
+      "printed_page": 54,
+      "pdf_page": 61,
+      "image": "bookpages/Page_060.jpg",
+      "title": "Figure 4.12 and SRS differences",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Full LRS MOP table with recorded MOP1/2 errors; section 3.4 explains store signaling changes."
+    },
+    "srs_timing": {
+      "printed_page": 55,
+      "pdf_page": 62,
+      "image": "bookpages/Page_061.jpg",
+      "title": "Figure 4.13: SRS timing",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Store output direction, early SME and WRITE pulse; contains no full numbered SRS table."
+    },
+    "ein_text": {
+      "printed_page": 62,
+      "pdf_page": 69,
+      "image": "bookpages/Page_068.jpg",
+      "title": "Interrupt enable delay",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "EIN sets INTE at next instruction F0T2; request gating and interrupt entry overview."
+    },
+    "interrupt_return": {
+      "printed_page": 63,
+      "pdf_page": 70,
+      "image": "bookpages/Page_069.jpg",
+      "title": "Figure 4.18: interrupt state flow",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "N increments on interrupt entry and RSR decrements it; discusses MOP38/39 and INTR."
+    },
+    "ein_diagram": {
+      "printed_page": 64,
+      "pdf_page": 71,
+      "image": "bookpages/Page_070.jpg",
+      "title": "Figure 4.19: EIN followed by RSR",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Explicit delayed enable; RSR execute row is labeled F1, unlike the skipped-to-F2 presentation later."
+    },
+    "interrupt_circuit": {
+      "printed_page": 65,
+      "pdf_page": 72,
+      "image": "bookpages/Page_071.jpg",
+      "title": "Figures 4.20/4.21",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "INTR→INTA clocked F0T0, then the entry table clears INTE/INTR, increments N and writes constant002 into the new PC. No PG change is shown. Adjacent reset table is distinct; not evidence RSR alone re-enables INTE."
+    },
+    "jmp": {
+      "printed_page": 70,
+      "pdf_page": 77,
+      "image": "bookpages/Page_076.jpg",
+      "title": "Figure 5.3: JMP MOP table",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "F1T1 MOP31 changes phase to F2 without restarting T; F2T5 reads target; F2T6 writes PC and PG. Prose also specifies JCR register target."
+    },
+    "calls": {
+      "printed_page": 71,
+      "pdf_page": 78,
+      "image": "bookpages/Page_077.jpg",
+      "title": "Figure 5.4: JSR and RSR",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "JSR increments caller PC again during F1, increments N at F2T2 and writes target to new PC at F2T6. RSR skips phase then decrements N."
+    },
+    "branch_circuit": {
+      "printed_page": 72,
+      "pdf_page": 79,
+      "image": "bookpages/Page_078.jpg",
+      "title": "Figure 5.5: conditional branch circuits",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "MOP51–54 select Z/L/T/DI bit0; MOP55 clocks H at T2. XOR uses IR bit3; inverted H output gates MOP22 at T6. Separate T capture edge and complete branch/page decoding are not drawn."
+    },
+    "branch_sequence": {
+      "printed_page": 73,
+      "pdf_page": 80,
+      "image": "bookpages/Page_079.jpg",
+      "title": "Figure 5.6: BB0 functional/MOP sequence",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Operand fetch increments PC; conditional MOP22 at F2T6 selects branch or fall-through."
+    },
+    "and": {
+      "printed_page": 75,
+      "pdf_page": 82,
+      "image": "bookpages/Page_081.jpg",
+      "title": "Figure 5.7: AND microprogram",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "R(A) and X operands, X→DI/DB→BR preparation, Z from ALU result. Numbered row sparse; held levels need reconstruction."
+    },
+    "inc_dec": {
+      "printed_page": 76,
+      "pdf_page": 83,
+      "image": "bookpages/Page_082.jpg",
+      "title": "Figure 5.8: INR/DCR microprograms",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Increment and complemented increment/decrement; captures and final register writes. Held gates across phases are implicit; the three-cycle model uses both F1 and F2 without a phase skip."
+    },
+    "shift": {
+      "printed_page": 77,
+      "pdf_page": 84,
+      "image": "bookpages/Page_083.jpg",
+      "title": "Figure 5.9 and omitted DCR flag circuitry",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "SHR/ROR/RRL semantics; explicitly says DCR zero-detection controls omitted from figure 5.8."
+    },
+    "mux": {
+      "printed_page": 78,
+      "pdf_page": 85,
+      "image": "bookpages/Page_084.jpg",
+      "title": "Figure 5.10: shift multiplexer",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "MOP11 shifts ALU→BR. ROR wraps bit0; SHR grounds bit7; RRL uses a master/slave Link. Explicitly says figure-5.11 gates are only a principle and physical controls are partly coded."
+    },
+    "rrl": {
+      "printed_page": 79,
+      "pdf_page": 86,
+      "image": "bookpages/Page_085.jpg",
+      "title": "Figures 5.11/5.12: RRL circuits and microprogram",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Link path and shift timing. Printed 30 at F1T1 conflicts with functional 2→F; figure 5.11 uses 57 for zero insertion."
+    },
+    "io_out": {
+      "printed_page": 95,
+      "pdf_page": 102,
+      "image": "bookpages/Page_101.jpg",
+      "title": "Figure 6.11: output port",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Address decode + EDE + WRITE loads port latch. Prose prints output address 001; figures 6.10/6.11 show 00. Accepted project correction E007 changes the output address to 00; input address 001 remains correct."
+    },
+    "io_in": {
+      "printed_page": 96,
+      "pdf_page": 103,
+      "image": "bookpages/Page_102.jpg",
+      "title": "Figures 6.12/6.13: input port",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "EDE and physical DBDIR high admit read data; tristate otherwise."
+    },
+    "control": {
+      "printed_page": 97,
+      "pdf_page": 104,
+      "image": "bookpages/Page_103.jpg",
+      "title": "Figure 6.14: SCW/SCS",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "STRCS accompanies the second byte on DB; figure 6.14 illustrates an external latch as one possible receiving circuit, not required CMC8 hardware. Separate interface from LRD/SRD."
+    },
+    "handshake": {
+      "printed_page": 98,
+      "pdf_page": 105,
+      "image": "bookpages/Page_104.jpg",
+      "title": "Figure 6.15: SCS vs SCW",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "SCS continues after strobe; SCW waits for active-low SCWR acknowledgement."
+    },
+    "scw_intro": {
+      "printed_page": 99,
+      "pdf_page": 106,
+      "image": "bookpages/Page_105.jpg",
+      "title": "SCW microprogram introduction",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Opcode fetch and second control-byte address; wired acknowledgement context."
+    },
+    "scw_sequence": {
+      "printed_page": 100,
+      "pdf_page": 107,
+      "image": "bookpages/Page_106.jpg",
+      "title": "Figure 6.17: SCW microprogram",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "SCWR sampled at F2T4 and each wait T4. Figure6.17, figure6.18 and later prose put PME rise F1T2/strobe F1T6; one earlier paragraph says F2T2/F2T6. E008 selects the consistent F1 labels without altering literal source."
+    },
+    "test_inputs": {
+      "printed_page": 105,
+      "pdf_page": 112,
+      "image": "bookpages/Page_111.jpg",
+      "title": "Figure 6.22: test inputs",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Four direct test lines and BT0/BT1; compares software subroutine, interrupt and test-input polling."
+    },
+    "bidirectional": {
+      "printed_page": 113,
+      "pdf_page": 120,
+      "image": "bookpages/Page_119.jpg",
+      "title": "Figure 7.5: bidirectional port",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "A register behaves like a memory word activated by EDE rather than PME/SME."
+    },
+    "memory_test": {
+      "printed_page": 126,
+      "pdf_page": 133,
+      "image": "bookpages/Page_132.jpg",
+      "title": "MIDAHS memory and port tests",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Parallel SRM/LRM and SRS/LRS programs; LRM data window F2T2–T5; LRD/SRD opcodes in lower table."
+    },
+    "delay_loop": {
+      "printed_page": 143,
+      "pdf_page": 150,
+      "image": "bookpages/Page_149.jpg",
+      "title": "Figure 8.5: wait subroutine",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "LRI, INR, BZ0, DCR, RSR with octal machine code and per-instruction cycles; INR explicitly three cycles."
+    },
+    "delay_measure": {
+      "printed_page": 144,
+      "pdf_page": 151,
+      "image": "bookpages/Page_150.jpg",
+      "title": "Wait-subroutine timing",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "JSR call example; computed timing uses (3+2) cycles for INR+branch. SCW used as halt in this system setup."
+    },
+    "traffic1": {
+      "printed_page": 146,
+      "pdf_page": 153,
+      "image": "bookpages/Page_152.jpg",
+      "title": "Figure 8.6 part 1",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "LRM/SRD, BT1, JMP and repeated JSR calls with octal encodings. Complete 75-byte figure8.6 image is transcribed in traffic-program.json and exercised by the board harness. E010 retains the inconsistent T1/T2 prose comment beside actual T1/T3 instructions."
+    },
+    "traffic2": {
+      "printed_page": 147,
+      "pdf_page": 154,
+      "image": "bookpages/Page_153.jpg",
+      "title": "Figure 8.6 part 2",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "NOP padding; LRI/INR/BZ0/DCR/RSR delay routine. Printed octal172 is retained; its parenthetical decimal76 conflicts with decimal122 and the p.144 calculation (candidate E009)."
+    },
+    "lamp_code": {
+      "printed_page": 93,
+      "pdf_page": 100,
+      "image": "bookpages/Page_099.jpg",
+      "title": "Figure 6.9: lamp polling example",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "LRI/SRD/LRD/ANI/BZ0 polling sequence; generic OUT/STORE references in surrounding prose are not CMC8 mnemonics."
+    },
+    "lamp_explanation": {
+      "printed_page": 94,
+      "pdf_page": 101,
+      "image": "bookpages/Page_100.jpg",
+      "title": "Lamp polling interpretation",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Explains immediate data load, port transfer and ANI mask replacing accumulator contents; octal numeric notation."
+    },
+    "kex_start": {
+      "printed_page": 151,
+      "pdf_page": 158,
+      "image": "bookpages/Page_157.jpg",
+      "title": "Figure 8.8: KEX initialization",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Text names LSX R5 after copying the address into X; system memory-selection wiring must be considered separately."
+    },
+    "keyboard": {
+      "printed_page": 153,
+      "pdf_page": 160,
+      "image": "bookpages/Page_159.jpg",
+      "title": "Figure 8.10: keyboard subroutine",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "CPY R6→R7, XRI R7 with octal 377, zero branches and RSR. Several printed mnemonic/machine-code pairs disagree with figure 5.1. E004/E005 are accepted byte-field corrections: 052→057 at 012 and 340→343 at 014; preserve the printed fields."
+    },
+    "key_sort": {
+      "printed_page": 154,
+      "pdf_page": 161,
+      "image": "bookpages/Page_160.jpg",
+      "title": "Figure 8.11: key identification",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "LRI R4, SHR R6 and BB0 R6 distinguish command bits; example octal encodings."
+    },
+    "increment_key": {
+      "printed_page": 155,
+      "pdf_page": 162,
+      "image": "bookpages/Page_161.jpg",
+      "title": "Figure 8.12: increment-address command",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "LRD R7, INR R7, SRD R7, LRX R5, SRD R5, JMP page3; SRD R7 machine-code field prints 032 instead of expected 037. Accepted project correction E006: R7 is intended by the read/increment/write sequence."
+    },
+    "jmp_bus": {
+      "printed_page": 90,
+      "pdf_page": 97,
+      "image": "bookpages/Page_096.jpg",
+      "title": "Figure 6.7: JMP bus timing",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Target is written to PC at the beginning of F2T6; AB receives it at T1 of the following fetch. Confirms operand address remains in AB across the jump completion."
+    },
+    "jmp_phase_context": {
+      "printed_page": 89,
+      "pdf_page": 96,
+      "image": "bookpages/Page_095.jpg",
+      "title": "JMP combined execute cycle discussion",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Explains the F1–2 execute cycle used in the following JMP timing diagram."
+    },
+    "jmp_single_step": {
+      "printed_page": 91,
+      "pdf_page": 98,
+      "image": "bookpages/Page_097.jpg",
+      "title": "Figure 6.8: single-step JMP",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Shows memory/address retention through single-step waits and the T4 WAIT-output mask. Implemented in v018 with explicit H023 SSE timing/interaction assumptions; the omitted complete SSE circuit is not claimed recovered."
+    },
+    "test_inputs_context": {
+      "printed_page": 106,
+      "pdf_page": 113,
+      "image": "bookpages/Page_112.jpg",
+      "title": "CMC8 test-input discussion; then Intel 8048 comparison",
+      "architecture": "CMC8 / comparison clearly separated",
+      "review": "visually_checked",
+      "comment": "Opening paragraph loosely calls BT actions subroutine jumps. No N increment or return-address mechanism is specified; later 8048 discussion belongs to another architecture."
+    },
+    "lamp_zero": {
+      "printed_page": 95,
+      "pdf_page": 102,
+      "image": "bookpages/Page_101.jpg",
+      "title": "Lamp polling: ANI result and Z",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Opening paragraph explicitly says ANI gives Z=0 for a nonzero masked accumulator result, causing BZ0 to repeat; low input bit3 lets execution continue. No internal capture slot is given."
+    },
+    "serial_link": {
+      "printed_page": 107,
+      "pdf_page": 114,
+      "image": "bookpages/Page_113.jpg",
+      "title": "CMC8 Link and serial transfer",
+      "architecture": "CMC8 paragraphs after other-architecture comparisons",
+      "review": "visually_checked",
+      "comment": "CMC8 has direct LOUT from Link. Eight RRLs emit a register LSB first; setting Link from a test input before each RRL permits serial reception. Earlier UART/SCMP comparisons do not define CMC8 circuitry."
+    },
+    "scw_timing": {
+      "printed_page": 101,
+      "pdf_page": 108,
+      "image": "bookpages/Page_107.jpg",
+      "title": "Figure 6.18: SCW handshake timing",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Strobe F1T6; PME/control-byte address/data held through two complete waits (16 extra subdivisions), then F2T6 releases PME. SCWR low around T4 ends waiting. Later PIO examples on this page are other-architecture context."
+    },
+    "wait_phase": {
+      "printed_page": 56,
+      "pdf_page": 63,
+      "image": "bookpages/Page_062.jpg",
+      "title": "Memory-ready wait-cycle mechanism",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Eight-subdivision F3 waits suppress normal instruction MOPs. MEMR high means not ready; low resumes. Execute-phase reads can wait as well as fetch. v018 implements a selected continuation controller; SCWR uses the same loop mechanism with its own checkpoint."
+    },
+    "kex_start_code": {
+      "printed_page": 150,
+      "pdf_page": 157,
+      "image": "bookpages/Page_156.jpg",
+      "title": "KEX startup listing",
+      "architecture": "CMC8",
+      "review": "OCR_checked",
+      "comment": "Initial JMP on page 3 targets 017, immediately after the keyboard routine listing; adjacency supports but alone does not prove that routine’s page."
+    },
+    "kex_layout": {
+      "printed_page": 152,
+      "pdf_page": 159,
+      "image": "bookpages/Page_158.jpg",
+      "title": "Figure 8.9: KEX registers, memory and control words",
+      "architecture": "CMC8",
+      "review": "OCR_checked",
+      "comment": "KEX start address is program-memory page 3, octal 363."
+    },
+    "reset_prose": {
+      "printed_page": 64,
+      "pdf_page": 71,
+      "image": "bookpages/Page_070.jpg",
+      "title": "RESET: T7 sampling and following reset cycle",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "MOP47 is active only during T7. A low RESET during T7 selects the following machine cycle: clear INTA/PG at T0, DI=0 at T1, N=0 at T2, DI→R0 at T4. Does not describe additional flag clears."
+    },
+    "reset_sequence": {
+      "printed_page": 65,
+      "pdf_page": 72,
+      "image": "bookpages/Page_071.jpg",
+      "title": "Figure 4.21: RESET gate and functional cycle",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Separate from interrupt figure 4.20 on the same page. Figure4.21b specifies F0 reset cycle with INTA/PG clear T0, zero DI T1, N clear T2, R(N) write T4 and phase reset T7. No numbered INTA-clear MOP is given."
+    },
+    "wait_circuit": {
+      "printed_page": 58,
+      "pdf_page": 65,
+      "image": "bookpages/Page_064.jpg",
+      "title": "Figure 4.15: HALT and MEMR circuitry",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "HALT latch set during F0T2, cleared by high HALT. WAIT samples HALT.Q OR gated raw MEMR at T4; active-low WAIT output is forced high during T4."
+    },
+    "memory_wait_timing": {
+      "printed_page": 59,
+      "pdf_page": 66,
+      "image": "bookpages/Page_065.jpg",
+      "title": "Figure 4.16: LRS with one wait per memory read",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Three phases consume six machine cycles. Each wait runs from T4 through the following T3; PME/SME and AB remain stable, then original phase resumes at T4."
+    },
+    "halt_wait_prose": {
+      "printed_page": 60,
+      "pdf_page": 67,
+      "image": "bookpages/Page_066.jpg",
+      "title": "HALT/MEMR timing explanation",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "MEMR sampled at beginning T4; WAIT pin asserted after T4. HALT high asynchronously clears its request latch; low must reach the F0T2 set window. Returning work resumes at F0T4."
+    },
+    "halt_wait_timing": {
+      "printed_page": 61,
+      "pdf_page": 68,
+      "image": "bookpages/Page_067.jpg",
+      "title": "Figure 4.17: HALT during LRS",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Three wait cycles delay the opcode fetch. WAIT output pulses high during each T4. HALT release resumes fetch before operand/data phases."
+    },
+    "single_step_prose": {
+      "printed_page": 88,
+      "pdf_page": 95,
+      "image": "bookpages/Page_094.jpg",
+      "title": "Single-step SSE handshake",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "SS is consulted with HALT low. SS high sets SSE; SS low with SSE=1 clears SSE and permits one instruction. Held-low SS with SSE=0 does not permit another instruction."
+    },
+    "single_step_flow": {
+      "printed_page": 89,
+      "pdf_page": 96,
+      "image": "bookpages/Page_095.jpg",
+      "title": "Figure 6.6: single-step state diagram",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "The HALT-low branch tests SS and SSE; completed instruction returns to next opcode address presentation before waiting. Complete SSE circuit omitted."
+    },
+    "single_step_timing": {
+      "printed_page": 90,
+      "pdf_page": 97,
+      "image": "bookpages/Page_096.jpg",
+      "title": "Single-step JMP timing explanation",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "SS must be low during a later T3 to leave the ordinary wait. After one instruction, the next fetch waits while SSE=0. Full SSE circuit is not supplied."
+    },
+    "traffic_lamps": {
+      "printed_page": 141,
+      "pdf_page": 148,
+      "image": "bookpages/Page_147.jpg",
+      "title": "Figure8.3: ED4 traffic lamp bit patterns",
+      "architecture": "CMC8",
+      "review": "visually_checked",
+      "comment": "Main road red/yellow/green bits0/1/2; side road red/yellow/green bits5/6/7. Codes044,046,041,201,301 octal. Green+yellow overlaps are part of the illustrative example."
+    }
+  },
+  "instructions": [
+    {
+      "mnemonic": "LRM",
+      "pattern": "01000RRR",
+      "mask": 248,
+      "value": 64,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Load R(A) from program memory at the address byte.",
+      "group": "load/store",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "mops",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "datapath",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "memory_test",
+          "role": "supporting evidence",
+          "comment": "Parallel memory tests corroborate the memory-enable substitution; LRM data appears at F2T2–T5."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Reuse LRS/SRS with PME in place of SME; program writes are valid where the external system supplies writable memory.",
+          "sources": [
+            "memory_test"
+          ]
+        },
+        {
+          "classification": "implementation validation",
+          "status": "board integration; shortened fixtures and literal program passed",
+          "statement": "The complete figure8.6 traffic-light program runs through unchanged v018 MOP sequencing: literal bytes completed11,288,752 subdivisions and564,443 CPU events, returning to normal polling. Both T1/T3 demands are covered by explicitly shortened fixtures; observed lamp states, nine real subroutine calls and exact interval arithmetic are checked. This is internal consistency evidence, not hardware validation.",
+          "sources": [
+            "traffic1",
+            "traffic2",
+            "delay_measure",
+            "traffic_lamps"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "LRM",
+        "LARM"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "LRS",
+      "pattern": "01010RRR",
+      "mask": 248,
+      "value": 80,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Load R(A) from storage memory at the address byte.",
+      "group": "load/store",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "mops",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "datapath",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "load_intro",
+          "role": "supporting evidence",
+          "comment": "Detailed load model; compare functional sequence with literal numbered table."
+        },
+        {
+          "source": "load_phases",
+          "role": "supporting evidence",
+          "comment": "Detailed load model; compare functional sequence with literal numbered table."
+        },
+        {
+          "source": "lrs_timing",
+          "role": "supporting evidence",
+          "comment": "Detailed load model; compare functional sequence with literal numbered table."
+        },
+        {
+          "source": "lrs_format",
+          "role": "supporting evidence",
+          "comment": "Detailed load model; compare functional sequence with literal numbered table."
+        },
+        {
+          "source": "fetch",
+          "role": "supporting evidence",
+          "comment": "Detailed load model; compare functional sequence with literal numbered table."
+        },
+        {
+          "source": "fetch_mops",
+          "role": "supporting evidence",
+          "comment": "Detailed load model; compare functional sequence with literal numbered table."
+        },
+        {
+          "source": "lrs_function",
+          "role": "supporting evidence",
+          "comment": "Detailed load model; compare functional sequence with literal numbered table."
+        },
+        {
+          "source": "lrs_mops",
+          "role": "supporting evidence",
+          "comment": "Detailed load model; compare functional sequence with literal numbered table."
+        },
+        {
+          "source": "memory_test",
+          "role": "supporting evidence",
+          "comment": "Detailed load model; compare functional sequence with literal numbered table."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "documented",
+          "status": "established project correction",
+          "statement": "Use MOP2 at F1T5/F2T5; printed figure 4.12 MOP1 conflicts with its transfer description and figure 4.2.",
+          "sources": [
+            "lrs_function",
+            "lrs_mops",
+            "mops"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "LRS"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "LRX",
+      "pattern": "01001RRR",
+      "mask": 248,
+      "value": 72,
+      "length_bytes": 1,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Load R(A) from program memory addressed by X.",
+      "group": "load/store",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "mops",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "datapath",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        },
+        {
+          "source": "and",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        },
+        {
+          "source": "increment_key",
+          "role": "application/semantic corroboration",
+          "comment": "Indexed read and branch-back in a concrete application sequence."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Selected H006-A: X→DI→DB→BR at F1T5, then BR→AB at F1T6; F2 reuses direct memory transfer. H006-B direct X→DI→AB remains backup.",
+          "sources": [
+            "pages",
+            "and"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "LRX"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "LSX",
+      "pattern": "01011RRR",
+      "mask": 248,
+      "value": 88,
+      "length_bytes": 1,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Load R(A) from storage memory addressed by X.",
+      "group": "load/store",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "mops",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "datapath",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        },
+        {
+          "source": "and",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        },
+        {
+          "source": "kex_start",
+          "role": "application/semantic corroboration",
+          "comment": "Indexed read appears in KEX initialization prose."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Selected H006-A: X→DI→DB→BR at F1T5, then BR→AB at F1T6; F2 reuses direct memory transfer. H006-B direct X→DI→AB remains backup.",
+          "sources": [
+            "pages",
+            "and"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "LSX",
+        "ESX"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "LRD",
+      "pattern": "00010RRR",
+      "mask": 248,
+      "value": 16,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Load R(A) from an external device selected by the address byte.",
+      "group": "load/store",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "mops",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "datapath",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "io_out",
+          "role": "supporting evidence",
+          "comment": "External registers behave like memory words enabled with EDE; device latch behavior is external to CPU."
+        },
+        {
+          "source": "io_in",
+          "role": "supporting evidence",
+          "comment": "External registers behave like memory words enabled with EDE; device latch behavior is external to CPU."
+        },
+        {
+          "source": "bidirectional",
+          "role": "supporting evidence",
+          "comment": "External registers behave like memory words enabled with EDE; device latch behavior is external to CPU."
+        },
+        {
+          "source": "memory_test",
+          "role": "supporting evidence",
+          "comment": "External registers behave like memory words enabled with EDE; device latch behavior is external to CPU."
+        },
+        {
+          "source": "lamp_code",
+          "role": "application/semantic corroboration",
+          "comment": "Worked polling loop using the named instruction."
+        },
+        {
+          "source": "lamp_explanation",
+          "role": "application/semantic corroboration",
+          "comment": "Explanation of accumulator effects and immediate masking."
+        },
+        {
+          "source": "keyboard",
+          "role": "application/semantic corroboration",
+          "comment": "Keyboard read/compare/copy example; inspect marked numeric discrepancies before execution."
+        },
+        {
+          "source": "key_sort",
+          "role": "application/semantic corroboration",
+          "comment": "Bit-by-bit command classification."
+        },
+        {
+          "source": "increment_key",
+          "role": "application/semantic corroboration",
+          "comment": "Indexed read and branch-back in a concrete application sequence."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Reuse load/store sequence with EDE; I/O addresses use AB alone. Device register capture at WRITE falling is a harness assumption.",
+          "sources": [
+            "pages",
+            "io_out",
+            "io_in",
+            "bidirectional"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "LRD"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "SRM",
+      "pattern": "01100RRR",
+      "mask": 248,
+      "value": 96,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Store R(A) into program memory at the address byte.",
+      "group": "load/store",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "mops",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "datapath",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "memory_test",
+          "role": "supporting evidence",
+          "comment": "Parallel memory tests corroborate the memory-enable substitution; LRM data appears at F2T2–T5."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Reuse LRS/SRS with PME in place of SME; program writes are valid where the external system supplies writable memory.",
+          "sources": [
+            "memory_test"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "SRM",
+        "SAM"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "SRS",
+      "pattern": "01110RRR",
+      "mask": 248,
+      "value": 112,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Store R(A) into storage memory at the address byte.",
+      "group": "load/store",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "mops",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "datapath",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "fetch_mops",
+          "role": "supporting evidence",
+          "comment": "Store-specific signaling and example; numbered held controls remain derived."
+        },
+        {
+          "source": "lrs_mops",
+          "role": "supporting evidence",
+          "comment": "Store-specific signaling and example; numbered held controls remain derived."
+        },
+        {
+          "source": "srs_timing",
+          "role": "supporting evidence",
+          "comment": "Store-specific signaling and example; numbered held controls remain derived."
+        },
+        {
+          "source": "memory_test",
+          "role": "supporting evidence",
+          "comment": "Store-specific signaling and example; numbered held controls remain derived."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived",
+          "status": "working",
+          "statement": "Held internal store controls reproduce figure 4.13; no complete printed SRS MOP table has been found.",
+          "sources": [
+            "srs_timing"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "SRS"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "SRX",
+      "pattern": "01101RRR",
+      "mask": 248,
+      "value": 104,
+      "length_bytes": 1,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Store R(A) into program memory addressed by X.",
+      "group": "load/store",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "mops",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "datapath",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        },
+        {
+          "source": "and",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Selected H006-A: X→DI→DB→BR at F1T5, then BR→AB at F1T6; F2 reuses direct memory transfer. H006-B direct X→DI→AB remains backup.",
+          "sources": [
+            "pages",
+            "and"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "SRX"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "SSX",
+      "pattern": "01111RRR",
+      "mask": 248,
+      "value": 120,
+      "length_bytes": 1,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Store R(A) into storage memory addressed by X.",
+      "group": "load/store",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "mops",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "datapath",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        },
+        {
+          "source": "and",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Indexed operation and three-cycle simplification; AND supplies a reusable X→BR path, not a literal indexed microprogram."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Selected H006-A: X→DI→DB→BR at F1T5, then BR→AB at F1T6; F2 reuses direct memory transfer. H006-B direct X→DI→AB remains backup.",
+          "sources": [
+            "pages",
+            "and"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "SSX"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "SRD",
+      "pattern": "00011RRR",
+      "mask": 248,
+      "value": 24,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Store R(A) into an external device selected by the address byte.",
+      "group": "load/store",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "pages",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "mops",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "datapath",
+          "role": "supporting evidence",
+          "comment": "Address/register selection and transfer vocabulary; shared framework rather than a dedicated table for every instruction."
+        },
+        {
+          "source": "io_out",
+          "role": "supporting evidence",
+          "comment": "External registers behave like memory words enabled with EDE; device latch behavior is external to CPU."
+        },
+        {
+          "source": "io_in",
+          "role": "supporting evidence",
+          "comment": "External registers behave like memory words enabled with EDE; device latch behavior is external to CPU."
+        },
+        {
+          "source": "bidirectional",
+          "role": "supporting evidence",
+          "comment": "External registers behave like memory words enabled with EDE; device latch behavior is external to CPU."
+        },
+        {
+          "source": "memory_test",
+          "role": "supporting evidence",
+          "comment": "External registers behave like memory words enabled with EDE; device latch behavior is external to CPU."
+        },
+        {
+          "source": "lamp_code",
+          "role": "application/semantic corroboration",
+          "comment": "Worked polling loop using the named instruction."
+        },
+        {
+          "source": "lamp_explanation",
+          "role": "application/semantic corroboration",
+          "comment": "Explanation of accumulator effects and immediate masking."
+        },
+        {
+          "source": "increment_key",
+          "role": "application/semantic corroboration",
+          "comment": "Indexed read and branch-back in a concrete application sequence."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Reuse load/store sequence with EDE; I/O addresses use AB alone. Device register capture at WRITE falling is a harness assumption.",
+          "sources": [
+            "pages",
+            "io_out",
+            "io_in",
+            "bidirectional"
+          ]
+        },
+        {
+          "classification": "established project correction",
+          "status": "E006; accepted by project owner",
+          "statement": "Figure 8.12 at octal 052 intends SRD R7 after reading and incrementing R7. Correct printed opcode 032 (R2) to 037 (R7), preserving the literal field.",
+          "sources": [
+            "increment_key",
+            "repertory"
+          ]
+        },
+        {
+          "classification": "implementation validation",
+          "status": "board integration; shortened fixtures and literal program passed",
+          "statement": "The complete figure8.6 traffic-light program runs through unchanged v018 MOP sequencing: literal bytes completed11,288,752 subdivisions and564,443 CPU events, returning to normal polling. Both T1/T3 demands are covered by explicitly shortened fixtures; observed lamp states, nine real subroutine calls and exact interval arithmetic are checked. This is internal consistency evidence, not hardware validation.",
+          "sources": [
+            "traffic1",
+            "traffic2",
+            "delay_measure",
+            "traffic_lamps"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "SRD"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "BB0",
+      "pattern": "11010RRR",
+      "mask": 248,
+      "value": 208,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Branch to the address byte if bit 0 of R(A) is zero.",
+      "group": "conditional branch",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_circuit",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_sequence",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "key_sort",
+          "role": "application/semantic corroboration",
+          "comment": "Bit-by-bit command classification."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived from documented circuit",
+          "status": "selected in v009",
+          "statement": "Store physical H.Q = selected condition XOR IR bit3 at F2T2. H.Q-bar controls MOP22 at F2T6; the functional table’s H=1 taken notation refers to the logical predicate, not physical Q. Restrict the conditional write overlay to branch execute; complete decoding is not drawn.",
+          "sources": [
+            "branch_circuit",
+            "branch_sequence"
+          ]
+        },
+        {
+          "classification": "established project correction",
+          "status": "E002; selected in v009 and subsequently accepted by project owner",
+          "statement": "Use MOP4 instead of the printed F1T4 MOP6, matching the functional BR→R(N) row and p.73 increment explanation. Keep the literal source row unchanged. F2 samples R(A), so A=N observes the PC after both bytes. Held source controls are derived.",
+          "sources": [
+            "branch_sequence",
+            "mops"
+          ]
+        }
+      ],
+      "questions": [
+        "Figure 5.6 F1T4 prints MOP6 where its functional BR→R(N) transfer needs MOP4+18+22 under figure 4.2. The MOP4 correction is now accepted as project erratum E002; the H branch controls also use MOP51–55 beyond the original list."
+      ],
+      "ocr_patterns": [
+        "BB\\s*[0OØøÖö$g&fS]"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "BB1",
+      "pattern": "11011RRR",
+      "mask": 248,
+      "value": 216,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Branch to the address byte if bit 0 of R(A) is one.",
+      "group": "conditional branch",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_circuit",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_sequence",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived from documented circuit",
+          "status": "selected in v009",
+          "statement": "Store physical H.Q = selected condition XOR IR bit3 at F2T2. H.Q-bar controls MOP22 at F2T6; the functional table’s H=1 taken notation refers to the logical predicate, not physical Q. Restrict the conditional write overlay to branch execute; complete decoding is not drawn.",
+          "sources": [
+            "branch_circuit",
+            "branch_sequence"
+          ]
+        },
+        {
+          "classification": "established project correction",
+          "status": "E002; selected in v009 and subsequently accepted by project owner",
+          "statement": "Use MOP4 instead of the printed F1T4 MOP6, matching the functional BR→R(N) row and p.73 increment explanation. Keep the literal source row unchanged. F2 samples R(A), so A=N observes the PC after both bytes. Held source controls are derived.",
+          "sources": [
+            "branch_sequence",
+            "mops"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "BB\\s*1"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "BL0",
+      "pattern": "111001PP",
+      "mask": 252,
+      "value": 228,
+      "length_bytes": 2,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Branch to the address byte on page PP if Link is zero.",
+      "group": "conditional branch",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_circuit",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_sequence",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived from documented circuit",
+          "status": "selected in v009",
+          "statement": "Store physical H.Q = selected condition XOR IR bit3 at F2T2. H.Q-bar controls MOP22 at F2T6; the functional table’s H=1 taken notation refers to the logical predicate, not physical Q. Restrict the conditional write overlay to branch execute; complete decoding is not drawn.",
+          "sources": [
+            "branch_circuit",
+            "branch_sequence"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H008 selected in v009; likely",
+          "statement": "Use MOP31 at F1T1; sample condition at F2T2; increment PC through BR at T3/T4 while fetching the operand; capture target at T5; conditionally write PC at T6. This fits the documented two-cycle duration and reuses operand-fetch controls. No dedicated complete MOP table was found.",
+          "sources": [
+            "repertory",
+            "branch_circuit",
+            "branch_sequence",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "selected in v009; likely",
+          "statement": "Load PP→PG with MOP15 at T6 only when taken, alongside the conditional PC write. Fetch the address using the original page. The PG condition gate is not drawn in figure 5.5.",
+          "sources": [
+            "repertory",
+            "branch_circuit",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H022 selected in v018 when execution control enabled",
+          "statement": "Add a T4 MEMR checkpoint to the external operand/control-byte read where the sparse selected table omits MOP29. Preserve the active access during complete eight-slot waits and resume original T4 actions once. Do not extend this to CPU loopback, write strobes or SCW’s already-fetched control byte in F2.",
+          "sources": [
+            "wait_phase",
+            "wait_circuit",
+            "memory_wait_timing"
+          ]
+        }
+      ],
+      "questions": [
+        "Exact historical placement and circuitry for the conditional PG update remain unverified."
+      ],
+      "ocr_patterns": [
+        "BL\\s*[0OØøÖö$g&fS]"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "BL1",
+      "pattern": "111011PP",
+      "mask": 252,
+      "value": 236,
+      "length_bytes": 2,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Branch to the address byte on page PP if Link is one.",
+      "group": "conditional branch",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_circuit",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_sequence",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived from documented circuit",
+          "status": "selected in v009",
+          "statement": "Store physical H.Q = selected condition XOR IR bit3 at F2T2. H.Q-bar controls MOP22 at F2T6; the functional table’s H=1 taken notation refers to the logical predicate, not physical Q. Restrict the conditional write overlay to branch execute; complete decoding is not drawn.",
+          "sources": [
+            "branch_circuit",
+            "branch_sequence"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H008 selected in v009; likely",
+          "statement": "Use MOP31 at F1T1; sample condition at F2T2; increment PC through BR at T3/T4 while fetching the operand; capture target at T5; conditionally write PC at T6. This fits the documented two-cycle duration and reuses operand-fetch controls. No dedicated complete MOP table was found.",
+          "sources": [
+            "repertory",
+            "branch_circuit",
+            "branch_sequence",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "selected in v009; likely",
+          "statement": "Load PP→PG with MOP15 at T6 only when taken, alongside the conditional PC write. Fetch the address using the original page. The PG condition gate is not drawn in figure 5.5.",
+          "sources": [
+            "repertory",
+            "branch_circuit",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H022 selected in v018 when execution control enabled",
+          "statement": "Add a T4 MEMR checkpoint to the external operand/control-byte read where the sparse selected table omits MOP29. Preserve the active access during complete eight-slot waits and resume original T4 actions once. Do not extend this to CPU loopback, write strobes or SCW’s already-fetched control byte in F2.",
+          "sources": [
+            "wait_phase",
+            "wait_circuit",
+            "memory_wait_timing"
+          ]
+        }
+      ],
+      "questions": [
+        "Exact historical placement and circuitry for the conditional PG update remain unverified."
+      ],
+      "ocr_patterns": [
+        "BL\\s*1"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "BZ0",
+      "pattern": "111000PP",
+      "mask": 252,
+      "value": 224,
+      "length_bytes": 2,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Branch to the address byte on page PP if Z is zero.",
+      "group": "conditional branch",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_circuit",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_sequence",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "lamp_code",
+          "role": "application/semantic corroboration",
+          "comment": "Worked polling loop using the named instruction."
+        },
+        {
+          "source": "lamp_explanation",
+          "role": "application/semantic corroboration",
+          "comment": "Explanation of accumulator effects and immediate masking."
+        },
+        {
+          "source": "keyboard",
+          "role": "application/semantic corroboration",
+          "comment": "Keyboard read/compare/copy example; inspect marked numeric discrepancies before execution."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived from documented circuit",
+          "status": "selected in v009",
+          "statement": "Store physical H.Q = selected condition XOR IR bit3 at F2T2. H.Q-bar controls MOP22 at F2T6; the functional table’s H=1 taken notation refers to the logical predicate, not physical Q. Restrict the conditional write overlay to branch execute; complete decoding is not drawn.",
+          "sources": [
+            "branch_circuit",
+            "branch_sequence"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H008 selected in v009; likely",
+          "statement": "Use MOP31 at F1T1; sample condition at F2T2; increment PC through BR at T3/T4 while fetching the operand; capture target at T5; conditionally write PC at T6. This fits the documented two-cycle duration and reuses operand-fetch controls. No dedicated complete MOP table was found.",
+          "sources": [
+            "repertory",
+            "branch_circuit",
+            "branch_sequence",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "selected in v009; likely",
+          "statement": "Load PP→PG with MOP15 at T6 only when taken, alongside the conditional PC write. Fetch the address using the original page. The PG condition gate is not drawn in figure 5.5.",
+          "sources": [
+            "repertory",
+            "branch_circuit",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "established project correction",
+          "status": "E005; accepted by project owner",
+          "statement": "Figure 8.10 at octal 014 intends BZ0,3; correct printed opcode 340 to 343. Figure 8.9 places KEX start at 3,363, and p.150 jumps to 3,017 immediately after the keyboard routine. That adjacency supports but alone does not prove page 3; branch 005 and mnemonic 014 also support page 3. Preserve printed 340.",
+          "sources": [
+            "keyboard",
+            "kex_start_code",
+            "kex_layout",
+            "repertory"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H022 selected in v018 when execution control enabled",
+          "statement": "Add a T4 MEMR checkpoint to the external operand/control-byte read where the sparse selected table omits MOP29. Preserve the active access during complete eight-slot waits and resume original T4 actions once. Do not extend this to CPU loopback, write strobes or SCW’s already-fetched control byte in F2.",
+          "sources": [
+            "wait_phase",
+            "wait_circuit",
+            "memory_wait_timing"
+          ]
+        },
+        {
+          "classification": "implementation validation",
+          "status": "board integration; shortened fixtures and literal program passed",
+          "statement": "The complete figure8.6 traffic-light program runs through unchanged v018 MOP sequencing: literal bytes completed11,288,752 subdivisions and564,443 CPU events, returning to normal polling. Both T1/T3 demands are covered by explicitly shortened fixtures; observed lamp states, nine real subroutine calls and exact interval arithmetic are checked. This is internal consistency evidence, not hardware validation.",
+          "sources": [
+            "traffic1",
+            "traffic2",
+            "delay_measure",
+            "traffic_lamps"
+          ]
+        }
+      ],
+      "questions": [
+        "Exact historical placement and circuitry for the conditional PG update remain unverified."
+      ],
+      "ocr_patterns": [
+        "BZ\\s*[0OØøÖö$g&fS]"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "BZ1",
+      "pattern": "111010PP",
+      "mask": 252,
+      "value": 232,
+      "length_bytes": 2,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Branch to the address byte on page PP if Z is one.",
+      "group": "conditional branch",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_circuit",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_sequence",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "keyboard",
+          "role": "application/semantic corroboration",
+          "comment": "Keyboard read/compare/copy example; inspect marked numeric discrepancies before execution."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived from documented circuit",
+          "status": "selected in v009",
+          "statement": "Store physical H.Q = selected condition XOR IR bit3 at F2T2. H.Q-bar controls MOP22 at F2T6; the functional table’s H=1 taken notation refers to the logical predicate, not physical Q. Restrict the conditional write overlay to branch execute; complete decoding is not drawn.",
+          "sources": [
+            "branch_circuit",
+            "branch_sequence"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H008 selected in v009; likely",
+          "statement": "Use MOP31 at F1T1; sample condition at F2T2; increment PC through BR at T3/T4 while fetching the operand; capture target at T5; conditionally write PC at T6. This fits the documented two-cycle duration and reuses operand-fetch controls. No dedicated complete MOP table was found.",
+          "sources": [
+            "repertory",
+            "branch_circuit",
+            "branch_sequence",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "selected in v009; likely",
+          "statement": "Load PP→PG with MOP15 at T6 only when taken, alongside the conditional PC write. Fetch the address using the original page. The PG condition gate is not drawn in figure 5.5.",
+          "sources": [
+            "repertory",
+            "branch_circuit",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H022 selected in v018 when execution control enabled",
+          "statement": "Add a T4 MEMR checkpoint to the external operand/control-byte read where the sparse selected table omits MOP29. Preserve the active access during complete eight-slot waits and resume original T4 actions once. Do not extend this to CPU loopback, write strobes or SCW’s already-fetched control byte in F2.",
+          "sources": [
+            "wait_phase",
+            "wait_circuit",
+            "memory_wait_timing"
+          ]
+        }
+      ],
+      "questions": [
+        "Exact historical placement and circuitry for the conditional PG update remain unverified."
+      ],
+      "ocr_patterns": [
+        "BZ\\s*1"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "BT0",
+      "pattern": "110000TT",
+      "mask": 252,
+      "value": 192,
+      "length_bytes": 2,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Branch to the address byte if test input TT is zero.",
+      "group": "conditional branch",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_circuit",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_sequence",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "test_inputs",
+          "role": "supporting evidence",
+          "comment": "Four direct test inputs; distinct from asynchronous interrupt requests."
+        },
+        {
+          "source": "formats",
+          "role": "selector semantics",
+          "comment": "TT selects one of four test inputs, not a target page."
+        },
+        {
+          "source": "test_inputs_context",
+          "role": "terminology discrepancy",
+          "comment": "Retain p.106 subroutine wording without adding an undocumented N increment."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived from documented circuit",
+          "status": "selected in v009",
+          "statement": "Store physical H.Q = selected condition XOR IR bit3 at F2T2. H.Q-bar controls MOP22 at F2T6; the functional table’s H=1 taken notation refers to the logical predicate, not physical Q. Restrict the conditional write overlay to branch execute; complete decoding is not drawn.",
+          "sources": [
+            "branch_circuit",
+            "branch_sequence"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H008 selected in v009; likely",
+          "statement": "Use MOP31 at F1T1; sample condition at F2T2; increment PC through BR at T3/T4 while fetching the operand; capture target at T5; conditionally write PC at T6. This fits the documented two-cycle duration and reuses operand-fetch controls. No dedicated complete MOP table was found.",
+          "sources": [
+            "repertory",
+            "branch_circuit",
+            "branch_sequence",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "hypothesis",
+          "status": "H009 selected in v009; provisional",
+          "statement": "Expose four logical test_inputs; MOP53 makes the selected current level available to H at T2 and records it in state.t. The T box has no documented capture edge, so separate synchronization/latency is not simulated. BT leaves N and PG unchanged.",
+          "sources": [
+            "branch_circuit",
+            "formats",
+            "test_inputs",
+            "test_inputs_context"
+          ]
+        },
+        {
+          "classification": "project interpretation",
+          "status": "accepted working reading",
+          "statement": "Project owner considers p.106 subroutine-jump terminology likely loose language. Treat BT as an ordinary conditional branch, preserving N; retain the literal wording as a source discrepancy.",
+          "sources": [
+            "repertory",
+            "test_inputs_context"
+          ]
+        },
+        {
+          "classification": "implementation preference",
+          "status": "future hardware; not simulated historical behavior",
+          "statement": "Project owner favors pullups on TEST inputs in a future implementation. Original input bias (pullup, pulldown or floating) remains unknown. Keep the research simulator default inputs unknown unless the experiment explicitly supplies levels.",
+          "sources": []
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H022 selected in v018 when execution control enabled",
+          "statement": "Add a T4 MEMR checkpoint to the external operand/control-byte read where the sparse selected table omits MOP29. Preserve the active access during complete eight-slot waits and resume original T4 actions once. Do not extend this to CPU loopback, write strobes or SCW’s already-fetched control byte in F2.",
+          "sources": [
+            "wait_phase",
+            "wait_circuit",
+            "memory_wait_timing"
+          ]
+        }
+      ],
+      "questions": [
+        "Does the T box add synchronization or an earlier sample? No timing edge is specified in figure 5.5.",
+        "Original TEST input electrical bias is unknown; future-design pullups are a project choice, not recovered CMC8 behavior."
+      ],
+      "ocr_patterns": [
+        "BT\\s*[0OØøÖö$g&fS]"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "BT1",
+      "pattern": "110010TT",
+      "mask": 252,
+      "value": 200,
+      "length_bytes": 2,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Branch to the address byte if test input TT is one.",
+      "group": "conditional branch",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_circuit",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "branch_sequence",
+          "role": "supporting evidence",
+          "comment": "Conditional flag/test selection and an explicit BB0 example; some controls are conditional or omitted from figure 4.1."
+        },
+        {
+          "source": "test_inputs",
+          "role": "supporting evidence",
+          "comment": "Four direct test inputs; distinct from asynchronous interrupt requests."
+        },
+        {
+          "source": "formats",
+          "role": "selector semantics",
+          "comment": "TT selects one of four test inputs, not a target page."
+        },
+        {
+          "source": "test_inputs_context",
+          "role": "terminology discrepancy",
+          "comment": "Retain p.106 subroutine wording without adding an undocumented N increment."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived from documented circuit",
+          "status": "selected in v009",
+          "statement": "Store physical H.Q = selected condition XOR IR bit3 at F2T2. H.Q-bar controls MOP22 at F2T6; the functional table’s H=1 taken notation refers to the logical predicate, not physical Q. Restrict the conditional write overlay to branch execute; complete decoding is not drawn.",
+          "sources": [
+            "branch_circuit",
+            "branch_sequence"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H008 selected in v009; likely",
+          "statement": "Use MOP31 at F1T1; sample condition at F2T2; increment PC through BR at T3/T4 while fetching the operand; capture target at T5; conditionally write PC at T6. This fits the documented two-cycle duration and reuses operand-fetch controls. No dedicated complete MOP table was found.",
+          "sources": [
+            "repertory",
+            "branch_circuit",
+            "branch_sequence",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "hypothesis",
+          "status": "H009 selected in v009; provisional",
+          "statement": "Expose four logical test_inputs; MOP53 makes the selected current level available to H at T2 and records it in state.t. The T box has no documented capture edge, so separate synchronization/latency is not simulated. BT leaves N and PG unchanged.",
+          "sources": [
+            "branch_circuit",
+            "formats",
+            "test_inputs",
+            "test_inputs_context"
+          ]
+        },
+        {
+          "classification": "project interpretation",
+          "status": "accepted working reading",
+          "statement": "Project owner considers p.106 subroutine-jump terminology likely loose language. Treat BT as an ordinary conditional branch, preserving N; retain the literal wording as a source discrepancy.",
+          "sources": [
+            "repertory",
+            "test_inputs_context"
+          ]
+        },
+        {
+          "classification": "implementation preference",
+          "status": "future hardware; not simulated historical behavior",
+          "statement": "Project owner favors pullups on TEST inputs in a future implementation. Original input bias (pullup, pulldown or floating) remains unknown. Keep the research simulator default inputs unknown unless the experiment explicitly supplies levels.",
+          "sources": []
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H022 selected in v018 when execution control enabled",
+          "statement": "Add a T4 MEMR checkpoint to the external operand/control-byte read where the sparse selected table omits MOP29. Preserve the active access during complete eight-slot waits and resume original T4 actions once. Do not extend this to CPU loopback, write strobes or SCW’s already-fetched control byte in F2.",
+          "sources": [
+            "wait_phase",
+            "wait_circuit",
+            "memory_wait_timing"
+          ]
+        },
+        {
+          "classification": "implementation validation",
+          "status": "board integration; shortened fixtures and literal program passed",
+          "statement": "The complete figure8.6 traffic-light program runs through unchanged v018 MOP sequencing: literal bytes completed11,288,752 subdivisions and564,443 CPU events, returning to normal polling. Both T1/T3 demands are covered by explicitly shortened fixtures; observed lamp states, nine real subroutine calls and exact interval arithmetic are checked. This is internal consistency evidence, not hardware validation.",
+          "sources": [
+            "traffic1",
+            "traffic2",
+            "delay_measure",
+            "traffic_lamps"
+          ]
+        }
+      ],
+      "questions": [
+        "Does the T box add synchronization or an earlier sample? No timing edge is specified in figure 5.5.",
+        "Original TEST input electrical bias is unknown; future-design pullups are a project choice, not recovered CMC8 behavior."
+      ],
+      "ocr_patterns": [
+        "BT\\s*1",
+        "BTL",
+        "BIL"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "JMP",
+      "pattern": "111100PP",
+      "mask": 252,
+      "value": 240,
+      "length_bytes": 2,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Jump to the address byte on page PP.",
+      "group": "unconditional control",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "calls",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "load_phases",
+          "role": "supporting evidence",
+          "comment": "Two-cycle classification and program examples using octal 360."
+        },
+        {
+          "source": "traffic1",
+          "role": "supporting evidence",
+          "comment": "Two-cycle classification and program examples using octal 360."
+        },
+        {
+          "source": "traffic2",
+          "role": "supporting evidence",
+          "comment": "Two-cycle classification and program examples using octal 360."
+        },
+        {
+          "source": "increment_key",
+          "role": "application/semantic corroboration",
+          "comment": "Indexed read and branch-back in a concrete application sequence."
+        },
+        {
+          "source": "jmp_bus",
+          "role": "timing context",
+          "comment": "Target is written to PC at the beginning of F2T6; AB receives it at T1 of the following fetch. Confirms operand address remains in AB across the jump completion."
+        },
+        {
+          "source": "jmp_phase_context",
+          "role": "timing context",
+          "comment": "Explains the F1–2 execute cycle used in the following JMP timing diagram."
+        },
+        {
+          "source": "jmp_single_step",
+          "role": "timing context",
+          "comment": "Single-step/wait circuit context; not evidence that the always-ready simulator implements single stepping."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "documented",
+          "status": "working",
+          "statement": "F1T1 switches to F2; next executed slot is F2T2, not F2T0. This explains the two-cycle duration.",
+          "sources": [
+            "jmp",
+            "calls"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H022 selected in v018 when execution control enabled",
+          "statement": "Add a T4 MEMR checkpoint to the external operand/control-byte read where the sparse selected table omits MOP29. Preserve the active access during complete eight-slot waits and resume original T4 actions once. Do not extend this to CPU loopback, write strobes or SCW’s already-fetched control byte in F2.",
+          "sources": [
+            "wait_phase",
+            "wait_circuit",
+            "memory_wait_timing"
+          ]
+        },
+        {
+          "classification": "implementation validation",
+          "status": "board integration; shortened fixtures and literal program passed",
+          "statement": "The complete figure8.6 traffic-light program runs through unchanged v018 MOP sequencing: literal bytes completed11,288,752 subdivisions and564,443 CPU events, returning to normal polling. Both T1/T3 demands are covered by explicitly shortened fixtures; observed lamp states, nine real subroutine calls and exact interval arithmetic are checked. This is internal consistency evidence, not hardware validation.",
+          "sources": [
+            "traffic1",
+            "traffic2",
+            "delay_measure",
+            "traffic_lamps"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "JMP"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "JCR",
+      "pattern": "11111RRR",
+      "mask": 248,
+      "value": 248,
+      "length_bytes": 1,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Jump to the contents of R(A).",
+      "group": "unconditional control",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "calls",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "selected in v008",
+          "statement": "H007: prepare R(A) through DI/DB into BR, skip F1 to F2 at T1, capture BR at F2T5 and write R(N) at T6. N and PG stay unchanged. Direct two-selector transfer is not assumed.",
+          "sources": [
+            "jmp",
+            "and"
+          ]
+        }
+      ],
+      "questions": [
+        "No dedicated JCR MOP table located: exact register-to-buffer preparation and write slot must be extrapolated from existing paths.",
+        "Alternative timing: use an earlier buffer capture or perform the register read later; preserve if new evidence distinguishes it from selected H007. No runtime fallback is used."
+      ],
+      "ocr_patterns": [
+        "JCR"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "LRI",
+      "pattern": "00100RRR",
+      "mask": 248,
+      "value": 32,
+      "length_bytes": 2,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Load the immediate second byte into R(A).",
+      "group": "register/immediate",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Immediate byte format and initialization examples."
+        },
+        {
+          "source": "memory_test",
+          "role": "supporting evidence",
+          "comment": "Immediate byte format and initialization examples."
+        },
+        {
+          "source": "delay_loop",
+          "role": "supporting evidence",
+          "comment": "Immediate byte format and initialization examples."
+        },
+        {
+          "source": "traffic2",
+          "role": "supporting evidence",
+          "comment": "Immediate byte format and initialization examples."
+        },
+        {
+          "source": "lamp_code",
+          "role": "application/semantic corroboration",
+          "comment": "Worked polling loop using the named instruction."
+        },
+        {
+          "source": "lamp_explanation",
+          "role": "application/semantic corroboration",
+          "comment": "Explanation of accumulator effects and immediate masking."
+        },
+        {
+          "source": "key_sort",
+          "role": "application/semantic corroboration",
+          "comment": "Bit-by-bit command classification."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H010 selected in v010; likely",
+          "statement": "Use common F0 fetch, phase skip at F1T1, established operand-fetch controls at F2T2–T5, then MOP4+19+22 at T6 and phase reset at T7. PC advances past both bytes before R(A) receives the immediate. When A=N the T6 write replaces PC. No third-cycle memory dereference or flag update.",
+          "sources": [
+            "repertory",
+            "formats",
+            "lrs_function",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "implementation validation",
+          "status": "board integration; shortened fixtures and literal program passed",
+          "statement": "The complete figure8.6 traffic-light program runs through unchanged v018 MOP sequencing: literal bytes completed11,288,752 subdivisions and564,443 CPU events, returning to normal polling. Both T1/T3 demands are covered by explicitly shortened fixtures; observed lamp states, nine real subroutine calls and exact interval arithmetic are checked. This is internal consistency evidence, not hardware validation.",
+          "sources": [
+            "traffic1",
+            "traffic2",
+            "delay_measure",
+            "traffic_lamps"
+          ]
+        }
+      ],
+      "questions": [
+        "No complete LRI MOP table located. A full F1 operand-fetch/write cycle without a phase skip is an unselected timing alternative; selected F2 labels follow the existing two-cycle control convention.",
+        "The inherited always-ready MOP29 check at F2T4 is extrapolated, not a documented LRI-specific slot."
+      ],
+      "ocr_patterns": [
+        "LR\\s*I",
+        "LETI",
+        "TRI"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "XRI",
+      "pattern": "00101RRR",
+      "mask": 248,
+      "value": 40,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [
+        "Z"
+      ],
+      "summary": "Exclusive-OR immediate; result to R(A).",
+      "group": "register/immediate",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Immediate operand format; listed flag effect Z. Exact destination is read with register/immediate family convention."
+        },
+        {
+          "source": "keyboard",
+          "role": "application/semantic corroboration",
+          "comment": "Keyboard read/compare/copy example; inspect marked numeric discrepancies before execution."
+        },
+        {
+          "source": "and",
+          "role": "timing precedent, not a dedicated table",
+          "comment": "AND supplies the ALU/Z T3 and register-result T4 precedent used by the selected immediate logical schedule."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H016 selected in v012; likely",
+          "statement": "Fetch the immediate into BR during full F1 using the established PC increment and program-read controls, without target→AB preload. F2 follows AND: R(A) on DI, ALU operation and MOP32 at T3, result→R(A) at T4, phase reset at T7. The detailed timing and held controls are inferred; no dedicated XRI/ANI MOP table located.",
+          "sources": [
+            "repertory",
+            "formats",
+            "and",
+            "lrs_function"
+          ]
+        },
+        {
+          "classification": "derived from documented application",
+          "status": "visually rechecked in v012 investigation",
+          "statement": "Figure 8.10 uses XRI R7,#377 octal followed by zero branches; FF transforms to zero, while other key codes give nonzero. This corroborates destination R7 and Z based on the transformed result, not the original byte. Accepted byte corrections E004/E005 preserve the literal listing mismatches.",
+          "sources": [
+            "keyboard"
+          ]
+        },
+        {
+          "classification": "established project correction",
+          "status": "E004; accepted by project owner",
+          "statement": "Figure 8.10 at octal 012 intends XRI R7,#377: the keyboard value is loaded into R7/X and inverted for the Z test. Printed opcode 052 selects R2; correct to 057, also printed correctly at 003. Preserve the literal field.",
+          "sources": [
+            "keyboard",
+            "repertory"
+          ]
+        }
+      ],
+      "questions": [
+        "Exact immediate logical capture/write slots remain inferred from the AND and operand-fetch precedents."
+      ],
+      "ocr_patterns": [
+        "XR\\s*I"
+      ],
+      "semantics_status": "documented operation; destination corroborated by keyboard example"
+    },
+    {
+      "mnemonic": "ANI",
+      "pattern": "00110RRR",
+      "mask": 248,
+      "value": 48,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [
+        "Z"
+      ],
+      "summary": "AND immediate; result to R(A).",
+      "group": "register/immediate",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Immediate operand format; listed flag effect Z. Exact destination is read with register/immediate family convention."
+        },
+        {
+          "source": "lamp_code",
+          "role": "application/semantic corroboration",
+          "comment": "Worked polling loop using the named instruction."
+        },
+        {
+          "source": "lamp_explanation",
+          "role": "application/semantic corroboration",
+          "comment": "Explanation of accumulator effects and immediate masking."
+        },
+        {
+          "source": "and",
+          "role": "timing precedent, not a dedicated table",
+          "comment": "AND supplies the ALU/Z T3 and register-result T4 precedent used by the selected immediate logical schedule."
+        },
+        {
+          "source": "lamp_zero",
+          "role": "result-zero semantics",
+          "comment": "Explicit result-based Z behavior and polling-loop exit condition; does not establish a T3 or T6 detector edge."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H016 selected in v012; likely",
+          "statement": "Fetch the immediate into BR during full F1 using the established PC increment and program-read controls, without target→AB preload. F2 follows AND: R(A) on DI, ALU operation and MOP32 at T3, result→R(A) at T4, phase reset at T7. The detailed timing and held controls are inferred; no dedicated XRI/ANI MOP table located.",
+          "sources": [
+            "repertory",
+            "formats",
+            "and",
+            "lrs_function"
+          ]
+        },
+        {
+          "classification": "documented result semantics",
+          "status": "visually rechecked in v012 investigation",
+          "statement": "Pages 94–95 mask to octal 010; a nonzero masked result clears Z and repeats the BZ0 loop, while zero lets execution continue. A nonzero source byte can therefore produce Z=1 after masking.",
+          "sources": [
+            "lamp_explanation",
+            "lamp_zero"
+          ]
+        }
+      ],
+      "questions": [
+        "Exact immediate logical capture/write slots remain inferred from the AND and operand-fetch precedents."
+      ],
+      "ocr_patterns": [
+        "ANI"
+      ],
+      "semantics_status": "documented operation; destination corroborated by accumulator-mask example"
+    },
+    {
+      "mnemonic": "CPY",
+      "pattern": "00111RRR",
+      "mask": 248,
+      "value": 56,
+      "length_bytes": 1,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Copy R(A) into X.",
+      "group": "register/immediate",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "keyboard",
+          "role": "application/semantic corroboration",
+          "comment": "Keyboard read/compare/copy example; inspect marked numeric discrepancies before execution."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H011 selected in v010; likely",
+          "statement": "Reuse the selected JCR buffered source route: R(A)→DI at F1T0, drive DB at T1 with MOP31 phase skip, hold through F2T5 and capture BR, then MOP4+20+22 writes X at T6. No execute memory access. A=N reads the PC after the one-byte fetch; N=7 makes the destination the active PC.",
+          "sources": [
+            "repertory",
+            "keyboard",
+            "and",
+            "jmp"
+          ]
+        }
+      ],
+      "questions": [
+        "No full CPY MOP table located. Figure 8.10 corroborates R(A)→X semantics; its exact two-cycle transfer timing remains to be reconstructed.",
+        "Earlier buffer capture or a full F1 execute cycle remain unselected timing alternatives. Passing tests do not establish the historical CPY capture slot."
+      ],
+      "ocr_patterns": [
+        "CPY"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "INR",
+      "pattern": "10000RRR",
+      "mask": 248,
+      "value": 128,
+      "length_bytes": 1,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [
+        "Z"
+      ],
+      "summary": "Increment R(A).",
+      "group": "arithmetic/logical",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "inc_dec",
+          "role": "supporting evidence",
+          "comment": "Detailed arithmetic sequences; DCR zero flag needs circuitry omitted from the printed table."
+        },
+        {
+          "source": "shift",
+          "role": "supporting evidence",
+          "comment": "Detailed arithmetic sequences; DCR zero flag needs circuitry omitted from the printed table."
+        },
+        {
+          "source": "delay_loop",
+          "role": "supporting evidence",
+          "comment": "Detailed arithmetic sequences; DCR zero flag needs circuitry omitted from the printed table."
+        },
+        {
+          "source": "traffic2",
+          "role": "supporting evidence",
+          "comment": "Detailed arithmetic sequences; DCR zero flag needs circuitry omitted from the printed table."
+        },
+        {
+          "source": "and",
+          "role": "supporting evidence",
+          "comment": "Z detects wrap to zero; timing calculation corroborates three cycles."
+        },
+        {
+          "source": "delay_measure",
+          "role": "supporting evidence",
+          "comment": "Z detects wrap to zero; timing calculation corroborates three cycles."
+        },
+        {
+          "source": "increment_key",
+          "role": "application/semantic corroboration",
+          "comment": "Indexed read and branch-back in a concrete application sequence."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "documented functional sequence; source-conflict interpretation",
+          "status": "H013 selected in v011; T3 selected over prose T2",
+          "statement": "Hold R(A) on DI across full F1 and through F2T3; do not invent a missing F1 DB→BR capture. Follow figure 5.8: DI+1→BR with MOP32 testing ALU zero at T3, then BR→R(A) at T6. Preserve three cycles and the prose T2 alternative.",
+          "sources": [
+            "inc_dec",
+            "and",
+            "delay_loop",
+            "delay_measure"
+          ]
+        },
+        {
+          "classification": "implementation validation",
+          "status": "board integration; shortened fixtures and literal program passed",
+          "statement": "The complete figure8.6 traffic-light program runs through unchanged v018 MOP sequencing: literal bytes completed11,288,752 subdivisions and564,443 CPU events, returning to normal polling. Both T1/T3 demands are covered by explicitly shortened fixtures; observed lamp states, nine real subroutine calls and exact interval arithmetic are checked. This is internal consistency evidence, not hardware validation.",
+          "sources": [
+            "traffic1",
+            "traffic2",
+            "delay_measure",
+            "traffic_lamps"
+          ]
+        }
+      ],
+      "questions": [
+        "Figure 5.8 leaves held register gates and the relation of its F1 preparation to F2 implicit. v011 holds the source across both full phases. Keep figure 5.1/8.5 three-cycle count; no phase skip is selected."
+      ],
+      "ocr_patterns": [
+        "INR"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "ROR",
+      "pattern": "10001RRR",
+      "mask": 248,
+      "value": 136,
+      "length_bytes": 1,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Rotate R(A) one step right, wrapping bit 0 to bit 7.",
+      "group": "shift/rotate",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "shift",
+          "role": "supporting evidence",
+          "comment": "Right-shift/rotation semantics and dedicated mux/link circuits. Only RRL has a full illustrated functional example here."
+        },
+        {
+          "source": "mux",
+          "role": "supporting evidence",
+          "comment": "Right-shift/rotation semantics and dedicated mux/link circuits. Only RRL has a full illustrated functional example here."
+        },
+        {
+          "source": "rrl",
+          "role": "supporting evidence",
+          "comment": "Right-shift/rotation semantics and dedicated mux/link circuits. Only RRL has a full illustrated functional example here."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived datapath realization from documented sequence",
+          "status": "H017 selected in v013",
+          "statement": "Figure 5.12 uses MOP7 without B enable or arithmetic operation: model DI passthrough through ALU. MOP11 shifts; MOP13 wraps ALU bit0, MOP43/57 insert zero, MOP33 uses old Link for bit7 while sampling ALU bit0 into new Link. These are functional control abstractions, not recovered physical wire coding.",
+          "sources": [
+            "rrl",
+            "mux",
+            "mops",
+            "shift"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H018 selected in v013; likely",
+          "statement": "Reuse RRL timing and replace its MOP33 with MOP13 for ROR or MOP43 for SHR. This gives the documented rotation/zero-fill semantics without updating Link or Z. No dedicated complete ROR/SHR MOP table was located.",
+          "sources": [
+            "repertory",
+            "shift",
+            "mux",
+            "rrl",
+            "mops"
+          ]
+        }
+      ],
+      "questions": [
+        "Figure 5.11 labels zero insertion 57 while figure 4.2 uses 43. v013 models their stated function as equivalent, without asserting the physical encodings are identical; selected SHR tables use 43.",
+        "Exact ROR/SHR control timing remains inferred by consistency with the RRL table."
+      ],
+      "ocr_patterns": [
+        "ROR"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "SHR",
+      "pattern": "10010RRR",
+      "mask": 248,
+      "value": 144,
+      "length_bytes": 1,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Shift R(A) one step right, inserting zero at bit 7.",
+      "group": "shift/rotate",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "shift",
+          "role": "supporting evidence",
+          "comment": "Right-shift/rotation semantics and dedicated mux/link circuits. Only RRL has a full illustrated functional example here."
+        },
+        {
+          "source": "mux",
+          "role": "supporting evidence",
+          "comment": "Right-shift/rotation semantics and dedicated mux/link circuits. Only RRL has a full illustrated functional example here."
+        },
+        {
+          "source": "rrl",
+          "role": "supporting evidence",
+          "comment": "Right-shift/rotation semantics and dedicated mux/link circuits. Only RRL has a full illustrated functional example here."
+        },
+        {
+          "source": "key_sort",
+          "role": "application/semantic corroboration",
+          "comment": "Bit-by-bit command classification."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived datapath realization from documented sequence",
+          "status": "H017 selected in v013",
+          "statement": "Figure 5.12 uses MOP7 without B enable or arithmetic operation: model DI passthrough through ALU. MOP11 shifts; MOP13 wraps ALU bit0, MOP43/57 insert zero, MOP33 uses old Link for bit7 while sampling ALU bit0 into new Link. These are functional control abstractions, not recovered physical wire coding.",
+          "sources": [
+            "rrl",
+            "mux",
+            "mops",
+            "shift"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H018 selected in v013; likely",
+          "statement": "Reuse RRL timing and replace its MOP33 with MOP13 for ROR or MOP43 for SHR. This gives the documented rotation/zero-fill semantics without updating Link or Z. No dedicated complete ROR/SHR MOP table was located.",
+          "sources": [
+            "repertory",
+            "shift",
+            "mux",
+            "rrl",
+            "mops"
+          ]
+        }
+      ],
+      "questions": [
+        "Figure 5.11 labels zero insertion 57 while figure 4.2 uses 43. v013 models their stated function as equivalent, without asserting the physical encodings are identical; selected SHR tables use 43.",
+        "Exact ROR/SHR control timing remains inferred by consistency with the RRL table."
+      ],
+      "ocr_patterns": [
+        "SHR"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "RRL",
+      "pattern": "10011RRR",
+      "mask": 248,
+      "value": 152,
+      "length_bytes": 1,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [
+        "L"
+      ],
+      "summary": "Rotate R(A) right through Link.",
+      "group": "shift/rotate",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "shift",
+          "role": "supporting evidence",
+          "comment": "Right-shift/rotation semantics and dedicated mux/link circuits. Only RRL has a full illustrated functional example here."
+        },
+        {
+          "source": "mux",
+          "role": "supporting evidence",
+          "comment": "Right-shift/rotation semantics and dedicated mux/link circuits. Only RRL has a full illustrated functional example here."
+        },
+        {
+          "source": "rrl",
+          "role": "supporting evidence",
+          "comment": "Right-shift/rotation semantics and dedicated mux/link circuits. Only RRL has a full illustrated functional example here."
+        },
+        {
+          "source": "serial_link",
+          "role": "serial transfer corroboration",
+          "comment": "Eight rotations emit source bits LSB first; a full nine-bit register-plus-Link cycle takes nine rotations."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived datapath realization from documented sequence",
+          "status": "H017 selected in v013",
+          "statement": "Figure 5.12 uses MOP7 without B enable or arithmetic operation: model DI passthrough through ALU. MOP11 shifts; MOP13 wraps ALU bit0, MOP43/57 insert zero, MOP33 uses old Link for bit7 while sampling ALU bit0 into new Link. These are functional control abstractions, not recovered physical wire coding.",
+          "sources": [
+            "rrl",
+            "mux",
+            "mops",
+            "shift"
+          ]
+        },
+        {
+          "classification": "established project correction; derived held controls",
+          "status": "E003; selected in v013 and subsequently accepted by project owner",
+          "statement": "Replace printed F1T1 MOP30 with MOP31, matching its functional 2→F and the two-cycle phase-skip mechanism. Follow the table: shift/Link capture F2T2, BR→DI T5, register write T6, phase reset T7. Preserve literal numbered row and endpoint timing limitations.",
+          "sources": [
+            "rrl",
+            "mops",
+            "jmp"
+          ]
+        },
+        {
+          "classification": "cross-instruction consistency finding",
+          "status": "tested in v013; timing confidence unchanged",
+          "statement": "Eight RRLs reproduce the serial-output behavior described on p.107. BT/SEL/REL/RRL programs receive serial bytes through the selected deferred flag timing; RRL/BL programs consume shifted-out Link. These tests check model consistency rather than physical timing.",
+          "sources": [
+            "serial_link",
+            "rrl"
+          ]
+        }
+      ],
+      "questions": [
+        "Figure 5.11 labels zero insertion 57 while figure 4.2 uses 43. v013 models their stated function as equivalent, without asserting the physical encodings are identical; selected SHR tables use 43.",
+        "E003 is now an accepted project correction; physical Link master/slave edges inside T2 remain unspecified by the endpoint model."
+      ],
+      "ocr_patterns": [
+        "RRL",
+        "RAL"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "DCR",
+      "pattern": "10100RRR",
+      "mask": 248,
+      "value": 160,
+      "length_bytes": 1,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [
+        "Z"
+      ],
+      "summary": "Decrement R(A).",
+      "group": "arithmetic/logical",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "inc_dec",
+          "role": "supporting evidence",
+          "comment": "Detailed arithmetic sequences; DCR zero flag needs circuitry omitted from the printed table."
+        },
+        {
+          "source": "shift",
+          "role": "supporting evidence",
+          "comment": "Detailed arithmetic sequences; DCR zero flag needs circuitry omitted from the printed table."
+        },
+        {
+          "source": "delay_loop",
+          "role": "supporting evidence",
+          "comment": "Detailed arithmetic sequences; DCR zero flag needs circuitry omitted from the printed table."
+        },
+        {
+          "source": "traffic2",
+          "role": "supporting evidence",
+          "comment": "Detailed arithmetic sequences; DCR zero flag needs circuitry omitted from the printed table."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "documented arithmetic sequence; derived held controls",
+          "status": "selected in v011",
+          "statement": "Capture R(A) through CPU-driven DB into BR at F1T5. At F2T3 capture (~BR+1)&255 using MOP5+7+10+12, then use MOP5+19+22 at T6 to write its complement, yielding (original-1)&255.",
+          "sources": [
+            "inc_dec",
+            "mops"
+          ]
+        },
+        {
+          "classification": "hypothesis constrained by documented flag semantics",
+          "status": "H014 selected in v011; provisional circuit and timing",
+          "statement": "Represent omitted DCR flag circuitry by adding functional MOP32 at F2T6 with named research control zero_source=\"di\", testing the final complemented result at writeback. This is not a recovered physical MOP assignment. An all-ones test on the intermediate ALU result at T3 is an unselected equivalent final-semantics alternative with different timing.",
+          "sources": [
+            "shift",
+            "inc_dec",
+            "mops"
+          ]
+        },
+        {
+          "classification": "cross-instruction consistency finding",
+          "status": "v012 reassessment; H014 unchanged, timing still provisional",
+          "statement": "ANI polling and XRI keyboard examples corroborate Z from the logical result. Across all 256 bytes, DCR result/Z agree with XRI #FF; INR; XRI #FF reconstruction. This checks final semantics only: T3 intermediate all-ones and T6 final-DI zero predicates are equivalent and cannot distinguish hardware/timing. Retain H014 without promoting its detector location to documented fact.",
+          "sources": [
+            "lamp_zero",
+            "keyboard",
+            "shift",
+            "and"
+          ]
+        },
+        {
+          "classification": "implementation validation",
+          "status": "board integration; shortened fixtures and literal program passed",
+          "statement": "The complete figure8.6 traffic-light program runs through unchanged v018 MOP sequencing: literal bytes completed11,288,752 subdivisions and564,443 CPU events, returning to normal polling. Both T1/T3 demands are covered by explicitly shortened fixtures; observed lamp states, nine real subroutine calls and exact interval arithmetic are checked. This is internal consistency evidence, not hardware validation.",
+          "sources": [
+            "traffic1",
+            "traffic2",
+            "delay_measure",
+            "traffic_lamps"
+          ]
+        }
+      ],
+      "questions": [
+        "Page 77 explicitly says Z-update circuitry/MOPs were omitted. A mechanically literal figure 5.8 replay is incomplete.",
+        "Exact omitted DCR zero-detector circuitry and capture slot remain unknown. v011 selects DI at T6; an intermediate all-ones test at T3 remains an alternative."
+      ],
+      "ocr_patterns": [
+        "DCR"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "XOR",
+      "pattern": "10101RRR",
+      "mask": 248,
+      "value": 168,
+      "length_bytes": 1,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [
+        "Z"
+      ],
+      "summary": "Exclusive-OR R(A) and X; result to X.",
+      "group": "arithmetic/logical",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "and",
+          "role": "supporting evidence",
+          "comment": "Detailed AND example; XOR shares operand/result roles in figure 5.1, not a separate detailed table."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H015 selected in v012; likely",
+          "statement": "Use the AND schedule unchanged except substitute XOR MOP8 for AND MOP9. Same X buffer preparation, R(A) operand, ALU/Z capture F2T3 and result→X F2T4. Figure 5.1 documents the matching operands, result destination, three cycles and Z effect.",
+          "sources": [
+            "repertory",
+            "and",
+            "mops"
+          ]
+        }
+      ],
+      "questions": [
+        "No dedicated XOR MOP table found; operation substitution follows the consistency principle."
+      ],
+      "ocr_patterns": [
+        "XOR"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "AND",
+      "pattern": "10110RRR",
+      "mask": 248,
+      "value": 176,
+      "length_bytes": 1,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [
+        "Z"
+      ],
+      "summary": "AND R(A) and X; result to X.",
+      "group": "arithmetic/logical",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "and",
+          "role": "supporting evidence",
+          "comment": "Detailed AND example; XOR shares operand/result roles in figure 5.1, not a separate detailed table."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "documented functional sequence; derived held controls",
+          "status": "H012 selected in v011",
+          "statement": "Use the established X→DI→DB→BR preparation with DB drive starting F1T1 (functional placement), retaining the sparse numbered-row T0 discrepancy. Hold R(A) on DI through F2T3; MOP3+7+9+12+32 capture AND result and ALU-zero Z together at T3, then BR→X at T4. No execute memory access or extra PC increment.",
+          "sources": [
+            "and",
+            "mops"
+          ]
+        }
+      ],
+      "questions": [
+        "Figure 5.7 functional DI→DB at T1 and numbered row MOP23 at T0 differ; held-level controls are incomplete."
+      ],
+      "ocr_patterns": [
+        "AND"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "EXR",
+      "pattern": "10111RRR",
+      "mask": 248,
+      "value": 184,
+      "length_bytes": 1,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Exchange R(A) and X.",
+      "group": "register/immediate",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "datapath",
+          "role": "model constraint, not an EXR sequence",
+          "comment": "One selected register port and one DI bus in the simplified schematic; no ALU input holding latch is explicitly drawn."
+        },
+        {
+          "source": "and",
+          "role": "transfer precedent only",
+          "comment": "X→DI→DB→BR preparation provides the first saved operand; does not describe exchange or a holding latch."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "architecture hypothesis",
+          "status": "H019 selected in v014 and accepted by project owner as working model; historical latch remains unverified",
+          "statement": "Add an explicitly controlled 8-bit ALU input-A holding latch. Save X in BR during F1. Capture R(A) into held A at F2T0; BR→R(A) at T4; held A→ALU→BR at T5; BR→X at T6. No register-port conflict or self-alias special case. The latch and exact controls/slots are not documented for EXR.",
+          "sources": [
+            "repertory",
+            "datapath",
+            "and"
+          ]
+        },
+        {
+          "classification": "restricted-model consistency finding",
+          "status": "executable investigation, not proof about original hardware",
+          "statement": "Pure transfers through R(A)↔BR and X↔BR cannot swap two distinct register values without another path/holding detail. Three-XOR swap has a self-alias counterexample. These observations motivate exploring an omitted holding path but do not prove the selected latch or exclude every possible ALU algorithm.",
+          "sources": [
+            "datapath",
+            "repertory"
+          ]
+        },
+        {
+          "classification": "project decision",
+          "status": "accepted working architecture hypothesis",
+          "statement": "Project owner accepts H019 as the working EXR architecture because it provides a coherent solution to a missing detail in the simplified book model and no better-supported alternative has been identified. Acceptance does not establish the latch as original CMC8 hardware; retain its explicit provenance and revisit if evidence favors another path.",
+          "sources": []
+        }
+      ],
+      "questions": [
+        "No additional EXR description or dedicated MOP sequence was located in the searched OCR. OCR absence is not proof of book absence.",
+        "Does the real ALU hold an input, or does exchange use another omitted register/bus path? H019 is a provisional architecture extension, not established from figure 4.1.",
+        "Operand preservation and three cycles are tested, but EXR capture/write timing remains unknown."
+      ],
+      "ocr_patterns": [
+        "EXR"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "SCW",
+      "pattern": "00001000",
+      "mask": 255,
+      "value": 8,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": true,
+      "flags": [],
+      "summary": "Send control signals and wait.",
+      "group": "control/handshake",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "control",
+          "role": "supporting evidence",
+          "comment": "STRCS and SCWR are separate from ordinary port reads/writes; SCW adds acknowledgement waits."
+        },
+        {
+          "source": "handshake",
+          "role": "supporting evidence",
+          "comment": "STRCS and SCWR are separate from ordinary port reads/writes; SCW adds acknowledgement waits."
+        },
+        {
+          "source": "scw_intro",
+          "role": "supporting evidence",
+          "comment": "STRCS and SCWR are separate from ordinary port reads/writes; SCW adds acknowledgement waits."
+        },
+        {
+          "source": "scw_sequence",
+          "role": "supporting evidence",
+          "comment": "STRCS and SCWR are separate from ordinary port reads/writes; SCW adds acknowledgement waits."
+        },
+        {
+          "source": "delay_measure",
+          "role": "supporting evidence",
+          "comment": "Application uses SCW as a halt under a chosen external acknowledgement setup; not a generic HALT opcode."
+        },
+        {
+          "source": "scw_timing",
+          "role": "timing corroboration",
+          "comment": "Confirms F1T6 strobe and retained program-memory bus data; SCW example adds two full eight-slot waits."
+        },
+        {
+          "source": "wait_phase",
+          "role": "shared wait architecture precedent",
+          "comment": "Eight-slot F3 wait controller is borrowed from the documented general mechanism; effective traces retain PME and sample SCWR, not an invented new instruction PLA."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "established project correction",
+          "status": "E008; selected in v015 and subsequently accepted by project owner",
+          "statement": "Use PME rise F1T2 and STRCS at F1T6, agreeing with both figures6.17/6.18 and later prose. Retain the conflicting F2T2/F2T6 paragraph separately; the genuine PME fall remains F2T6.",
+          "sources": [
+            "scw_sequence",
+            "scw_timing"
+          ]
+        },
+        {
+          "classification": "documented functional behavior; derived held controls",
+          "status": "selected in v015",
+          "statement": "Advance PC past both bytes, keep AB on the control-byte address, and hold PME from F1T2 through F2T5. External program memory directly drives the control byte at STRCS F1T6; figure 6.14’s latch is an example receiver, not a CPU requirement. No control-byte→BR capture, CPU DB output, EDE or WRITE. STRCS is a named control because no numbered MOP was supplied.",
+          "sources": [
+            "control",
+            "scw_intro",
+            "scw_sequence",
+            "scw_timing"
+          ]
+        },
+        {
+          "classification": "documented wait behavior; derived controller realization",
+          "status": "H021 selected in v015",
+          "statement": "MOP50 at T4 samples raw SCWR: high sets logical WAIT, low clears it. High enters the F3 controller, timing keeps running and samples recur every eight slots. Effective held PME remains asserted; only acknowledgement sampling repeats. A low pulse between samples is not queued. The complete electrical /WAIT pulse shape and MEMR/HALT waits are not modeled.",
+          "sources": [
+            "scw_sequence",
+            "scw_timing",
+            "wait_phase"
+          ]
+        },
+        {
+          "classification": "scope clarification",
+          "status": "project-owner clarification",
+          "statement": "The CPU presents the control byte with STRCS and, for SCW, samples SCWR. External hardware may use the byte in any suitable way. ControlPort models the book’s example latch and an acknowledgement source for experiments; its retained value is peripheral state, not mandatory system hardware or CPU state.",
+          "sources": [
+            "control",
+            "handshake"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H022 selected in v018 when execution control enabled",
+          "statement": "Add a T4 MEMR checkpoint to the external operand/control-byte read where the sparse selected table omits MOP29. Preserve the active access during complete eight-slot waits and resume original T4 actions once. Do not extend this to CPU loopback, write strobes or SCW’s already-fetched control byte in F2.",
+          "sources": [
+            "wait_phase",
+            "wait_circuit",
+            "memory_wait_timing"
+          ]
+        }
+      ],
+      "questions": [
+        "Exact internal STRCS generation and pulse edges within T6 are not specified by the numbered MOP list; v015 uses a named slot-level output and the example peripheral’s latch capture at its modeled rise.",
+        "SCS detailed held controls and the F3 realization of SCWR waits retain the stated consistency-based confidence; generic memory-ready/HALT waits and physical /WAIT pulse shape remain outside this version."
+      ],
+      "ocr_patterns": [
+        "SCW"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "SCS",
+      "pattern": "00001001",
+      "mask": 255,
+      "value": 9,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Send control signals.",
+      "group": "control/handshake",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "control",
+          "role": "supporting evidence",
+          "comment": "STRCS and SCWR are separate from ordinary port reads/writes; SCW adds acknowledgement waits."
+        },
+        {
+          "source": "handshake",
+          "role": "supporting evidence",
+          "comment": "STRCS and SCWR are separate from ordinary port reads/writes; SCW adds acknowledgement waits."
+        },
+        {
+          "source": "scw_intro",
+          "role": "supporting evidence",
+          "comment": "STRCS and SCWR are separate from ordinary port reads/writes; SCW adds acknowledgement waits."
+        },
+        {
+          "source": "scw_sequence",
+          "role": "supporting evidence",
+          "comment": "STRCS and SCWR are separate from ordinary port reads/writes; SCW adds acknowledgement waits."
+        },
+        {
+          "source": "scw_timing",
+          "role": "timing corroboration",
+          "comment": "Confirms F1T6 strobe and retained program-memory bus data; SCW example adds two full eight-slot waits."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "established project correction",
+          "status": "E008; selected in v015 and subsequently accepted by project owner",
+          "statement": "Use PME rise F1T2 and STRCS at F1T6, agreeing with both figures6.17/6.18 and later prose. Retain the conflicting F2T2/F2T6 paragraph separately; the genuine PME fall remains F2T6.",
+          "sources": [
+            "scw_sequence",
+            "scw_timing"
+          ]
+        },
+        {
+          "classification": "documented functional behavior; derived held controls",
+          "status": "selected in v015",
+          "statement": "Advance PC past both bytes, keep AB on the control-byte address, and hold PME from F1T2 through F2T5. External program memory directly drives the control byte at STRCS F1T6; figure 6.14’s latch is an example receiver, not a CPU requirement. No control-byte→BR capture, CPU DB output, EDE or WRITE. STRCS is a named control because no numbered MOP was supplied.",
+          "sources": [
+            "control",
+            "scw_intro",
+            "scw_sequence",
+            "scw_timing"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H020 selected in v015; likely",
+          "statement": "Use the SCW three-cycle control-byte/strobe schedule but omit MOP50. SCS neither samples nor waits for SCWR, including an unknown input. Figure5.1 supplies three cycles and p.98 supplies send-and-continue semantics; no separate complete SCS timing table located.",
+          "sources": [
+            "repertory",
+            "handshake",
+            "scw_sequence",
+            "scw_timing"
+          ]
+        },
+        {
+          "classification": "scope clarification",
+          "status": "project-owner clarification",
+          "statement": "The CPU presents the control byte with STRCS and, for SCW, samples SCWR. External hardware may use the byte in any suitable way. ControlPort models the book’s example latch and an acknowledgement source for experiments; its retained value is peripheral state, not mandatory system hardware or CPU state.",
+          "sources": [
+            "control",
+            "handshake"
+          ]
+        },
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "H022 selected in v018 when execution control enabled",
+          "statement": "Add a T4 MEMR checkpoint to the external operand/control-byte read where the sparse selected table omits MOP29. Preserve the active access during complete eight-slot waits and resume original T4 actions once. Do not extend this to CPU loopback, write strobes or SCW’s already-fetched control byte in F2.",
+          "sources": [
+            "wait_phase",
+            "wait_circuit",
+            "memory_wait_timing"
+          ]
+        }
+      ],
+      "questions": [
+        "Exact internal STRCS generation and pulse edges within T6 are not specified by the numbered MOP list; v015 uses a named slot-level output and the example peripheral’s latch capture at its modeled rise.",
+        "SCS detailed held controls and the F3 realization of SCWR waits retain the stated consistency-based confidence; generic memory-ready/HALT waits and physical /WAIT pulse shape remain outside this version."
+      ],
+      "ocr_patterns": [
+        "SC\\s*S",
+        "SES"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "JSR",
+      "pattern": "00001100",
+      "mask": 255,
+      "value": 12,
+      "length_bytes": 2,
+      "base_cycles": 3,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Jump to a subroutine using the next register as PC.",
+      "group": "unconditional control",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "calls",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "ein_diagram",
+          "role": "supporting evidence",
+          "comment": "Interrupt return context; do not infer RSR alone enables INTE."
+        },
+        {
+          "source": "interrupt_return",
+          "role": "supporting evidence",
+          "comment": "Interrupt return context; do not infer RSR alone enables INTE."
+        },
+        {
+          "source": "test_inputs",
+          "role": "supporting evidence",
+          "comment": "Software call versus interrupt; application call/return examples."
+        },
+        {
+          "source": "delay_measure",
+          "role": "supporting evidence",
+          "comment": "Software call versus interrupt; application call/return examples."
+        },
+        {
+          "source": "traffic1",
+          "role": "supporting evidence",
+          "comment": "Software call versus interrupt; application call/return examples."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived",
+          "status": "working",
+          "statement": "Caller PC must advance past both bytes before N increments. PG is not stacked by the shown mechanism.",
+          "sources": [
+            "calls"
+          ]
+        },
+        {
+          "classification": "implementation validation",
+          "status": "board integration; shortened fixtures and literal program passed",
+          "statement": "The complete figure8.6 traffic-light program runs through unchanged v018 MOP sequencing: literal bytes completed11,288,752 subdivisions and564,443 CPU events, returning to normal polling. Both T1/T3 demands are covered by explicitly shortened fixtures; observed lamp states, nine real subroutine calls and exact interval arithmetic are checked. This is internal consistency evidence, not hardware validation.",
+          "sources": [
+            "traffic1",
+            "traffic2",
+            "delay_measure",
+            "traffic_lamps"
+          ]
+        }
+      ],
+      "questions": [
+        "Global PG is not a per-register stack. Cross-page subroutines need an explicit page convention; do not silently invent PG save/restore."
+      ],
+      "ocr_patterns": [
+        "JSR",
+        "JAR"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "RSR",
+      "pattern": "00001111",
+      "mask": 255,
+      "value": 15,
+      "length_bytes": 1,
+      "base_cycles": 2,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "Return by selecting the previous PC register.",
+      "group": "unconditional control",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "registers",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "jmp",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "calls",
+          "role": "supporting evidence",
+          "comment": "Unconditional control semantics; complete JMP MOPs and functional call/return diagrams. JCR has no dedicated numbered table in the inspected sections."
+        },
+        {
+          "source": "ein_diagram",
+          "role": "supporting evidence",
+          "comment": "Interrupt return context; do not infer RSR alone enables INTE."
+        },
+        {
+          "source": "interrupt_return",
+          "role": "supporting evidence",
+          "comment": "Interrupt return context; do not infer RSR alone enables INTE."
+        },
+        {
+          "source": "delay_loop",
+          "role": "supporting evidence",
+          "comment": "Return from actual wait subroutine; validates that the caller must resume after both JSR bytes."
+        },
+        {
+          "source": "traffic2",
+          "role": "supporting evidence",
+          "comment": "Return from actual wait subroutine; validates that the caller must resume after both JSR bytes."
+        },
+        {
+          "source": "keyboard",
+          "role": "application/semantic corroboration",
+          "comment": "Keyboard read/compare/copy example; inspect marked numeric discrepancies before execution."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "documented",
+          "status": "working",
+          "statement": "Decrement N to resume the previous PC; no standalone INTE enable is shown by figure 5.4.",
+          "sources": [
+            "calls",
+            "ein_diagram"
+          ]
+        },
+        {
+          "classification": "interrupt integration of documented circuit and sequence",
+          "status": "selected in v016; sampled endpoint realization",
+          "statement": "With explicit InterruptInput, enabled active-low INT asynchronously sets INTR; MOP28 samples pending INTR at F0T0. An accepted request selects the eight-slot figure4.20 entry cycle: clear INTE/INTR at T0, increment N T2, write002 to new PC T4. Return PC is the previous instruction’s completed PC; PG and L/Z are unchanged by entry.",
+          "sources": [
+            "ein_text",
+            "interrupt_return",
+            "interrupt_circuit"
+          ]
+        },
+        {
+          "classification": "consistency-supported integration",
+          "status": "tested in v016",
+          "statement": "RSR restores N and the saved PC after interrupt entry without automatically enabling INTE or restoring PG/L/Z. Handler EIN supplies the reenable effect during RSR fetch; held requests cannot be accepted until the following F0T0.",
+          "sources": [
+            "interrupt_return",
+            "ein_diagram",
+            "interrupt_circuit"
+          ]
+        },
+        {
+          "classification": "implementation validation",
+          "status": "board integration; shortened fixtures and literal program passed",
+          "statement": "The complete figure8.6 traffic-light program runs through unchanged v018 MOP sequencing: literal bytes completed11,288,752 subdivisions and564,443 CPU events, returning to normal polling. Both T1/T3 demands are covered by explicitly shortened fixtures; observed lamp states, nine real subroutine calls and exact interval arithmetic are checked. This is internal consistency evidence, not hardware validation.",
+          "sources": [
+            "traffic1",
+            "traffic2",
+            "delay_measure",
+            "traffic_lamps"
+          ]
+        }
+      ],
+      "questions": [
+        "Global PG is not a per-register stack. Cross-page subroutines need an explicit page convention; do not silently invent PG save/restore.",
+        "Figure 4.19 labels the execute cycle F1; figure 5.4/p.71 explicitly switch to F2. Use the explicit phase-skip account while preserving the discrepancy."
+      ],
+      "ocr_patterns": [
+        "RSR"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "NOP",
+      "pattern": "00000000",
+      "mask": 255,
+      "value": 0,
+      "length_bytes": 1,
+      "base_cycles": 1,
+      "variable_wait": false,
+      "flags": [],
+      "summary": "No operation beyond fetch and PC advance.",
+      "group": "single-cycle flag/NOP",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "fetch",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        },
+        {
+          "source": "traffic2",
+          "role": "supporting evidence",
+          "comment": "Octal 000 used for padding reserved data positions."
+        },
+        {
+          "source": "keyboard",
+          "role": "application/semantic corroboration",
+          "comment": "Keyboard read/compare/copy example; inspect marked numeric discrepancies before execution."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Keep BR→AB at F0T6 for consistency with EIN (v006 onward); v005 preserves idle T6 alternative.",
+          "sources": [
+            "ein_diagram"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "NOP"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "EIN",
+      "pattern": "00000011",
+      "mask": 255,
+      "value": 3,
+      "length_bytes": 1,
+      "base_cycles": 1,
+      "variable_wait": false,
+      "flags": [
+        "INTE"
+      ],
+      "summary": "Enable interrupts.",
+      "group": "single-cycle flag/NOP",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "fetch",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        },
+        {
+          "source": "ein_text",
+          "role": "supporting evidence",
+          "comment": "EIN delayed enable is explicit; matching DIN timing is extrapolation."
+        },
+        {
+          "source": "interrupt_return",
+          "role": "supporting evidence",
+          "comment": "EIN delayed enable is explicit; matching DIN timing is extrapolation."
+        },
+        {
+          "source": "ein_diagram",
+          "role": "supporting evidence",
+          "comment": "EIN delayed enable is explicit; matching DIN timing is extrapolation."
+        },
+        {
+          "source": "interrupt_circuit",
+          "role": "supporting evidence",
+          "comment": "EIN delayed enable is explicit; matching DIN timing is extrapolation."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "derived",
+          "status": "working",
+          "statement": "At next F0T2, IR still holds EIN; decode it to assert MOP38. Timing documented, full interrupt handling remains untested.",
+          "sources": [
+            "ein_text",
+            "ein_diagram"
+          ]
+        },
+        {
+          "classification": "interrupt integration of documented circuit and sequence",
+          "status": "selected in v016; sampled endpoint realization",
+          "statement": "With explicit InterruptInput, enabled active-low INT asynchronously sets INTR; MOP28 samples pending INTR at F0T0. An accepted request selects the eight-slot figure4.20 entry cycle: clear INTE/INTR at T0, increment N T2, write002 to new PC T4. Return PC is the previous instruction’s completed PC; PG and L/Z are unchanged by entry.",
+          "sources": [
+            "ein_text",
+            "interrupt_return",
+            "interrupt_circuit"
+          ]
+        },
+        {
+          "classification": "cross-instruction consistency finding",
+          "status": "integrated interrupt tests in v016",
+          "statement": "Held INT plus EIN allows the following instruction to complete before acceptance. Handler EIN followed by RSR restores N before a newly latched request is accepted. This supports the selected IR-retention timing model without proving every physical edge or other flag-instruction timing.",
+          "sources": [
+            "ein_text",
+            "ein_diagram",
+            "interrupt_circuit"
+          ]
+        }
+      ],
+      "questions": [
+        "Entry leaves IR unchanged. Under the selected IR-only decoder, a retained EIN opcode can re-enable during the first handler fetch, e.g. consecutive EINs. Entry suppresses ordinary IR controls, but no hidden post-entry consumption latch is added. Exact silicon precedence remains unverified."
+      ],
+      "ocr_patterns": [
+        "EIN"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "DIN",
+      "pattern": "00000010",
+      "mask": 255,
+      "value": 2,
+      "length_bytes": 1,
+      "base_cycles": 1,
+      "variable_wait": false,
+      "flags": [
+        "INTE"
+      ],
+      "summary": "Disable interrupts.",
+      "group": "single-cycle flag/NOP",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "fetch",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        },
+        {
+          "source": "ein_text",
+          "role": "supporting evidence",
+          "comment": "EIN delayed enable is explicit; matching DIN timing is extrapolation."
+        },
+        {
+          "source": "interrupt_return",
+          "role": "supporting evidence",
+          "comment": "EIN delayed enable is explicit; matching DIN timing is extrapolation."
+        },
+        {
+          "source": "ein_diagram",
+          "role": "supporting evidence",
+          "comment": "EIN delayed enable is explicit; matching DIN timing is extrapolation."
+        },
+        {
+          "source": "interrupt_circuit",
+          "role": "supporting evidence",
+          "comment": "EIN delayed enable is explicit; matching DIN timing is extrapolation."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Likely next-fetch F0T2 flag update, matching EIN; preserve earlier own-T6/T7 update as an unselected alternative.",
+          "sources": [
+            "formats",
+            "ein_diagram"
+          ]
+        },
+        {
+          "classification": "interrupt integration of documented circuit and sequence",
+          "status": "selected in v016; sampled endpoint realization",
+          "statement": "With explicit InterruptInput, enabled active-low INT asynchronously sets INTR; MOP28 samples pending INTR at F0T0. An accepted request selects the eight-slot figure4.20 entry cycle: clear INTE/INTR at T0, increment N T2, write002 to new PC T4. Return PC is the previous instruction’s completed PC; PG and L/Z are unchanged by entry.",
+          "sources": [
+            "ein_text",
+            "interrupt_return",
+            "interrupt_circuit"
+          ]
+        },
+        {
+          "classification": "derived from the detailed latch circuit",
+          "status": "selected in v016; circuit preferred over simplified flowchart",
+          "statement": "DIN clears INTE but not a request already latched in INTR. The detailed circuit clocks INTR directly into INTA, so that pending request can still be accepted after masking. Near-edge races are outside the model.",
+          "sources": [
+            "interrupt_return",
+            "interrupt_circuit"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "DIN"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "SEL",
+      "pattern": "00000101",
+      "mask": 255,
+      "value": 5,
+      "length_bytes": 1,
+      "base_cycles": 1,
+      "variable_wait": false,
+      "flags": [
+        "L"
+      ],
+      "summary": "Set Link.",
+      "group": "single-cycle flag/NOP",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "fetch",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Likely next-fetch F0T2 flag update, matching EIN; preserve earlier own-T6/T7 update as an unselected alternative.",
+          "sources": [
+            "formats",
+            "ein_diagram"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "SEL"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "REL",
+      "pattern": "00000100",
+      "mask": 255,
+      "value": 4,
+      "length_bytes": 1,
+      "base_cycles": 1,
+      "variable_wait": false,
+      "flags": [
+        "L"
+      ],
+      "summary": "Clear Link.",
+      "group": "single-cycle flag/NOP",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "fetch",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Likely next-fetch F0T2 flag update, matching EIN; preserve earlier own-T6/T7 update as an unselected alternative.",
+          "sources": [
+            "formats",
+            "ein_diagram"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "REL"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "SEZ",
+      "pattern": "00000111",
+      "mask": 255,
+      "value": 7,
+      "length_bytes": 1,
+      "base_cycles": 1,
+      "variable_wait": false,
+      "flags": [
+        "Z"
+      ],
+      "summary": "Set Z.",
+      "group": "single-cycle flag/NOP",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "fetch",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Likely next-fetch F0T2 flag update, matching EIN; preserve earlier own-T6/T7 update as an unselected alternative.",
+          "sources": [
+            "formats",
+            "ein_diagram"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "SEZ"
+      ],
+      "semantics_status": "documented summary"
+    },
+    {
+      "mnemonic": "REZ",
+      "pattern": "00000110",
+      "mask": 255,
+      "value": 6,
+      "length_bytes": 1,
+      "base_cycles": 1,
+      "variable_wait": false,
+      "flags": [
+        "Z"
+      ],
+      "summary": "Clear Z.",
+      "group": "single-cycle flag/NOP",
+      "references": [
+        {
+          "source": "repertory",
+          "role": "encoding/semantics/cycles/flags",
+          "comment": "Baseline visually transcribed from figure 5.1."
+        },
+        {
+          "source": "fetch",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        },
+        {
+          "source": "formats",
+          "role": "supporting evidence",
+          "comment": "Single-cycle fetch framework and bit-level flag encoding."
+        }
+      ],
+      "findings": [
+        {
+          "classification": "consistency-supported extrapolation",
+          "status": "working",
+          "statement": "Likely next-fetch F0T2 flag update, matching EIN; preserve earlier own-T6/T7 update as an unselected alternative.",
+          "sources": [
+            "formats",
+            "ein_diagram"
+          ]
+        }
+      ],
+      "questions": [],
+      "ocr_patterns": [
+        "REZ"
+      ],
+      "semantics_status": "documented summary"
+    }
+  ]
+}

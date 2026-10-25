@@ -1,0 +1,343 @@
+{
+  "title": "Traffic-light program, figure8.6",
+  "source_pages": [
+    146,
+    147
+  ],
+  "images": [
+    "bookpages/Page_152.jpg",
+    "bookpages/Page_153.jpg"
+  ],
+  "base": 8,
+  "authority": "Visually checked machine-code column, preserving printed bytes; not OCR output.",
+  "subdivision_nanoseconds": 8000,
+  "clock_source_page": 144,
+  "cells": [
+    {
+      "address": "000",
+      "byte": "103"
+    },
+    {
+      "address": "001",
+      "byte": "066"
+    },
+    {
+      "address": "002",
+      "byte": "033"
+    },
+    {
+      "address": "003",
+      "byte": "004"
+    },
+    {
+      "address": "004",
+      "byte": "311"
+    },
+    {
+      "address": "005",
+      "byte": "012"
+    },
+    {
+      "address": "006",
+      "byte": "313"
+    },
+    {
+      "address": "007",
+      "byte": "012"
+    },
+    {
+      "address": "010",
+      "byte": "360"
+    },
+    {
+      "address": "011",
+      "byte": "004"
+    },
+    {
+      "address": "012",
+      "byte": "103"
+    },
+    {
+      "address": "013",
+      "byte": "067"
+    },
+    {
+      "address": "014",
+      "byte": "033"
+    },
+    {
+      "address": "015",
+      "byte": "004"
+    },
+    {
+      "address": "016",
+      "byte": "014"
+    },
+    {
+      "address": "017",
+      "byte": "100"
+    },
+    {
+      "address": "020",
+      "byte": "103"
+    },
+    {
+      "address": "021",
+      "byte": "070"
+    },
+    {
+      "address": "022",
+      "byte": "033"
+    },
+    {
+      "address": "023",
+      "byte": "004"
+    },
+    {
+      "address": "024",
+      "byte": "014"
+    },
+    {
+      "address": "025",
+      "byte": "100"
+    },
+    {
+      "address": "026",
+      "byte": "014"
+    },
+    {
+      "address": "027",
+      "byte": "100"
+    },
+    {
+      "address": "030",
+      "byte": "103"
+    },
+    {
+      "address": "031",
+      "byte": "071"
+    },
+    {
+      "address": "032",
+      "byte": "033"
+    },
+    {
+      "address": "033",
+      "byte": "004"
+    },
+    {
+      "address": "034",
+      "byte": "014"
+    },
+    {
+      "address": "035",
+      "byte": "100"
+    },
+    {
+      "address": "036",
+      "byte": "014"
+    },
+    {
+      "address": "037",
+      "byte": "100"
+    },
+    {
+      "address": "040",
+      "byte": "014"
+    },
+    {
+      "address": "041",
+      "byte": "100"
+    },
+    {
+      "address": "042",
+      "byte": "103"
+    },
+    {
+      "address": "043",
+      "byte": "072"
+    },
+    {
+      "address": "044",
+      "byte": "033"
+    },
+    {
+      "address": "045",
+      "byte": "004"
+    },
+    {
+      "address": "046",
+      "byte": "014"
+    },
+    {
+      "address": "047",
+      "byte": "100"
+    },
+    {
+      "address": "050",
+      "byte": "014"
+    },
+    {
+      "address": "051",
+      "byte": "100"
+    },
+    {
+      "address": "052",
+      "byte": "103"
+    },
+    {
+      "address": "053",
+      "byte": "070"
+    },
+    {
+      "address": "054",
+      "byte": "033"
+    },
+    {
+      "address": "055",
+      "byte": "004"
+    },
+    {
+      "address": "056",
+      "byte": "014"
+    },
+    {
+      "address": "057",
+      "byte": "100"
+    },
+    {
+      "address": "060",
+      "byte": "103"
+    },
+    {
+      "address": "061",
+      "byte": "066"
+    },
+    {
+      "address": "062",
+      "byte": "033"
+    },
+    {
+      "address": "063",
+      "byte": "004"
+    },
+    {
+      "address": "064",
+      "byte": "360"
+    },
+    {
+      "address": "065",
+      "byte": "004"
+    },
+    {
+      "address": "066",
+      "byte": "044"
+    },
+    {
+      "address": "067",
+      "byte": "046"
+    },
+    {
+      "address": "070",
+      "byte": "041"
+    },
+    {
+      "address": "071",
+      "byte": "201"
+    },
+    {
+      "address": "072",
+      "byte": "301"
+    },
+    {
+      "address": "073",
+      "byte": "000"
+    },
+    {
+      "address": "074",
+      "byte": "000"
+    },
+    {
+      "address": "075",
+      "byte": "000"
+    },
+    {
+      "address": "076",
+      "byte": "000"
+    },
+    {
+      "address": "077",
+      "byte": "000"
+    },
+    {
+      "address": "100",
+      "byte": "043"
+    },
+    {
+      "address": "101",
+      "byte": "000"
+    },
+    {
+      "address": "102",
+      "byte": "044"
+    },
+    {
+      "address": "103",
+      "byte": "172"
+    },
+    {
+      "address": "104",
+      "byte": "203"
+    },
+    {
+      "address": "105",
+      "byte": "340"
+    },
+    {
+      "address": "106",
+      "byte": "104"
+    },
+    {
+      "address": "107",
+      "byte": "244"
+    },
+    {
+      "address": "110",
+      "byte": "340"
+    },
+    {
+      "address": "111",
+      "byte": "104"
+    },
+    {
+      "address": "112",
+      "byte": "017"
+    }
+  ],
+  "light_codes": [
+    "044",
+    "046",
+    "041",
+    "201",
+    "301"
+  ],
+  "notes": [
+    {
+      "location": "p.146, comment beside TEST branches",
+      "printed": "T1 eller T2 = 1?",
+      "interpretation": "BT1,1 and BT1,3 and pp.140/143 describe T1 or T3. Preserve machine bytes."
+    },
+    {
+      "location": "p.147, address103 octal",
+      "printed": "#172 (dec 76)",
+      "interpretation": "The byte172 octal is decimal122. Page144 explicitly calculates122 iterations; preserve172."
+    }
+  ],
+  "labels": {
+    "HIT": "004",
+    "FRAM": "012",
+    "DATA": "066",
+    "WAIT10": "100",
+    "HOPP": "104"
+  }
+}

@@ -1,0 +1,809 @@
+{
+  "schema": 1,
+  "status": "Research hypothesis, not a verified chip pinout",
+  "orientation": "Top view, notch left; owner correlates cover/page35 die orientation with this package orientation. Standard DIP numbering assumed: lower row 1→20 left-to-right, upper row 40→21 left-to-right.",
+  "sources": {
+    "die": "bookpages/Page_041.jpg",
+    "cover": "bookpages/Front.jpg",
+    "bond_photo": "bookpages/Page_040.jpg",
+    "package_colour": "TEKS0043130.jpg",
+    "package_bw": "TEKS0043130 (1).jpg",
+    "connector": "bookpages/Page_120.jpg"
+  },
+  "coordinate_note": "Approximate pad centers in the full 1851×2808 Page_041.jpg scan. P00 starts at upper-left corner; indices increase clockwise. IDs are research labels, not chip pin numbers.",
+  "assumptions": [
+    "The supplied package contains the same CMC8 die/layout revision as the book.",
+    "The die orientation supplied by the project owner is accepted; no mirror transform is applied.",
+    "One external terminal corresponds to each of the 40 perimeter pads.",
+    "Perimeter pad order is preserved through bond fingers and hidden carrier routing to the conventional DIP numbering. Noncrossing visible bonds alone do not prove this.",
+    "Connector a1–a31 preserves CPU numbering; a32 is board INHIBIT rather than CPU STRCS. Remaining CPU pins follow the reversed control order visible on connector b.",
+    "D0–D2 are the three lower-right data-driver pads; LINK is the unlabeled pad between AB0 and VSS.",
+    "Board CL IN/CL UT exposes one CPU clock connection through board circuitry; pin33 is proposed as CL, not assigned a board-level direction."
+  ],
+  "pads": [
+    {
+      "id": "P00",
+      "clockwise_index": 0,
+      "page35_xy": [
+        343,
+        1050
+      ],
+      "die_label": null,
+      "candidate_signal": "WRITE",
+      "candidate_package_pin": 34,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "b9",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P01",
+      "clockwise_index": 1,
+      "page35_xy": [
+        523,
+        1050
+      ],
+      "die_label": null,
+      "candidate_signal": "CL",
+      "candidate_package_pin": 33,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "b10/b11 (board clock direction unresolved)",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P02",
+      "clockwise_index": 2,
+      "page35_xy": [
+        682,
+        1050
+      ],
+      "die_label": null,
+      "candidate_signal": "STRCS",
+      "candidate_package_pin": 32,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "b32",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P03",
+      "clockwise_index": 3,
+      "page35_xy": [
+        732,
+        1050
+      ],
+      "die_label": null,
+      "candidate_signal": "RESET",
+      "candidate_package_pin": 31,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a31",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P04",
+      "clockwise_index": 4,
+      "page35_xy": [
+        1066,
+        1050
+      ],
+      "die_label": "AB7",
+      "candidate_signal": "AB7",
+      "candidate_package_pin": 30,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a30",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P05",
+      "clockwise_index": 5,
+      "page35_xy": [
+        1228,
+        1050
+      ],
+      "die_label": "AB6",
+      "candidate_signal": "AB6",
+      "candidate_package_pin": 29,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a29",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P06",
+      "clockwise_index": 6,
+      "page35_xy": [
+        1384,
+        1050
+      ],
+      "die_label": "AB5",
+      "candidate_signal": "AB5",
+      "candidate_package_pin": 28,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a28",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P07",
+      "clockwise_index": 7,
+      "page35_xy": [
+        1551,
+        1050
+      ],
+      "die_label": "AB4",
+      "candidate_signal": "AB4",
+      "candidate_package_pin": 27,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a27",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P08",
+      "clockwise_index": 8,
+      "page35_xy": [
+        1612,
+        1050
+      ],
+      "die_label": "AB3",
+      "candidate_signal": "AB3",
+      "candidate_package_pin": 26,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a26",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P09",
+      "clockwise_index": 9,
+      "page35_xy": [
+        1640,
+        1290
+      ],
+      "die_label": "AB2",
+      "candidate_signal": "AB2",
+      "candidate_package_pin": 25,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a25",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P10",
+      "clockwise_index": 10,
+      "page35_xy": [
+        1640,
+        1446
+      ],
+      "die_label": "AB1",
+      "candidate_signal": "AB1",
+      "candidate_package_pin": 24,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a24",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P11",
+      "clockwise_index": 11,
+      "page35_xy": [
+        1640,
+        1496
+      ],
+      "die_label": "AB0",
+      "candidate_signal": "AB0",
+      "candidate_package_pin": 23,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a23",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P12",
+      "clockwise_index": 12,
+      "page35_xy": [
+        1640,
+        1628
+      ],
+      "die_label": null,
+      "candidate_signal": "LOUT",
+      "candidate_package_pin": 22,
+      "evidence_basis": "connector_gap_between_AB0_and_VSS",
+      "connector_reference": "a22",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P13",
+      "clockwise_index": 13,
+      "page35_xy": [
+        1640,
+        1677
+      ],
+      "die_label": "VSS",
+      "candidate_signal": "VSS",
+      "candidate_package_pin": 21,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a21",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P14",
+      "clockwise_index": 14,
+      "page35_xy": [
+        1640,
+        1757
+      ],
+      "die_label": "DB7",
+      "candidate_signal": "DB7",
+      "candidate_package_pin": 20,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a20",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P15",
+      "clockwise_index": 15,
+      "page35_xy": [
+        1640,
+        1906
+      ],
+      "die_label": "DB6",
+      "candidate_signal": "DB6",
+      "candidate_package_pin": 19,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a19",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P16",
+      "clockwise_index": 16,
+      "page35_xy": [
+        1640,
+        2056
+      ],
+      "die_label": "DB5",
+      "candidate_signal": "DB5",
+      "candidate_package_pin": 18,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a18",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P17",
+      "clockwise_index": 17,
+      "page35_xy": [
+        1640,
+        2201
+      ],
+      "die_label": "DB4",
+      "candidate_signal": "DB4",
+      "candidate_package_pin": 17,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a17",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P18",
+      "clockwise_index": 18,
+      "page35_xy": [
+        1640,
+        2338
+      ],
+      "die_label": "DB3",
+      "candidate_signal": "DB3",
+      "candidate_package_pin": 16,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a16",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P19",
+      "clockwise_index": 19,
+      "page35_xy": [
+        1483,
+        2375
+      ],
+      "die_label": null,
+      "candidate_signal": "DB2",
+      "candidate_package_pin": 15,
+      "evidence_basis": "data_driver_pattern_and_connector_order",
+      "connector_reference": "a15",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P20",
+      "clockwise_index": 20,
+      "page35_xy": [
+        1341,
+        2375
+      ],
+      "die_label": null,
+      "candidate_signal": "DB1",
+      "candidate_package_pin": 14,
+      "evidence_basis": "data_driver_pattern_and_connector_order",
+      "connector_reference": "a14",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P21",
+      "clockwise_index": 21,
+      "page35_xy": [
+        1218,
+        2375
+      ],
+      "die_label": null,
+      "candidate_signal": "DB0",
+      "candidate_package_pin": 13,
+      "evidence_basis": "data_driver_pattern_and_connector_order",
+      "connector_reference": "a13",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P22",
+      "clockwise_index": 22,
+      "page35_xy": [
+        930,
+        2375
+      ],
+      "die_label": null,
+      "candidate_signal": "DBDIR",
+      "candidate_package_pin": 12,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a12",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P23",
+      "clockwise_index": 23,
+      "page35_xy": [
+        871,
+        2375
+      ],
+      "die_label": null,
+      "candidate_signal": "PG0",
+      "candidate_package_pin": 11,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a11",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P24",
+      "clockwise_index": 24,
+      "page35_xy": [
+        773,
+        2375
+      ],
+      "die_label": null,
+      "candidate_signal": "PG1",
+      "candidate_package_pin": 10,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a10",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P25",
+      "clockwise_index": 25,
+      "page35_xy": [
+        700,
+        2375
+      ],
+      "die_label": null,
+      "candidate_signal": "INT",
+      "candidate_package_pin": 9,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a9",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P26",
+      "clockwise_index": 26,
+      "page35_xy": [
+        641,
+        2375
+      ],
+      "die_label": null,
+      "candidate_signal": "INTA",
+      "candidate_package_pin": 8,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a8",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P27",
+      "clockwise_index": 27,
+      "page35_xy": [
+        525,
+        2375
+      ],
+      "die_label": null,
+      "candidate_signal": "HALT",
+      "candidate_package_pin": 7,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a7",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P28",
+      "clockwise_index": 28,
+      "page35_xy": [
+        448,
+        2375
+      ],
+      "die_label": null,
+      "candidate_signal": "SS",
+      "candidate_package_pin": 6,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a6",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P29",
+      "clockwise_index": 29,
+      "page35_xy": [
+        280,
+        2372
+      ],
+      "die_label": null,
+      "candidate_signal": "PME",
+      "candidate_package_pin": 5,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a5",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P30",
+      "clockwise_index": 30,
+      "page35_xy": [
+        280,
+        2319
+      ],
+      "die_label": null,
+      "candidate_signal": "MEMR",
+      "candidate_package_pin": 4,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a4",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P31",
+      "clockwise_index": 31,
+      "page35_xy": [
+        280,
+        2268
+      ],
+      "die_label": null,
+      "candidate_signal": "EDE",
+      "candidate_package_pin": 3,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a3",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P32",
+      "clockwise_index": 32,
+      "page35_xy": [
+        280,
+        1977
+      ],
+      "die_label": null,
+      "candidate_signal": "SME",
+      "candidate_package_pin": 2,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "a2",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P33",
+      "clockwise_index": 33,
+      "page35_xy": [
+        280,
+        1925
+      ],
+      "die_label": "VDD",
+      "candidate_signal": "VDD",
+      "candidate_package_pin": 1,
+      "evidence_basis": "die_label_and_connector_order",
+      "connector_reference": "a1",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P34",
+      "clockwise_index": 34,
+      "page35_xy": [
+        280,
+        1877
+      ],
+      "die_label": null,
+      "candidate_signal": "WAIT",
+      "candidate_package_pin": 40,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "b3",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P35",
+      "clockwise_index": 35,
+      "page35_xy": [
+        280,
+        1815
+      ],
+      "die_label": null,
+      "candidate_signal": "TEST0",
+      "candidate_package_pin": 39,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "b4",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P36",
+      "clockwise_index": 36,
+      "page35_xy": [
+        280,
+        1346
+      ],
+      "die_label": null,
+      "candidate_signal": "TEST1",
+      "candidate_package_pin": 38,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "b5",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P37",
+      "clockwise_index": 37,
+      "page35_xy": [
+        280,
+        1269
+      ],
+      "die_label": null,
+      "candidate_signal": "TEST2",
+      "candidate_package_pin": 37,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "b6",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P38",
+      "clockwise_index": 38,
+      "page35_xy": [
+        280,
+        1189
+      ],
+      "die_label": null,
+      "candidate_signal": "TEST3",
+      "candidate_package_pin": 36,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "b7",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    },
+    {
+      "id": "P39",
+      "clockwise_index": 39,
+      "page35_xy": [
+        280,
+        1107
+      ],
+      "die_label": null,
+      "candidate_signal": "SCWR",
+      "candidate_package_pin": 35,
+      "evidence_basis": "connector_order_only",
+      "connector_reference": "b8",
+      "package_assignment_status": "tentative; depends on connector/package ordering hypothesis"
+    }
+  ],
+  "connector_rows": [
+    {
+      "row": 1,
+      "a": "VDD",
+      "b": "D+"
+    },
+    {
+      "row": 2,
+      "a": "SME",
+      "b": "SLÄCK"
+    },
+    {
+      "row": 3,
+      "a": "EDE",
+      "b": "WAIT"
+    },
+    {
+      "row": 4,
+      "a": "MEMR",
+      "b": "TEST0"
+    },
+    {
+      "row": 5,
+      "a": "PME",
+      "b": "TEST1"
+    },
+    {
+      "row": 6,
+      "a": "SS",
+      "b": "TEST2"
+    },
+    {
+      "row": 7,
+      "a": "HALT",
+      "b": "TEST3"
+    },
+    {
+      "row": 8,
+      "a": "INTA",
+      "b": "SCWR"
+    },
+    {
+      "row": 9,
+      "a": "INT",
+      "b": "WRITE"
+    },
+    {
+      "row": 10,
+      "a": "PG1",
+      "b": "CL UT"
+    },
+    {
+      "row": 11,
+      "a": "PG0",
+      "b": "CL IN"
+    },
+    {
+      "row": 12,
+      "a": "DBDIR",
+      "b": null
+    },
+    {
+      "row": 13,
+      "a": "DB0",
+      "b": null
+    },
+    {
+      "row": 14,
+      "a": "DB1",
+      "b": null
+    },
+    {
+      "row": 15,
+      "a": "DB2",
+      "b": null
+    },
+    {
+      "row": 16,
+      "a": "DB3",
+      "b": null
+    },
+    {
+      "row": 17,
+      "a": "DB4",
+      "b": null
+    },
+    {
+      "row": 18,
+      "a": "DB5",
+      "b": null
+    },
+    {
+      "row": 19,
+      "a": "DB6",
+      "b": null
+    },
+    {
+      "row": 20,
+      "a": "DB7",
+      "b": null
+    },
+    {
+      "row": 21,
+      "a": "VSS",
+      "b": null
+    },
+    {
+      "row": 22,
+      "a": "LOUT",
+      "b": null
+    },
+    {
+      "row": 23,
+      "a": "AB0",
+      "b": null
+    },
+    {
+      "row": 24,
+      "a": "AB1",
+      "b": null
+    },
+    {
+      "row": 25,
+      "a": "AB2",
+      "b": null
+    },
+    {
+      "row": 26,
+      "a": "AB3",
+      "b": null
+    },
+    {
+      "row": 27,
+      "a": "AB4",
+      "b": null
+    },
+    {
+      "row": 28,
+      "a": "AB5",
+      "b": null
+    },
+    {
+      "row": 29,
+      "a": "AB6",
+      "b": null
+    },
+    {
+      "row": 30,
+      "a": "AB7",
+      "b": null
+    },
+    {
+      "row": 31,
+      "a": "RESET",
+      "b": null
+    },
+    {
+      "row": 32,
+      "a": "INHIBIT",
+      "b": "STRCS"
+    }
+  ],
+  "hypothesis_id": "PIN001",
+  "relative_checks": [
+    {
+      "observation": "VDD to lower-right DB0 candidate has exactly eleven intervening pads",
+      "pad_ids": [
+        "P33",
+        "P21"
+      ],
+      "intervening_pads": 11,
+      "connector_positions": [
+        1,
+        13
+      ],
+      "status": "visual pad count; DB0 identification from repeating data-driver pattern"
+    },
+    {
+      "observation": "VDD and VSS are twenty perimeter positions apart",
+      "pad_ids": [
+        "P33",
+        "P13"
+      ],
+      "perimeter_distance": 20,
+      "connector_positions": [
+        1,
+        21
+      ],
+      "status": "counted against labeled supply pads"
+    },
+    {
+      "observation": "Reverse die order DB0..DB7, VSS, unlabeled candidate LOUT, AB0..AB7 matches connector a13..a30",
+      "status": "conditional connector-order support; DB0..DB2 and LOUT remain inferred"
+    }
+  ],
+  "package_bond_observations": [
+    {
+      "source": "TEKS0043130.jpg",
+      "observer": "project owner",
+      "observation": "Seventh die bond wire counted from the bottom on the right side (third in the separated upper-half group) reaches the sixth carrier finger counted from the top. The corresponding die pad in figure3.5 is VDD.",
+      "interpretation": "With the colour photo notch right and a symmetric split of carrier fingers into the two 20-pin banks, this finger is the first of the upper/first DIP bank, hence candidate pin1.",
+      "assistant_review": "Enlarged right-side crop is consistent with a mid-side wire landing. All fine endpoints and buried external-lead routes are not independently resolved. Corner-finger counting must be kept explicit when comparing ordinals.",
+      "status": "Owner-traced bond supports VDD=1 independently of connector ordering; external mapping still uses the symmetric-carrier assumption."
+    },
+    {
+      "source": "TEKS0043130.jpg",
+      "observer": "project owner",
+      "observation": "Sixth carrier finger counted from the bottom on the left side (including the corner in the count) reaches the upper of a close pair of die pads. A second close pair follows after a short gap.",
+      "interpretation": "For the notch-right colour view and symmetric bank split, the finger is candidate pin21. The first pair matches VSS and the unlabeled candidate LOUT pad after rotating figure3.5 by 180 degrees; the following pair matches AB0/AB1.",
+      "assistant_review": "The enlarged left-side crop shows the relevant bonds/pad grouping. Fine endpoints are not all independently resolved. The page35 pattern has VSS/neighbor and AB0/AB1 close pairs in the stated rotated orientation.",
+      "status": "Owner-traced bond supports VSS=21 independently of connector ordering, under the existing orientation/carrier assumptions."
+    }
+  ],
+  "package_condition_observations": [
+    {
+      "source": "TEKS0043130.jpg",
+      "observer": "project owner; visually reviewed in enlarged crop",
+      "candidate_package_pin": 20,
+      "candidate_signal": "DB7",
+      "observation": "A wire associated with the finger adjacent to candidate VSS21 appears loose, curving away rather than reaching its die bond.",
+      "status": "Apparent detached/displaced bond; no electrical continuity measurement.",
+      "inference": "If detached as it appears, the sample would have an open DB7 connection under PIN001. This does not by itself establish whether the die remains functional or is repairable."
+    }
+  ]
+}

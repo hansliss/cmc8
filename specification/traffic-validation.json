@@ -1,0 +1,65 @@
+{
+  "model": "v018",
+  "program": "figure8.6",
+  "literal_book_bytes": true,
+  "delay_count_decimal": 122,
+  "delay_routine_cycles": 156776,
+  "subdivisions": 11288752,
+  "elapsed_ns": 90310016000,
+  "events": 564443,
+  "port_writes": [
+    {
+      "subdivision": 53,
+      "time_ns": 424000,
+      "address": 4,
+      "value": 36,
+      "name": "traffic lamps ED4"
+    },
+    {
+      "subdivision": 261,
+      "time_ns": 2088000,
+      "address": 4,
+      "value": 38,
+      "name": "traffic lamps ED4"
+    },
+    {
+      "subdivision": 1254541,
+      "time_ns": 10036328000,
+      "address": 4,
+      "value": 33,
+      "name": "traffic lamps ED4"
+    },
+    {
+      "subdivision": 3763053,
+      "time_ns": 30104424000,
+      "address": 4,
+      "value": 129,
+      "name": "traffic lamps ED4"
+    },
+    {
+      "subdivision": 7525797,
+      "time_ns": 60206376000,
+      "address": 4,
+      "value": 193,
+      "name": "traffic lamps ED4"
+    },
+    {
+      "subdivision": 10034309,
+      "time_ns": 80274472000,
+      "address": 4,
+      "value": 33,
+      "name": "traffic lamps ED4"
+    },
+    {
+      "subdivision": 11288589,
+      "time_ns": 90308712000,
+      "address": 4,
+      "value": 36,
+      "name": "traffic lamps ED4"
+    }
+  ],
+  "final_n": 0,
+  "final_pc_octal": "004",
+  "final_ed4_octal": "044",
+  "trace_tail_slots": 64
+}

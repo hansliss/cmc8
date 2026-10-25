@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+.venv/
+Mikroprocessor_i_CMOS_ocr.pdf
+TEKS0043130_1.jpg
+TEKS0043130_2.jpg
+bookpages
+*~
+*#
+README_org.md
+CMC8_Emulation_Feasibility.md
+codex_resume.sh
+
+/assembler/cmc8asm
+/assembler/cmc8asm.exe
+
+/assembler/build/
+
+# Full-book OCR is a local research input, like the PDF and page scans.
+/specification/ocr-pages.json
+
+# Local CMake build directories and editor/OS temporary files.
+/build/
+/cmake-build-*/
+/assembler/cmake-build-*/
+*.swp
+*.swo
+.DS_Store

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="680" viewBox="0 0 1340 680">
+<rect width="1340" height="680" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#172b40}.pin{font-size:15px}.note{font-size:17px}</style>
+<text x="40" y="40" font-size="26">CMC8 — tentative package pinout, hypothesis PIN001</text>
+<text x="40" y="72" class="note">Top view; notch left. Every external pin assignment remains conditional.</text>
+<rect x="72" y="230" width="1188" height="155" rx="12" fill="#eef3f7" stroke="#43576b" stroke-width="2"/>
+<path d="M72 277 A30 30 0 0 1 72 337" fill="white" stroke="#43576b" stroke-width="2"/>
+<circle cx="98" cy="367" r="5" fill="#43576b"/>
+<text x="520" y="300" font-size="24">ASEA-HAFO CMC8</text>
+<text x="435" y="335" class="note">40-pad order + figure 7.6 connector hypothesis</text>
+<path d="M115 385 V414" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(115,442) rotate(55)">1: VDD</text>
+<path d="M173 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(173,442) rotate(55)">2: SME</text>
+<path d="M231 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(231,442) rotate(55)">3: EDE</text>
+<path d="M289 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(289,442) rotate(55)">4: MEMR</text>
+<path d="M347 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(347,442) rotate(55)">5: PME</text>
+<path d="M405 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(405,442) rotate(55)">6: SS</text>
+<path d="M463 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(463,442) rotate(55)">7: HALT</text>
+<path d="M521 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(521,442) rotate(55)">8: INTA</text>
+<path d="M579 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(579,442) rotate(55)">9: INT</text>
+<path d="M637 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(637,442) rotate(55)">10: PG1</text>
+<path d="M695 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(695,442) rotate(55)">11: PG0</text>
+<path d="M753 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(753,442) rotate(55)">12: DBDIR</text>
+<path d="M811 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(811,442) rotate(55)">13: DB0</text>
+<path d="M869 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(869,442) rotate(55)">14: DB1</text>
+<path d="M927 385 V414" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(927,442) rotate(55)">15: DB2</text>
+<path d="M985 385 V414" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(985,442) rotate(55)">16: DB3</text>
+<path d="M1043 385 V414" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(1043,442) rotate(55)">17: DB4</text>
+<path d="M1101 385 V414" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(1101,442) rotate(55)">18: DB5</text>
+<path d="M1159 385 V414" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(1159,442) rotate(55)">19: DB6</text>
+<path d="M1217 385 V414" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(1217,442) rotate(55)">20: DB7</text>
+<path d="M1217 230 V201" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(1217,177) rotate(-55)">21: VSS</text>
+<path d="M1159 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(1159,177) rotate(-55)">22: LOUT</text>
+<path d="M1101 230 V201" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(1101,177) rotate(-55)">23: AB0</text>
+<path d="M1043 230 V201" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(1043,177) rotate(-55)">24: AB1</text>
+<path d="M985 230 V201" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(985,177) rotate(-55)">25: AB2</text>
+<path d="M927 230 V201" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(927,177) rotate(-55)">26: AB3</text>
+<path d="M869 230 V201" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(869,177) rotate(-55)">27: AB4</text>
+<path d="M811 230 V201" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(811,177) rotate(-55)">28: AB5</text>
+<path d="M753 230 V201" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(753,177) rotate(-55)">29: AB6</text>
+<path d="M695 230 V201" stroke="#196d55" stroke-width="8"/>
+<text class="pin" transform="translate(695,177) rotate(-55)">30: AB7</text>
+<path d="M637 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(637,177) rotate(-55)">31: RESET</text>
+<path d="M579 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(579,177) rotate(-55)">32: STRCS</text>
+<path d="M521 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(521,177) rotate(-55)">33: CL</text>
+<path d="M463 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(463,177) rotate(-55)">34: WRITE</text>
+<path d="M405 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(405,177) rotate(-55)">35: SCWR</text>
+<path d="M347 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(347,177) rotate(-55)">36: TEST3</text>
+<path d="M289 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(289,177) rotate(-55)">37: TEST2</text>
+<path d="M231 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(231,177) rotate(-55)">38: TEST1</text>
+<path d="M173 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(173,177) rotate(-55)">39: TEST0</text>
+<path d="M115 230 V201" stroke="#aa6300" stroke-width="8"/>
+<text class="pin" transform="translate(115,177) rotate(-55)">40: WAIT</text>
+<text x="40" y="577" class="note" style="fill:#196d55">Green terminal: signal explicitly labeled on the die overview.</text>
+<text x="40" y="607" class="note" style="fill:#aa6300">Amber terminal: signal inferred from pad pattern and/or connector ordering.</text>
+<text x="40" y="637" class="note">Colors describe die-signal evidence, not confidence in an external pin number. Pin numbers are proposed.</text>
+</svg>

@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CMC8 traffic lights</title>
+<style>
+body{margin:0;background:#101b25;color:#e6edf3;font:16px system-ui}main{max-width:1050px;margin:auto;padding:24px}h1{font-size:28px;margin-bottom:6px}p{color:#b8c9d7;line-height:1.5}canvas{width:100%;background:#20392e;border-radius:12px}nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin:18px 0}button,.file{background:#28495f;color:white;border:1px solid #68889e;border-radius:5px;padding:9px;cursor:pointer}input[type=file]{max-width:230px}output{font-variant-numeric:tabular-nums}#status{min-height:1.5em}a{color:#8fcef4}
+</style>
+<main><h1>CMC8 traffic lights</h1><p>The original 75-byte program controls the signals. Side-road cars arrive every 75 simulated seconds on average across both approaches and activate the sensors. One simulated second follows the original Midahs clock.</p>
+<nav><button id="pause">Pause</button><button id="reset">Restart</button><button id="default">Restore book program</button><label>Load Intel HEX <input id="file" type="file" accept=".hex,.ihx"></label><label>Speed <select id="speed"><option value="1">1×</option><option value="3" selected>3×</option><option value="10">10×</option></select></label></nav>
+<canvas id="scene" width="1000" height="640" aria-label="Animated main road and side road with CMC8 controlled traffic signals"></canvas>
+<p><output id="status" role="status"></output></p><p>Instruction-level demo: supports the traffic program’s instruction families, not the full CPU or interrupt system. Replacement programs use the same ED4 lamps and T1/T3 sensors. Yellow holds arriving cars; cars already in the junction continue through.</p></main>
+<script type="module" src="app.mjs"></script></html>

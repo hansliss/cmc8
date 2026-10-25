@@ -1,0 +1,759 @@
+{
+  "authority": "Normalized source transcriptions, not directly executable held-level microcode",
+  "sources_catalogue": "specification/instructions.json",
+  "records": [
+    {
+      "id": "fig4.11",
+      "instructions": [
+        "LRS"
+      ],
+      "source": "lrs_function",
+      "title": "LRS, figure 4.11",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F0": [
+          "R(N)→DI",
+          "DI→AB",
+          "PME rises",
+          "DI+1→BR",
+          "BR→R(N)",
+          "DB→IR",
+          "BR→AB; PME falls",
+          ""
+        ],
+        "F1": [
+          "R(N)→DI",
+          "",
+          "PME rises",
+          "DI+1→BR",
+          "BR→R(N)",
+          "DB→BR",
+          "BR→AB; PME falls",
+          ""
+        ],
+        "F2": [
+          "",
+          "",
+          "SME rises",
+          "",
+          "",
+          "DB→BR",
+          "BR→R(A); SME falls",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {},
+      "notes": [
+        "IR is transparent during T5; BR captures at the T4→T5 boundary. See p.53 prose.",
+        "Figure 4.12 supplies a numbered table but prints MOP1 at the two execution reads; the established project correction is MOP2."
+      ]
+    },
+    {
+      "id": "fig4.19",
+      "instructions": [
+        "EIN",
+        "RSR"
+      ],
+      "source": "ein_diagram",
+      "title": "EIN followed by RSR, figure 4.19",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "EIN F0": [
+          "R(N)→DI",
+          "DI→AB",
+          "PME rises",
+          "DI+1→BR",
+          "BR→R(N)",
+          "DB→IR",
+          "BR→AB; PME falls",
+          "0→F"
+        ],
+        "following RSR F0": [
+          "R(N)→DI",
+          "DI→AB",
+          "1→INTE; PME rises",
+          "DI+1→BR",
+          "BR→R(N)",
+          "DB→IR",
+          "BR→AB; PME falls",
+          ""
+        ],
+        "following RSR F1": [
+          "",
+          "",
+          "N-1→N",
+          "",
+          "",
+          "",
+          "",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {},
+      "notes": [
+        "The INTE update is caused by preceding EIN, not evidence that RSR alone enables interrupts.",
+        "The execute row is labeled F1 here; later figure 5.4 explicitly changes F1 to F2 at T1."
+      ]
+    },
+    {
+      "id": "fig5.3",
+      "instructions": [
+        "JMP"
+      ],
+      "source": "jmp",
+      "title": "JMP, figure 5.3",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F1": [
+          "",
+          "2→F",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "F2": [
+          "",
+          "",
+          "PME rises",
+          "",
+          "",
+          "DB→BR",
+          "BR→R(N); PP→PG; PME falls",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {
+        "F1": [
+          [],
+          [
+            31
+          ],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "F2": [
+          [],
+          [],
+          [
+            24
+          ],
+          [
+            24
+          ],
+          [
+            24
+          ],
+          [
+            2,
+            24
+          ],
+          [
+            4,
+            18,
+            15,
+            22
+          ],
+          [
+            30
+          ]
+        ]
+      },
+      "notes": [
+        "F0 is the common fetch (figure 4.10).",
+        "At F1T1, phase changes to F2 while the timing counter continues; the next slot is F2T2."
+      ]
+    },
+    {
+      "id": "fig5.4_jsr",
+      "instructions": [
+        "JSR"
+      ],
+      "source": "calls",
+      "title": "JSR, figure 5.4",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F1": [
+          "R(N)→DI",
+          "",
+          "PME rises",
+          "DI+1→BR",
+          "BR→R(N)",
+          "DB→BR",
+          "PME falls",
+          ""
+        ],
+        "F2": [
+          "",
+          "",
+          "N+1→N",
+          "",
+          "",
+          "",
+          "BR→R(N)",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {},
+      "notes": [
+        "F0 is common fetch; F1 advances the saved caller PC past the operand byte.",
+        "No PG save/restore or change is shown; no BR→AB at F1T6 is shown."
+      ]
+    },
+    {
+      "id": "fig5.4_rsr",
+      "instructions": [
+        "RSR"
+      ],
+      "source": "calls",
+      "title": "RSR, figure 5.4",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F1": [
+          "",
+          "2→F",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "F2": [
+          "",
+          "",
+          "N-1→N",
+          "",
+          "",
+          "",
+          "",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {},
+      "notes": [
+        "Two cycles via phase switch at F1T1; no operand byte or unconditional INTE write is shown."
+      ]
+    },
+    {
+      "id": "fig5.6",
+      "instructions": [
+        "BB0"
+      ],
+      "source": "branch_sequence",
+      "title": "BB0, figure 5.6",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F1": [
+          "R(N)→DI",
+          "",
+          "PME rises",
+          "DI+1→BR",
+          "BR→R(N)",
+          "DB→BR",
+          "PME falls",
+          ""
+        ],
+        "F2": [
+          "R(A)→DI",
+          "bit0→H path",
+          "bit0→H path; clock H",
+          "",
+          "",
+          "",
+          "H=1: BR→R(N); H=0: no transfer",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {
+        "F1": [
+          [
+            21,
+            18
+          ],
+          [],
+          [
+            24
+          ],
+          [
+            7,
+            10,
+            24,
+            12
+          ],
+          [
+            6,
+            18,
+            24,
+            22
+          ],
+          [
+            2,
+            24
+          ],
+          [],
+          []
+        ],
+        "F2": [
+          [
+            21,
+            19
+          ],
+          [
+            54
+          ],
+          [
+            54,
+            55
+          ],
+          [],
+          [],
+          [],
+          [
+            4,
+            18
+          ],
+          [
+            30
+          ]
+        ]
+      },
+      "notes": [
+        "H notation is functional; figure 5.5 includes XOR polarity selection and an inverted H output.",
+        "The printed F1T4 MOP6 conflicts with its BR→R(N) functional transfer; preserve it literally below.",
+        "Controls 54/55 are outside the original figure 4.2 list; conditional MOP22 comes from the branch circuit.",
+        "v009 stores physical H.Q as condition XOR IR bit3 and uses Q-bar as the taken predicate; the functional H=1 notation is preserved, not silently equated with circuit Q."
+      ]
+    },
+    {
+      "id": "fig5.7",
+      "instructions": [
+        "AND"
+      ],
+      "source": "and",
+      "title": "AND, figure 5.7",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F1": [
+          "X→DI",
+          "DI→DB",
+          "",
+          "",
+          "",
+          "DB→BR",
+          "",
+          ""
+        ],
+        "F2": [
+          "R(A)→DI",
+          "",
+          "",
+          "DI·BR→BR; update Z",
+          "BR→X",
+          "",
+          "",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {
+        "F1": [
+          [
+            20,
+            21,
+            23
+          ],
+          [
+            23
+          ],
+          [],
+          [],
+          [],
+          [
+            2
+          ],
+          [],
+          []
+        ],
+        "F2": [
+          [
+            19,
+            21
+          ],
+          [],
+          [],
+          [
+            3,
+            7,
+            9,
+            32,
+            12
+          ],
+          [
+            4,
+            22,
+            20
+          ],
+          [],
+          [],
+          [
+            30
+          ]
+        ]
+      },
+      "notes": [
+        "Printed MOP23 appears at T0 and T1, while the functional DI→DB is placed at T1.",
+        "Sparse numbered entries do not specify every held gate level."
+      ]
+    },
+    {
+      "id": "fig5.8_inr",
+      "instructions": [
+        "INR"
+      ],
+      "source": "inc_dec",
+      "title": "INR, figure 5.8",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F1": [
+          "R(A)→DI",
+          "DI→DB",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "F2": [
+          "",
+          "",
+          "",
+          "DI+1→BR; update Z",
+          "",
+          "",
+          "BR→R(A)",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {
+        "F1": [
+          [
+            21,
+            19
+          ],
+          [
+            23
+          ],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "F2": [
+          [],
+          [],
+          [],
+          [
+            10,
+            7,
+            12,
+            32
+          ],
+          [],
+          [],
+          [
+            4,
+            19,
+            22
+          ],
+          [
+            30
+          ]
+        ]
+      },
+      "notes": [
+        "Figure 5.1 and application cycle counts establish three cycles.",
+        "The preceding p.75 prose refers to F2T2 for the flag update; the table places the operation at T3."
+      ]
+    },
+    {
+      "id": "fig5.8_dcr",
+      "instructions": [
+        "DCR"
+      ],
+      "source": "inc_dec",
+      "title": "DCR, figure 5.8",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F1": [
+          "R(A)→DI",
+          "DI→DB",
+          "",
+          "",
+          "",
+          "DB→BR",
+          "",
+          ""
+        ],
+        "F2": [
+          "complement BR→DI",
+          "",
+          "",
+          "DI+1→BR",
+          "",
+          "",
+          "complement BR→R(A)",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {
+        "F1": [
+          [
+            19,
+            21
+          ],
+          [
+            23
+          ],
+          [],
+          [],
+          [],
+          [
+            2
+          ],
+          [],
+          []
+        ],
+        "F2": [
+          [
+            5
+          ],
+          [],
+          [],
+          [
+            10,
+            7,
+            12
+          ],
+          [],
+          [],
+          [
+            5,
+            19,
+            22
+          ],
+          [
+            30
+          ]
+        ]
+      },
+      "notes": [
+        "The functional output arrow has an overbar on BR; the numbered row also uses MOP5 at T6.",
+        "Page 77 explicitly states the special zero-flag circuitry/MOPs are omitted."
+      ]
+    },
+    {
+      "id": "fig5.12",
+      "instructions": [
+        "RRL"
+      ],
+      "source": "rrl",
+      "title": "RRL, figure 5.12",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F1": [
+          "R(A)→DI",
+          "2→F; DI→DB",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "F2": [
+          "",
+          "",
+          "rotate DI through L into BR",
+          "",
+          "",
+          "BR→DI",
+          "DI→R(A)",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {
+        "F1": [
+          [
+            19,
+            21
+          ],
+          [
+            19,
+            21,
+            23,
+            30
+          ],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        "F2": [
+          [],
+          [],
+          [
+            19,
+            21,
+            7,
+            11,
+            12,
+            33
+          ],
+          [],
+          [],
+          [
+            4
+          ],
+          [
+            19,
+            22,
+            4
+          ],
+          [
+            30
+          ]
+        ]
+      },
+      "notes": [
+        "The F1T1 numbered row prints 30, but its 2→F function corresponds to MOP31 in figure 4.2.",
+        "Figure 5.11 adds a zero-insertion control numbered 57; correspondence to MOP43 needs review."
+      ]
+    },
+    {
+      "id": "fig6.17",
+      "instructions": [
+        "SCW"
+      ],
+      "source": "scw_sequence",
+      "title": "SCW, figure 6.17",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F0": [
+          "R(N)→DI",
+          "DI→AB",
+          "PME rises",
+          "DI+1→BR",
+          "BR→R(N)",
+          "DB→IR",
+          "BR→AB; PME falls",
+          ""
+        ],
+        "F1": [
+          "R(N)→DI",
+          "",
+          "PME rises",
+          "DI+1→BR",
+          "BR→R(N)",
+          "",
+          "strobe",
+          ""
+        ],
+        "F2": [
+          "",
+          "",
+          "",
+          "",
+          "SCWR low: go; high: wait",
+          "",
+          "PME falls",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {},
+      "notes": [
+        "Diagram places the strobe in F1T6 and holds the memory access across the phase boundary.",
+        "An earlier p.100 paragraph instead says F2T2/F2T6; later paragraph agrees with the diagram.",
+        "No numbered MOP row for STRCS is supplied here; waiting must not be guessed as an ordinary memory-ready check.",
+        "Figure6.18 on p.101 was visually checked in v015 and corroborates F1T6 strobe, retained PME, and complete eight-slot acknowledgement waits. The conflicting paragraph remains preserved; E008 selects the F1 labels."
+      ]
+    },
+    {
+      "id": "fig4.20_entry",
+      "instructions": [
+        "EIN",
+        "DIN",
+        "RSR"
+      ],
+      "source": "interrupt_circuit",
+      "title": "Interrupt-entry cycle, figure4.20b (not an opcode)",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F0": [
+          "1→INTA; 0→INTE; 0→INTR",
+          "02→DI",
+          "N+1→N",
+          "",
+          "DI→R(N)",
+          "",
+          "",
+          "0→F"
+        ]
+      },
+      "notes": [
+        "Interrupt entry takes one eight-slot cycle and does not fetch a replacement opcode.",
+        "INTA is clocked from pending INTR at F0T0; accepted entry clears INTE and INTR after sampling.",
+        "No PG write or flag stack is shown. Complete held controls in v016 are derived from the functional row."
+      ],
+      "numbered_rows": {}
+    },
+    {
+      "id": "fig4.21_reset",
+      "instructions": [],
+      "source": "reset_sequence",
+      "title": "Reset cycle, figure4.21b (not an opcode)",
+      "status": "visually checked functional transcription; normalized notation",
+      "held_levels_complete": false,
+      "rows": {
+        "F0": [
+          "0→INTA; 0→PG",
+          "0→DI",
+          "0→N",
+          "",
+          "DI→R(N)",
+          "",
+          "",
+          "0→F"
+        ]
+      },
+      "numbered_rows": {},
+      "notes": [
+        "Page64 states that MOP47 gates active-low RESET during T7; the following machine cycle is the reset cycle.",
+        "INTA clear is explicit but has no numbered MOP in figure4.2.",
+        "The table does not specify INTE, INTR, L, Z, WAIT or other register clears. Complete held controls and integration precedence in v017 remain interpretations."
+      ]
+    }
+  ]
+}

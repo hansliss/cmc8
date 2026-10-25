@@ -1,0 +1,1760 @@
+{
+  "model": "v018",
+  "scope": "Base combinational decoder only; dynamic controller excluded",
+  "input_order": [
+    "mode:2",
+    "IR:8",
+    "phase:2",
+    "timing:3"
+  ],
+  "output_bits": [
+    "MOP1",
+    "MOP2",
+    "MOP3",
+    "MOP4",
+    "MOP5",
+    "MOP6",
+    "MOP7",
+    "MOP8",
+    "MOP9",
+    "MOP10",
+    "MOP11",
+    "MOP12",
+    "MOP13",
+    "MOP14",
+    "MOP15",
+    "MOP16",
+    "MOP17",
+    "MOP18",
+    "MOP19",
+    "MOP20",
+    "MOP21",
+    "MOP22",
+    "MOP23",
+    "MOP24",
+    "MOP25",
+    "MOP26",
+    "MOP27",
+    "MOP28",
+    "MOP29",
+    "MOP30",
+    "MOP31",
+    "MOP32",
+    "MOP33",
+    "MOP34",
+    "MOP35",
+    "MOP36",
+    "MOP37",
+    "MOP38",
+    "MOP39",
+    "MOP40",
+    "MOP41",
+    "MOP42",
+    "MOP43",
+    "MOP44",
+    "MOP45",
+    "MOP46",
+    "MOP47",
+    "MOP48",
+    "MOP49",
+    "MOP50",
+    "MOP51",
+    "MOP52",
+    "MOP53",
+    "MOP54",
+    "MOP55",
+    "MOP56",
+    "MOP57",
+    "STRCS",
+    "ZERO_DI",
+    "ALU_A_CAPTURE",
+    "ALU_A_HELD",
+    "CLEAR_INTA",
+    "DEFINED"
+  ],
+  "input_combinations": 32768,
+  "defined_combinations": 9822,
+  "product_terms": 335,
+  "literal_connections": 3130,
+  "or_connections": 426,
+  "dense_table_bits": 2064384,
+  "compression": "Exact per-output implicants, greedy covers, identical products shared; not globally minimal.",
+  "hdl_status": "Generated; no HDL compiler/synthesis tool present in the workspace environment.",
+  "terms": [
+    {
+      "mask": 8218,
+      "value": 0,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 8220,
+      "value": 0,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 8223,
+      "value": 4,
+      "outputs": 2228224
+    },
+    {
+      "mask": 10367,
+      "value": 7,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 10552,
+      "value": 0,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 10584,
+      "value": 64,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 10591,
+      "value": 71,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 10648,
+      "value": 128,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 10655,
+      "value": 135,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 16191,
+      "value": 7,
+      "outputs": 536870912
+    },
+    {
+      "mask": 16223,
+      "value": 71,
+      "outputs": 536870912
+    },
+    {
+      "mask": 16287,
+      "value": 135,
+      "outputs": 536870912
+    },
+    {
+      "mask": 16415,
+      "value": 0,
+      "outputs": 134217728
+    },
+    {
+      "mask": 16415,
+      "value": 4,
+      "outputs": 2228224
+    },
+    {
+      "mask": 24600,
+      "value": 8192,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 24600,
+      "value": 16384,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 24604,
+      "value": 0,
+      "outputs": 1179648
+    },
+    {
+      "mask": 24605,
+      "value": 8193,
+      "outputs": 1099511627776
+    },
+    {
+      "mask": 24605,
+      "value": 16385,
+      "outputs": 549755813888
+    },
+    {
+      "mask": 24606,
+      "value": 2,
+      "outputs": 8388608
+    },
+    {
+      "mask": 24606,
+      "value": 4,
+      "outputs": 8388608
+    },
+    {
+      "mask": 24606,
+      "value": 8194,
+      "outputs": 1099511627776
+    },
+    {
+      "mask": 24606,
+      "value": 16386,
+      "outputs": 549755813888
+    },
+    {
+      "mask": 24607,
+      "value": 1,
+      "outputs": 8192
+    },
+    {
+      "mask": 24607,
+      "value": 3,
+      "outputs": 2624
+    },
+    {
+      "mask": 24607,
+      "value": 4,
+      "outputs": 268435464
+    },
+    {
+      "mask": 24607,
+      "value": 5,
+      "outputs": 1
+    },
+    {
+      "mask": 24607,
+      "value": 8192,
+      "outputs": 35459249995776
+    },
+    {
+      "mask": 24607,
+      "value": 8194,
+      "outputs": 32768
+    },
+    {
+      "mask": 24607,
+      "value": 8196,
+      "outputs": 1099511627776
+    },
+    {
+      "mask": 24607,
+      "value": 8199,
+      "outputs": 70369281048576
+    },
+    {
+      "mask": 24607,
+      "value": 16384,
+      "outputs": 2305845208236949504
+    },
+    {
+      "mask": 24607,
+      "value": 16386,
+      "outputs": 17592186044416
+    },
+    {
+      "mask": 24607,
+      "value": 16388,
+      "outputs": 549755813888
+    },
+    {
+      "mask": 24607,
+      "value": 16391,
+      "outputs": 70369281048576
+    },
+    {
+      "mask": 25032,
+      "value": 256,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 25039,
+      "value": 263,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 25040,
+      "value": 256,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 25047,
+      "value": 263,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 25055,
+      "value": 262,
+      "outputs": 32
+    },
+    {
+      "mask": 25055,
+      "value": 279,
+      "outputs": 536870912
+    },
+    {
+      "mask": 25224,
+      "value": 512,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 25231,
+      "value": 519,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 25247,
+      "value": 535,
+      "outputs": 536870912
+    },
+    {
+      "mask": 25352,
+      "value": 768,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 25359,
+      "value": 775,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 25360,
+      "value": 768,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 25366,
+      "value": 768,
+      "outputs": 1048576
+    },
+    {
+      "mask": 25367,
+      "value": 775,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 25375,
+      "value": 774,
+      "outputs": 32
+    },
+    {
+      "mask": 25375,
+      "value": 791,
+      "outputs": 536870912
+    },
+    {
+      "mask": 26120,
+      "value": 512,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 26120,
+      "value": 1024,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 26127,
+      "value": 519,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 26127,
+      "value": 1031,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 26128,
+      "value": 512,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 26128,
+      "value": 1024,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 26134,
+      "value": 1024,
+      "outputs": 1048576
+    },
+    {
+      "mask": 26135,
+      "value": 519,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 26135,
+      "value": 1031,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 26143,
+      "value": 518,
+      "outputs": 32
+    },
+    {
+      "mask": 26143,
+      "value": 535,
+      "outputs": 536870912
+    },
+    {
+      "mask": 26143,
+      "value": 1030,
+      "outputs": 32
+    },
+    {
+      "mask": 26143,
+      "value": 1047,
+      "outputs": 536870912
+    },
+    {
+      "mask": 26399,
+      "value": 534,
+      "outputs": 8
+    },
+    {
+      "mask": 26399,
+      "value": 1801,
+      "outputs": 4194304
+    },
+    {
+      "mask": 26399,
+      "value": 1812,
+      "outputs": 262144
+    },
+    {
+      "mask": 26751,
+      "value": 6,
+      "outputs": 32
+    },
+    {
+      "mask": 26760,
+      "value": 2048,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 26767,
+      "value": 2055,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 26768,
+      "value": 2048,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 26775,
+      "value": 2055,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 26783,
+      "value": 2071,
+      "outputs": 536870912
+    },
+    {
+      "mask": 26879,
+      "value": 230,
+      "outputs": 32
+    },
+    {
+      "mask": 26975,
+      "value": 70,
+      "outputs": 32
+    },
+    {
+      "mask": 26984,
+      "value": 256,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 26991,
+      "value": 263,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 26992,
+      "value": 256,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 26999,
+      "value": 263,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 27007,
+      "value": 279,
+      "outputs": 536870912
+    },
+    {
+      "mask": 27039,
+      "value": 134,
+      "outputs": 32
+    },
+    {
+      "mask": 27112,
+      "value": 480,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 27119,
+      "value": 487,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 27120,
+      "value": 480,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 27127,
+      "value": 487,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 27135,
+      "value": 503,
+      "outputs": 536870912
+    },
+    {
+      "mask": 27144,
+      "value": 512,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 27158,
+      "value": 512,
+      "outputs": 1048576
+    },
+    {
+      "mask": 27159,
+      "value": 519,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 27167,
+      "value": 518,
+      "outputs": 32
+    },
+    {
+      "mask": 27167,
+      "value": 535,
+      "outputs": 536870912
+    },
+    {
+      "mask": 27278,
+      "value": 2050,
+      "outputs": 8388608
+    },
+    {
+      "mask": 27278,
+      "value": 2052,
+      "outputs": 8388608
+    },
+    {
+      "mask": 27286,
+      "value": 2048,
+      "outputs": 1048576
+    },
+    {
+      "mask": 27918,
+      "value": 3330,
+      "outputs": 1048576
+    },
+    {
+      "mask": 27919,
+      "value": 1027,
+      "outputs": 2112
+    },
+    {
+      "mask": 28174,
+      "value": 3074,
+      "outputs": 9437184
+    },
+    {
+      "mask": 28174,
+      "value": 3076,
+      "outputs": 8388608
+    },
+    {
+      "mask": 28175,
+      "value": 1027,
+      "outputs": 2112
+    },
+    {
+      "mask": 28180,
+      "value": 2560,
+      "outputs": 1048576
+    },
+    {
+      "mask": 28191,
+      "value": 2573,
+      "outputs": 2
+    },
+    {
+      "mask": 28428,
+      "value": 1280,
+      "outputs": 1048576
+    },
+    {
+      "mask": 28428,
+      "value": 1536,
+      "outputs": 1048576
+    },
+    {
+      "mask": 28431,
+      "value": 1027,
+      "outputs": 512
+    },
+    {
+      "mask": 28431,
+      "value": 1284,
+      "outputs": 2097160
+    },
+    {
+      "mask": 28431,
+      "value": 1540,
+      "outputs": 2097160
+    },
+    {
+      "mask": 28436,
+      "value": 1280,
+      "outputs": 1048576
+    },
+    {
+      "mask": 28444,
+      "value": 1296,
+      "outputs": 262144
+    },
+    {
+      "mask": 28444,
+      "value": 1552,
+      "outputs": 262144
+    },
+    {
+      "mask": 28446,
+      "value": 3858,
+      "outputs": 4456448
+    },
+    {
+      "mask": 28446,
+      "value": 3860,
+      "outputs": 5505024
+    },
+    {
+      "mask": 28447,
+      "value": 534,
+      "outputs": 2359296
+    },
+    {
+      "mask": 28447,
+      "value": 1046,
+      "outputs": 2359296
+    },
+    {
+      "mask": 28447,
+      "value": 1293,
+      "outputs": 2
+    },
+    {
+      "mask": 28447,
+      "value": 1299,
+      "outputs": 2147483780
+    },
+    {
+      "mask": 28447,
+      "value": 1555,
+      "outputs": 2147483908
+    },
+    {
+      "mask": 28447,
+      "value": 1814,
+      "outputs": 2621448
+    },
+    {
+      "mask": 28671,
+      "value": 406,
+      "outputs": 2097160
+    },
+    {
+      "mask": 28671,
+      "value": 489,
+      "outputs": 1073741824
+    },
+    {
+      "mask": 28831,
+      "value": 4102,
+      "outputs": 32
+    },
+    {
+      "mask": 29078,
+      "value": 4352,
+      "outputs": 1048576
+    },
+    {
+      "mask": 29199,
+      "value": 519,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 29200,
+      "value": 512,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 29459,
+      "value": 512,
+      "outputs": 131072
+    },
+    {
+      "mask": 29460,
+      "value": 512,
+      "outputs": 1179648
+    },
+    {
+      "mask": 29462,
+      "value": 514,
+      "outputs": 8388608
+    },
+    {
+      "mask": 29462,
+      "value": 516,
+      "outputs": 8388608
+    },
+    {
+      "mask": 29463,
+      "value": 515,
+      "outputs": 2624
+    },
+    {
+      "mask": 29463,
+      "value": 516,
+      "outputs": 270532616
+    },
+    {
+      "mask": 29471,
+      "value": 525,
+      "outputs": 2
+    },
+    {
+      "mask": 29471,
+      "value": 4886,
+      "outputs": 8
+    },
+    {
+      "mask": 29556,
+      "value": 256,
+      "outputs": 1048576
+    },
+    {
+      "mask": 29583,
+      "value": 4099,
+      "outputs": 2112
+    },
+    {
+      "mask": 29652,
+      "value": 256,
+      "outputs": 1048576
+    },
+    {
+      "mask": 29695,
+      "value": 397,
+      "outputs": 2
+    },
+    {
+      "mask": 29710,
+      "value": 1026,
+      "outputs": 1048576
+    },
+    {
+      "mask": 29839,
+      "value": 4098,
+      "outputs": 1048576
+    },
+    {
+      "mask": 29983,
+      "value": 1300,
+      "outputs": 262144
+    },
+    {
+      "mask": 30223,
+      "value": 4610,
+      "outputs": 1048576
+    },
+    {
+      "mask": 30223,
+      "value": 5123,
+      "outputs": 2112
+    },
+    {
+      "mask": 30231,
+      "value": 518,
+      "outputs": 32
+    },
+    {
+      "mask": 30239,
+      "value": 525,
+      "outputs": 2
+    },
+    {
+      "mask": 30239,
+      "value": 1556,
+      "outputs": 262144
+    },
+    {
+      "mask": 30478,
+      "value": 1026,
+      "outputs": 8388608
+    },
+    {
+      "mask": 30478,
+      "value": 1028,
+      "outputs": 8388608
+    },
+    {
+      "mask": 30479,
+      "value": 516,
+      "outputs": 268435456
+    },
+    {
+      "mask": 30495,
+      "value": 533,
+      "outputs": 2
+    },
+    {
+      "mask": 30495,
+      "value": 5910,
+      "outputs": 2097152
+    },
+    {
+      "mask": 30670,
+      "value": 258,
+      "outputs": 8388608
+    },
+    {
+      "mask": 30728,
+      "value": 2048,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 30728,
+      "value": 4096,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 30735,
+      "value": 2055,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 30735,
+      "value": 4103,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 30736,
+      "value": 2048,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 30736,
+      "value": 4096,
+      "outputs": 4611686018427387904
+    },
+    {
+      "mask": 30740,
+      "value": 2048,
+      "outputs": 1048576
+    },
+    {
+      "mask": 30742,
+      "value": 4096,
+      "outputs": 1048576
+    },
+    {
+      "mask": 30743,
+      "value": 2054,
+      "outputs": 32
+    },
+    {
+      "mask": 30743,
+      "value": 2055,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 30743,
+      "value": 4103,
+      "outputs": 70368744177664
+    },
+    {
+      "mask": 30751,
+      "value": 2061,
+      "outputs": 2
+    },
+    {
+      "mask": 30751,
+      "value": 2071,
+      "outputs": 536870912
+    },
+    {
+      "mask": 30751,
+      "value": 4102,
+      "outputs": 32
+    },
+    {
+      "mask": 30751,
+      "value": 4105,
+      "outputs": 4194304
+    },
+    {
+      "mask": 30751,
+      "value": 4119,
+      "outputs": 536870912
+    },
+    {
+      "mask": 30879,
+      "value": 6166,
+      "outputs": 131080
+    },
+    {
+      "mask": 30995,
+      "value": 2048,
+      "outputs": 131072
+    },
+    {
+      "mask": 30996,
+      "value": 2048,
+      "outputs": 131072
+    },
+    {
+      "mask": 30998,
+      "value": 2050,
+      "outputs": 8388608
+    },
+    {
+      "mask": 30998,
+      "value": 2052,
+      "outputs": 8388608
+    },
+    {
+      "mask": 30999,
+      "value": 2051,
+      "outputs": 2624
+    },
+    {
+      "mask": 30999,
+      "value": 2052,
+      "outputs": 270532616
+    },
+    {
+      "mask": 31002,
+      "value": 2312,
+      "outputs": 1572864
+    },
+    {
+      "mask": 31003,
+      "value": 2313,
+      "outputs": 4194304
+    },
+    {
+      "mask": 31004,
+      "value": 2312,
+      "outputs": 524288
+    },
+    {
+      "mask": 31006,
+      "value": 2314,
+      "outputs": 4194304
+    },
+    {
+      "mask": 31006,
+      "value": 2316,
+      "outputs": 4194304
+    },
+    {
+      "mask": 31246,
+      "value": 2050,
+      "outputs": 8388608
+    },
+    {
+      "mask": 31246,
+      "value": 2052,
+      "outputs": 8388608
+    },
+    {
+      "mask": 31262,
+      "value": 2578,
+      "outputs": 16777216
+    },
+    {
+      "mask": 31262,
+      "value": 2580,
+      "outputs": 16777216
+    },
+    {
+      "mask": 31374,
+      "value": 6146,
+      "outputs": 1179648
+    },
+    {
+      "mask": 31375,
+      "value": 6147,
+      "outputs": 2624
+    },
+    {
+      "mask": 31375,
+      "value": 6148,
+      "outputs": 270663680
+    },
+    {
+      "mask": 31382,
+      "value": 6144,
+      "outputs": 131072
+    },
+    {
+      "mask": 31389,
+      "value": 6164,
+      "outputs": 8
+    },
+    {
+      "mask": 31391,
+      "value": 6153,
+      "outputs": 1073741824
+    },
+    {
+      "mask": 31391,
+      "value": 6162,
+      "outputs": 18014398509481984
+    },
+    {
+      "mask": 31391,
+      "value": 6165,
+      "outputs": 2
+    },
+    {
+      "mask": 31503,
+      "value": 4099,
+      "outputs": 2624
+    },
+    {
+      "mask": 31514,
+      "value": 4104,
+      "outputs": 262144
+    },
+    {
+      "mask": 31516,
+      "value": 4104,
+      "outputs": 262144
+    },
+    {
+      "mask": 31518,
+      "value": 786,
+      "outputs": 4456448
+    },
+    {
+      "mask": 31518,
+      "value": 788,
+      "outputs": 5505024
+    },
+    {
+      "mask": 31518,
+      "value": 4108,
+      "outputs": 4194304
+    },
+    {
+      "mask": 31519,
+      "value": 6934,
+      "outputs": 131072
+    },
+    {
+      "mask": 31603,
+      "value": 256,
+      "outputs": 131072
+    },
+    {
+      "mask": 31604,
+      "value": 256,
+      "outputs": 131072
+    },
+    {
+      "mask": 31606,
+      "value": 258,
+      "outputs": 8388608
+    },
+    {
+      "mask": 31606,
+      "value": 260,
+      "outputs": 8388608
+    },
+    {
+      "mask": 31607,
+      "value": 259,
+      "outputs": 2624
+    },
+    {
+      "mask": 31607,
+      "value": 260,
+      "outputs": 270532616
+    },
+    {
+      "mask": 31699,
+      "value": 256,
+      "outputs": 131072
+    },
+    {
+      "mask": 31700,
+      "value": 256,
+      "outputs": 131072
+    },
+    {
+      "mask": 31702,
+      "value": 260,
+      "outputs": 8388608
+    },
+    {
+      "mask": 31703,
+      "value": 259,
+      "outputs": 2624
+    },
+    {
+      "mask": 31703,
+      "value": 260,
+      "outputs": 270532616
+    },
+    {
+      "mask": 31759,
+      "value": 2052,
+      "outputs": 268435456
+    },
+    {
+      "mask": 31759,
+      "value": 4098,
+      "outputs": 1048576
+    },
+    {
+      "mask": 31764,
+      "value": 5120,
+      "outputs": 1048576
+    },
+    {
+      "mask": 31770,
+      "value": 3082,
+      "outputs": 1048576
+    },
+    {
+      "mask": 31770,
+      "value": 3088,
+      "outputs": 5505024
+    },
+    {
+      "mask": 31770,
+      "value": 5128,
+      "outputs": 1048576
+    },
+    {
+      "mask": 31771,
+      "value": 4114,
+      "outputs": 262144
+    },
+    {
+      "mask": 31772,
+      "value": 3088,
+      "outputs": 4456448
+    },
+    {
+      "mask": 31773,
+      "value": 3089,
+      "outputs": 67108864
+    },
+    {
+      "mask": 31774,
+      "value": 3086,
+      "outputs": 262144
+    },
+    {
+      "mask": 31774,
+      "value": 3090,
+      "outputs": 67108864
+    },
+    {
+      "mask": 31774,
+      "value": 4104,
+      "outputs": 262144
+    },
+    {
+      "mask": 31774,
+      "value": 5130,
+      "outputs": 4194304
+    },
+    {
+      "mask": 31774,
+      "value": 5132,
+      "outputs": 4194304
+    },
+    {
+      "mask": 31775,
+      "value": 2069,
+      "outputs": 2
+    },
+    {
+      "mask": 31775,
+      "value": 2070,
+      "outputs": 2359304
+    },
+    {
+      "mask": 31775,
+      "value": 3087,
+      "outputs": 4194304
+    },
+    {
+      "mask": 31775,
+      "value": 3092,
+      "outputs": 67108864
+    },
+    {
+      "mask": 31775,
+      "value": 4118,
+      "outputs": 2097160
+    },
+    {
+      "mask": 31775,
+      "value": 5133,
+      "outputs": 2
+    },
+    {
+      "mask": 31903,
+      "value": 7177,
+      "outputs": 1073741824
+    },
+    {
+      "mask": 31903,
+      "value": 7189,
+      "outputs": 2
+    },
+    {
+      "mask": 32015,
+      "value": 1028,
+      "outputs": 2097152
+    },
+    {
+      "mask": 32015,
+      "value": 5376,
+      "outputs": 1048576
+    },
+    {
+      "mask": 32015,
+      "value": 5380,
+      "outputs": 2097160
+    },
+    {
+      "mask": 32026,
+      "value": 5384,
+      "outputs": 524288
+    },
+    {
+      "mask": 32028,
+      "value": 5384,
+      "outputs": 524288
+    },
+    {
+      "mask": 32031,
+      "value": 4361,
+      "outputs": 1073741824
+    },
+    {
+      "mask": 32031,
+      "value": 4370,
+      "outputs": 3136
+    },
+    {
+      "mask": 32031,
+      "value": 4373,
+      "outputs": 8
+    },
+    {
+      "mask": 32031,
+      "value": 5392,
+      "outputs": 262144
+    },
+    {
+      "mask": 32031,
+      "value": 7433,
+      "outputs": 1073741824
+    },
+    {
+      "mask": 32031,
+      "value": 7445,
+      "outputs": 2
+    },
+    {
+      "mask": 32142,
+      "value": 7170,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32142,
+      "value": 7172,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32143,
+      "value": 7172,
+      "outputs": 268435456
+    },
+    {
+      "mask": 32270,
+      "value": 6656,
+      "outputs": 1048576
+    },
+    {
+      "mask": 32270,
+      "value": 7170,
+      "outputs": 131072
+    },
+    {
+      "mask": 32271,
+      "value": 7171,
+      "outputs": 512
+    },
+    {
+      "mask": 32271,
+      "value": 7172,
+      "outputs": 270532608
+    },
+    {
+      "mask": 32275,
+      "value": 512,
+      "outputs": 131072
+    },
+    {
+      "mask": 32275,
+      "value": 6656,
+      "outputs": 131072
+    },
+    {
+      "mask": 32276,
+      "value": 512,
+      "outputs": 131072
+    },
+    {
+      "mask": 32276,
+      "value": 6656,
+      "outputs": 131072
+    },
+    {
+      "mask": 32278,
+      "value": 514,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32278,
+      "value": 516,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32278,
+      "value": 1024,
+      "outputs": 131072
+    },
+    {
+      "mask": 32278,
+      "value": 6658,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32278,
+      "value": 6660,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32278,
+      "value": 7168,
+      "outputs": 131072
+    },
+    {
+      "mask": 32279,
+      "value": 515,
+      "outputs": 2624
+    },
+    {
+      "mask": 32279,
+      "value": 516,
+      "outputs": 270532616
+    },
+    {
+      "mask": 32279,
+      "value": 6659,
+      "outputs": 2624
+    },
+    {
+      "mask": 32279,
+      "value": 6660,
+      "outputs": 270532616
+    },
+    {
+      "mask": 32282,
+      "value": 3088,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32282,
+      "value": 3600,
+      "outputs": 16777216
+    },
+    {
+      "mask": 32282,
+      "value": 5640,
+      "outputs": 524288
+    },
+    {
+      "mask": 32284,
+      "value": 5640,
+      "outputs": 524288
+    },
+    {
+      "mask": 32285,
+      "value": 6672,
+      "outputs": 262144
+    },
+    {
+      "mask": 32285,
+      "value": 7188,
+      "outputs": 131080
+    },
+    {
+      "mask": 32286,
+      "value": 530,
+      "outputs": 33554432
+    },
+    {
+      "mask": 32286,
+      "value": 532,
+      "outputs": 33554432
+    },
+    {
+      "mask": 32286,
+      "value": 6672,
+      "outputs": 262144
+    },
+    {
+      "mask": 32287,
+      "value": 4617,
+      "outputs": 1073741824
+    },
+    {
+      "mask": 32287,
+      "value": 4626,
+      "outputs": 3136
+    },
+    {
+      "mask": 32287,
+      "value": 4629,
+      "outputs": 8
+    },
+    {
+      "mask": 32287,
+      "value": 6673,
+      "outputs": 9007199254740992
+    },
+    {
+      "mask": 32287,
+      "value": 6674,
+      "outputs": 27021597764222976
+    },
+    {
+      "mask": 32287,
+      "value": 6678,
+      "outputs": 131072
+    },
+    {
+      "mask": 32287,
+      "value": 7177,
+      "outputs": 1073741824
+    },
+    {
+      "mask": 32287,
+      "value": 7186,
+      "outputs": 18014398509481984
+    },
+    {
+      "mask": 32287,
+      "value": 7189,
+      "outputs": 2
+    },
+    {
+      "mask": 32415,
+      "value": 6162,
+      "outputs": 4503599627370496
+    },
+    {
+      "mask": 32415,
+      "value": 7186,
+      "outputs": 1125899906842624
+    },
+    {
+      "mask": 32415,
+      "value": 7314,
+      "outputs": 2251799813685248
+    },
+    {
+      "mask": 32415,
+      "value": 7702,
+      "outputs": 2097152
+    },
+    {
+      "mask": 32524,
+      "value": 768,
+      "outputs": 1048576
+    },
+    {
+      "mask": 32524,
+      "value": 4096,
+      "outputs": 1048576
+    },
+    {
+      "mask": 32526,
+      "value": 1026,
+      "outputs": 131072
+    },
+    {
+      "mask": 32527,
+      "value": 1028,
+      "outputs": 268566528
+    },
+    {
+      "mask": 32531,
+      "value": 1280,
+      "outputs": 131072
+    },
+    {
+      "mask": 32532,
+      "value": 1280,
+      "outputs": 131072
+    },
+    {
+      "mask": 32534,
+      "value": 1282,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32534,
+      "value": 1284,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32535,
+      "value": 1283,
+      "outputs": 2624
+    },
+    {
+      "mask": 32535,
+      "value": 1284,
+      "outputs": 270532616
+    },
+    {
+      "mask": 32536,
+      "value": 4104,
+      "outputs": 1310720
+    },
+    {
+      "mask": 32538,
+      "value": 778,
+      "outputs": 1048576
+    },
+    {
+      "mask": 32538,
+      "value": 784,
+      "outputs": 38010880
+    },
+    {
+      "mask": 32538,
+      "value": 4106,
+      "outputs": 4194304
+    },
+    {
+      "mask": 32539,
+      "value": 5138,
+      "outputs": 16
+    },
+    {
+      "mask": 32540,
+      "value": 4112,
+      "outputs": 262144
+    },
+    {
+      "mask": 32540,
+      "value": 5136,
+      "outputs": 16
+    },
+    {
+      "mask": 32541,
+      "value": 785,
+      "outputs": 67108864
+    },
+    {
+      "mask": 32541,
+      "value": 1044,
+      "outputs": 8
+    },
+    {
+      "mask": 32542,
+      "value": 782,
+      "outputs": 262144
+    },
+    {
+      "mask": 32542,
+      "value": 786,
+      "outputs": 67108864
+    },
+    {
+      "mask": 32542,
+      "value": 1800,
+      "outputs": 262144
+    },
+    {
+      "mask": 32542,
+      "value": 7944,
+      "outputs": 262144
+    },
+    {
+      "mask": 32543,
+      "value": 783,
+      "outputs": 4194304
+    },
+    {
+      "mask": 32543,
+      "value": 788,
+      "outputs": 67108864
+    },
+    {
+      "mask": 32543,
+      "value": 1033,
+      "outputs": 1073741824
+    },
+    {
+      "mask": 32543,
+      "value": 1045,
+      "outputs": 2
+    },
+    {
+      "mask": 32543,
+      "value": 1801,
+      "outputs": 1073741824
+    },
+    {
+      "mask": 32543,
+      "value": 1813,
+      "outputs": 2
+    },
+    {
+      "mask": 32543,
+      "value": 4115,
+      "outputs": 2147483648
+    },
+    {
+      "mask": 32543,
+      "value": 4370,
+      "outputs": 4096
+    },
+    {
+      "mask": 32543,
+      "value": 4626,
+      "outputs": 4398046511104
+    },
+    {
+      "mask": 32543,
+      "value": 4882,
+      "outputs": 4294967296
+    },
+    {
+      "mask": 32543,
+      "value": 5142,
+      "outputs": 288230378299195392
+    },
+    {
+      "mask": 32543,
+      "value": 5396,
+      "outputs": 524288
+    },
+    {
+      "mask": 32543,
+      "value": 5652,
+      "outputs": 524288
+    },
+    {
+      "mask": 32543,
+      "value": 5904,
+      "outputs": 576460752303423552
+    },
+    {
+      "mask": 32543,
+      "value": 5909,
+      "outputs": 1152921504606849024
+    },
+    {
+      "mask": 32671,
+      "value": 7702,
+      "outputs": 16384
+    },
+    {
+      "mask": 32730,
+      "value": 266,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32730,
+      "value": 272,
+      "outputs": 8388608
+    },
+    {
+      "mask": 32735,
+      "value": 270,
+      "outputs": 144115188075855872
+    },
+    {
+      "mask": 32767,
+      "value": 66,
+      "outputs": 274877906944
+    },
+    {
+      "mask": 32767,
+      "value": 98,
+      "outputs": 137438953472
+    },
+    {
+      "mask": 32767,
+      "value": 130,
+      "outputs": 17179869184
+    },
+    {
+      "mask": 32767,
+      "value": 162,
+      "outputs": 8589934592
+    },
+    {
+      "mask": 32767,
+      "value": 194,
+      "outputs": 68719476736
+    },
+    {
+      "mask": 32767,
+      "value": 226,
+      "outputs": 34359738368
+    },
+    {
+      "mask": 32767,
+      "value": 276,
+      "outputs": 562949953421312
+    },
+    {
+      "mask": 32767,
+      "value": 402,
+      "outputs": 32768
+    },
+    {
+      "mask": 32767,
+      "value": 406,
+      "outputs": 131072
+    },
+    {
+      "mask": 32767,
+      "value": 498,
+      "outputs": 65536
+    }
+  ]
+}
