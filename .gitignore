@@ -26,3 +26,4 @@ codex_resume.sh
 *.swp
 *.swo
 .DS_Store
+x7_app_sdk
