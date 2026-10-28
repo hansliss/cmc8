@@ -134,3 +134,11 @@ v018 MOP datapath for the literal traffic program. It shows traffic alongside
 registers, buses and active micro-operations, with pause/slot/instruction stepping.
 It builds against the separately supplied `x7_app_sdk/`; the SDK itself remains
 unchanged and is excluded from this repository.
+
+
+## X7 Midahs panel
+
+[x7_midahs](x7_midahs/README.md) is an instruction-level handheld demo with the
+perspective-corrected panel photo, live overlays, a readable sidebar and snapping
+D-pad/A controls. It runs the reconstructed KEX monitor and preloaded SWITCHES
+program. It uses the separate X7 SDK without modifying it.

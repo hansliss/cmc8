@@ -31,3 +31,7 @@ x7_app_sdk
 # Native handheld demo build trees and host screenshots.
 /x7_traffic/build*/
 /x7_traffic/*.ppm
+
+# Midahs handheld app build products.
+/x7_midahs/build*/
+/x7_midahs/*.ppm
