@@ -125,3 +125,12 @@ with octal address/data entry, memory examination, switches, lamps, GO and
 return through KEX. The default user program copies switches to lamps;
 other programs can be loaded as Intel HEX. The monitor is readable assembly
 and is explicitly distinguished from an original ROM dump.
+
+
+## X7 handheld traffic demo
+
+[x7_traffic](x7_traffic/README.md) is a separate native console app using the
+v018 MOP datapath for the literal traffic program. It shows traffic alongside
+registers, buses and active micro-operations, with pause/slot/instruction stepping.
+It builds against the separately supplied `x7_app_sdk/`; the SDK itself remains
+unchanged and is excluded from this repository.

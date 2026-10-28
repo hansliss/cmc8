@@ -27,3 +27,7 @@ codex_resume.sh
 *.swo
 .DS_Store
 x7_app_sdk
+
+# Native handheld demo build trees and host screenshots.
+/x7_traffic/build*/
+/x7_traffic/*.ppm
