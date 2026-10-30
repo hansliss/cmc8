@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1100" viewBox="0 0 1400 1100" role="img" aria-labelledby="title desc">
+<title id="title">CMC8 functional structure — v018 working model</title>
+<desc id="desc">Register file, DI and DB buses, ALU, BR, shift multiplexer, address and instruction registers, branch and sequencing controls. Dashed orange paths identify the hypothetical EXR input latch and DCR zero source. Control connections are grouped rather than individual wires.</desc>
+<defs>
+ <marker id="blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#176aab"/></marker>
+ <marker id="green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#21804d"/></marker>
+ <marker id="purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#79509a"/></marker>
+ <marker id="orange" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#c56413"/></marker>
+ <style>
+ text{font-family:DejaVu Sans,Arial,sans-serif;fill:#182b3a;font-size:16px} .heading{font-size:25px;font-weight:bold}.sub{font-size:14px;fill:#4c5c68}.label{font-weight:bold;font-size:18px}.small{font-size:14px}.box{fill:#f3f7fa;stroke:#40566a;stroke-width:2;rx:8}.data{fill:none;stroke:#176aab;stroke-width:3;marker-end:url(#blue)}.addr{fill:none;stroke:#21804d;stroke-width:3;marker-end:url(#green)}.ctrl{fill:none;stroke:#79509a;stroke-width:2;marker-end:url(#purple)}.hyp{fill:none;stroke:#c56413;stroke-width:3;stroke-dasharray:7 5;marker-end:url(#orange)}.hypbox{fill:#fff5e8;stroke:#c56413;stroke-width:2;stroke-dasharray:7 5;rx:8}
+ </style>
+</defs>
+<rect width="1400" height="1100" fill="#fff"/>
+<text x="35" y="40" class="heading">CMC8 — functional datapath and control, v018</text>
+<text x="35" y="67" class="sub">A study redraw of the book's simplified model, with explicitly marked research additions. Not a physical schematic.</text>
+<!-- Main datapath, with DI and DB as horizontal spines. -->
+<path d="M70 240H1315" class="data"/><text x="75" y="227" class="label">DB · external 8-bit data bus</text>
+<rect x="1025" y="100" width="310" height="90" class="box"/>
+<text x="1040" y="128" class="label">PM / SM / external devices</text><text x="1040" y="153">24 PME · 25 SME · 26 EDE</text><text x="1040" y="177">27 WRITE · 23 DBDIR</text>
+<path d="M1190 190V240" class="data" marker-start="url(#blue)"/>
+<rect x="70" y="295" width="250" height="115" class="box"/>
+<text x="85" y="322" class="label">Register file · 8 × 8 bits</text><text x="85" y="347">One selected read/write port</text><text x="85" y="371">18: PC=R(N) · 19: Rr</text><text x="85" y="395">20: X=R7 · 44: clear PC</text>
+<path d="M70 480H1310" class="data"/><text x="75" y="467" class="label">DI · internal 8-bit bus</text>
+<path d="M155 410V480" class="data"/><text x="85" y="440" class="small">21 R→DI</text>
+<path d="M260 480V410" class="data"/><text x="265" y="445" class="small">22 DI→R</text>
+<rect x="375" y="295" width="220" height="115" class="box"/>
+<text x="392" y="324" class="label">BR · buffer register</text><text x="392" y="350">2: DB capture</text><text x="392" y="375">4: BR→DI</text><text x="392" y="399">5: complement BR→DI</text>
+<path d="M425 240V295" class="data"/><text x="433" y="274" class="small">2</text>
+<path d="M425 410V480" class="data"/><text x="433" y="443" class="small">4 / 5</text>
+<path d="M670 480V240" class="data"/><text x="680" y="450" class="small">23 DI→DB</text>
+<rect x="740" y="295" width="200" height="100" class="box"/>
+<text x="755" y="325" class="label">AB · address buffer</text><text x="755" y="353">6 BR→AB</text><text x="755" y="379">14 DI→AB</text>
+<path d="M595 320H740" class="addr"/><text x="650" y="309" class="small">6</text>
+<path d="M840 480V395" class="addr"/><text x="848" y="449" class="small">14</text>
+<path d="M940 320H995V170H1025" class="addr"/><text x="1002" y="284" class="small">AB[7:0]</text>
+<rect x="740" y="100" width="200" height="90" class="box"/>
+<text x="755" y="129" class="label">PG · 2-bit page</text><text x="755" y="154">15 IR[1:0]→PG</text><text x="755" y="178">42 clear PG</text>
+<path d="M940 145H1025" class="addr"/><text x="951" y="133" class="small">PG[1:0]</text>
+<rect x="375" y="100" width="220" height="90" class="box"/>
+<text x="390" y="129" class="label">IR · instruction register</text><text x="390" y="154">1: DB→IR (end of T5)</text><text x="390" y="178">opcode / r / p / t / IR3</text>
+<path d="M485 240V190" class="data"/><text x="495" y="218" class="small">1</text>
+<path d="M595 145H740" class="ctrl"/><text x="640" y="134" class="small">15</text>
+<rect x="70" y="100" width="250" height="90" class="box"/>
+<text x="85" y="129" class="label">N · 3-bit PC selector</text><text x="85" y="154">16 N+1 · 17 N−1 · 45 N=0</text><text x="85" y="178">PC stack uses the register file</text>
+<path d="M105 190V295" class="ctrl"/>
+<!-- ALU feedback loop -->
+<rect x="70" y="555" width="250" height="90" class="hypbox"/>
+<text x="85" y="584" class="label">EXR input-A latch · H019</text><text x="85" y="610">capture F2T0 · held F2T5</text><text x="85" y="634">Named controls, no MOP number</text>
+<path d="M155 480V555" class="hyp"/>
+<rect x="385" y="555" width="265" height="135" class="box"/>
+<text x="402" y="583" class="label">ALU · 8-bit</text><text x="402" y="611">7 DI→A · 3 BR→B</text><text x="402" y="637">8 XOR · 9 AND · 10 A+1</text><text x="402" y="665">A pass-through if no operation</text>
+<path d="M550 480V555" class="data"/><text x="557" y="525" class="small">7 A</text>
+<path d="M485 410V435H355V605H385" class="data"/><text x="362" y="532" class="small">3 B</text>
+<path d="M320 625H385" class="hyp"/>
+<rect x="740" y="555" width="280" height="135" class="box"/>
+<text x="756" y="583" class="label">MUX / right-shift network</text><text x="756" y="611">11 shift right · 13 wrap bit 0</text><text x="756" y="637">43 / 57 insert zero in bit 7</text><text x="756" y="665">33 old L→bit 7; bit 0→new L</text>
+<path d="M650 600H740" class="data"/>
+<path d="M880 690V720H630V380H595" class="data"/><text x="646" y="710" class="small">12 MUX→BR</text>
+<rect x="1085" y="555" width="250" height="135" class="box"/>
+<text x="1100" y="583" class="label">Flags · L / Z / INTE</text><text x="1100" y="611">32 zero→Z · 33 shift→L</text><text x="1100" y="637">34/35 set/clear L</text><text x="1100" y="661">36/37 Z · 38/39 INTE</text>
+<path d="M1020 600H1085" class="ctrl"/>
+<path d="M650 660H710V744H1060V630H1085" class="ctrl"/><text x="728" y="738" class="small">32 ALU zero detector</text>
+<path d="M1275 480V555" class="hyp"/><text x="1085" y="517" class="small">H014: DCR DI zero→Z</text>
+<!-- Control blocks: deliberately grouped, not every fanout drawn -->
+<rect x="70" y="790" width="390" height="155" class="box"/>
+<text x="86" y="819" class="label">Instruction / timing sequencer</text><text x="86" y="848">IR decode · F phase · T0–T7 clock</text><text x="86" y="875">30 F=0 · 31 F=2 (T keeps running)</text><text x="86" y="902">Control outputs drive the numbered datapath gates</text><text x="86" y="929">40 DI=0 · 41 DI=2 (constant DI sources)</text>
+<rect x="500" y="790" width="410" height="155" class="box"/>
+<text x="516" y="819" class="label">Branch condition circuit · T / H</text><text x="516" y="848">51 Z · 52 L · 53 selected TEST · 54 DI0</text><text x="516" y="875">55 at T2: H ← condition XOR IR3</text><text x="516" y="902">At F2T6, H=0 adds 22 DI→PC</text><text x="516" y="929">BL/BZ also add 15 IR[1:0]→PG if taken</text>
+<rect x="950" y="790" width="385" height="155" class="box"/>
+<text x="966" y="819" class="label">Interrupt / reset / wait / step</text><text x="966" y="848">INTR / INTA · HALT / SSE · F3 waits</text><text x="966" y="875">28 acknowledge · 46 clear pending INTR</text><text x="966" y="902">29 MEMR? · 47 RESET? · 48/49 SSE</text><text x="966" y="929">50 SCWR? · STRCS (unnumbered strobe)</text>
+<path d="M460 835H500" class="ctrl"/><path d="M950 835H910" class="ctrl"/>
+<text x="35" y="994" class="label">Legend</text>
+<path d="M140 988H205" class="data"/><text x="220" y="994">8-bit data</text>
+<path d="M360 988H425" class="addr"/><text x="440" y="994">address</text>
+<path d="M565 988H630" class="ctrl"/><text x="645" y="994">control / condition</text>
+<path d="M865 988H930" class="hyp"/><text x="945" y="994">provisional model addition</text>
+<text x="35" y="1033" class="sub">Grouped control blocks summarize connections; not all IR decode, flag, reset, pin or clock fanouts are drawn. Crossing lines are not junctions.</text>
+<text x="35" y="1062" class="sub">PM/SM address = PG:AB; device address = AB. EXR latch is internal; optional external STRCS capture hardware is a separate issue.</text>
+</svg>

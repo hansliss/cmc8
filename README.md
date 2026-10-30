@@ -34,6 +34,10 @@ for direct input/output, without requiring separate circuitry for this.
 
 It has 43 instructions, according to the book.
 
+For a compact guide to how they work, see the [learning reference](docs/learning/README.md):
+[instructions](docs/learning/instructions.md), [MOPs](docs/learning/mops.md),
+[named timing tables](docs/learning/timing.md), and an [internal-structure diagram](docs/learning/processor.svg).
+
 ## The investigation
 
 I started looking at this around seven years ago, but the project stalled due to other priorities
